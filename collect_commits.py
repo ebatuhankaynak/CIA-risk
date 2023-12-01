@@ -59,7 +59,7 @@ def save_to_json(data, filename):
         json.dump(data, file)
 
 
-project_name = "Cli"
+project_name = "Gson"
 repo_path = repo_names[project_name]
 
 commit_data = {}
