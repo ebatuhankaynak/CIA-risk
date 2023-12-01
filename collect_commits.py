@@ -60,10 +60,24 @@ for project_name, repo_path in repo_names.items():
     commit_data = {}
     owner, repo = repo_path.split('/')
     commits = get_commits(owner, repo)
-    for commit in tqdm(commits):
+    for commit in tqdm(list(reversed(commits))):
         sha = commit['sha']
         details = get_commit_details(owner, repo, sha)
-        print(details)
-        commit_data[sha] = list(reversed(commits))
+
+        commit_info = {
+            "author_name": details['commit']['author']['name'],
+            "files_changed": []
+        }
+
+        for file in details['files']:
+            file_info = {
+                "filename": file['filename'],
+                "status": file['status'],
+                "additions": file['additions'],
+                "deletions": file['deletions']
+            }
+            commit_info["files_changed"].append(file_info)
+
+        commit_data[sha] = commit_info
 
     save_to_json(commit_data, f"raw/{project_name}.json")
