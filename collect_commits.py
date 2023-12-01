@@ -9,13 +9,13 @@ repo_names = {
     "Cli": "apache/commons-cli",
     #"Closure": "google/closure-compiler",
     "Codec": "apache/commons-codec",
-    "Compress": "apache/commons-compress",
+    #"Compress": "apache/commons-compress",
     "Gson": "google/gson",
     "JacksonCore": "FasterXML/jackson-core",
     "Jsoup": "jhy/jsoup",
-    "Lang": "apache/commons-lang",
-    "Math": "apache/commons-math",
-    "Mockito": "mockito/mockito",
+    #"Lang": "apache/commons-lang",
+    #"Math": "apache/commons-math",
+    #"Mockito": "mockito/mockito",
     "Time": "JodaOrg/joda-time"
 }
 
@@ -58,33 +58,36 @@ def save_to_json(data, filename):
     with open(filename, 'w') as file:
         json.dump(data, file)
 
-for project_name, repo_path in repo_names.items():
-    commit_data = {}
-    owner, repo = repo_path.split('/')
-    commits = get_commits(owner, repo)
 
-    args_list = [(owner, repo, commit['sha'], index) for index, commit in enumerate(reversed(commits))]
+project_name = "Cli"
+repo_path = repo_names[project_name]
 
-    commit_details_with_index  = pqdm(args_list, get_commit_details_task, n_jobs=10)
-    commit_details_with_index.sort(key=lambda x: x[0])
-    sorted_commit_details = [details for _, details in sorted(commit_details_with_index, key=lambda x: x[0])]
+commit_data = {}
+owner, repo = repo_path.split('/')
+commits = get_commits(owner, repo)
 
-    commit_data = {}
-    for details in sorted_commit_details:
-        if details:
-            sha = details['sha']
-            commit_info = {
-                "author_name": details['commit']['author']['name'],
-                "files_changed": [
-                    {
-                        "filename": file['filename'],
-                        "status": file['status'],
-                        "additions": file['additions'],
-                        "deletions": file['deletions']
-                    }
-                    for file in details['files']
-                ]
-            }
-            commit_data[sha] = commit_info
+args_list = [(owner, repo, commit['sha'], index) for index, commit in enumerate(reversed(commits))]
 
-    save_to_json(commit_data, f"raw/{project_name}.json")
+commit_details_with_index  = pqdm(args_list, get_commit_details_task, n_jobs=10)
+commit_details_with_index.sort(key=lambda x: x[0])
+sorted_commit_details = [details for _, details in sorted(commit_details_with_index, key=lambda x: x[0])]
+
+commit_data = {}
+for details in sorted_commit_details:
+    if details:
+        sha = details['sha']
+        commit_info = {
+            "author_name": details['commit']['author']['name'],
+            "files_changed": [
+                {
+                    "filename": file['filename'],
+                    "status": file['status'],
+                    "additions": file['additions'],
+                    "deletions": file['deletions']
+                }
+                for file in details['files']
+            ]
+        }
+        commit_data[sha] = commit_info
+
+save_to_json(commit_data, f"raw/{project_name}.json")
