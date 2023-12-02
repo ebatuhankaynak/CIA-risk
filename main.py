@@ -1,4 +1,5 @@
 import networkx as nx
+from utils import Utils
 
 from graph_creator import GraphCreator
 
