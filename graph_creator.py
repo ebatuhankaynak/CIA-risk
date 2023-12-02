@@ -38,6 +38,22 @@ class MockGraphCreator:
 
         return G
     
+    def create_graph(self, nodes, edge_count, verbose=False):
+        edges = []
+        for _ in range(edge_count):
+            source, target = random.sample(nodes, 2)
+            edges.append((source, target))
+
+        call_graph = '\n'.join([f"{src} -> {tgt}" for src, tgt in edges])
+        if verbose:
+            print(call_graph)
+        
+        G = nx.DiGraph()
+        for src, tgt in edges:
+            G.add_edge(src, tgt)
+
+        return G
+    
     def scramble_graph_edges(self, graph):
         nodes = list(graph.nodes())
         scrambled_edges = []
