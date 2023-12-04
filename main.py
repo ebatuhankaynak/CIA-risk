@@ -13,17 +13,17 @@ requested_features = [
 ]
 
 features_per_cid = dh.create_features("Cli", requested_features)
-commit_ids, labels = dh.create_labels("Cli")
+y = dh.create_labels("Cli")
 
 def flatten_features(features_dict):
-    flattened_list = []
-    for key in features_dict:
-        flattened_list.extend(features_dict[key])
-    return flattened_list
+    flattened_lists = {}
+    for cid in features_dict:
+        flattened_lists[cid] = []
+        for feat_key in features_dict[cid]:
+            flattened_lists[cid].extend(features_dict[cid][feat_key])
+    return flattened_lists
 
-for idx, k in enumerate(features_per_cid.keys()):
-    print(k)
-    print(commit_ids[idx])
+x = flatten_features(features_per_cid)
 
-"""print(commit_ids)
-print(idx, len(commit_ids))"""
+print(x)
+print(y)

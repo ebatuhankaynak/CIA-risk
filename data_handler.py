@@ -123,4 +123,4 @@ class DataHandler:
         fonte_commit_ids = set(fonte_dataset_for_pid['commit'])
         labels = [1 if commit_id in fonte_commit_ids else 0 for commit_id in commit_ids]
 
-        return commit_ids, labels
+        return labels
