@@ -40,6 +40,11 @@ class MockGraphCreator:
     
     def create_graph(self, nodes, edge_count, verbose=False):
         edges = []
+
+        for node in nodes: # Pair each node with a random other node
+            target = random.choice([n for n in nodes if n != node])
+            edges.append((node, target))
+
         for _ in range(edge_count):
             source, target = random.sample(nodes, 2)
             edges.append((source, target))
