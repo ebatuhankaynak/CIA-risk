@@ -9,7 +9,7 @@ repo_names = {
     "Cli": "apache/commons-cli",
     #"Closure": "google/closure-compiler",
     "Codec": "apache/commons-codec",
-    #"Compress": "apache/commons-compress",
+    "Compress": "apache/commons-compress",
     "Gson": "google/gson",
     "JacksonCore": "FasterXML/jackson-core",
     "Jsoup": "jhy/jsoup",
@@ -59,7 +59,7 @@ def save_to_json(data, filename):
         json.dump(data, file)
 
 
-project_name = "Jsoup"
+project_name = "Compress"
 repo_path = repo_names[project_name]
 
 commit_data = {}
