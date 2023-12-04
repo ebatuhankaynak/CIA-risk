@@ -1,6 +1,8 @@
 import networkx as nx
 import numpy as np
 from tqdm import tqdm
+import pandas as pd
+import json
 
 from graph_creator import MockGraphCreator
 from utils import Utils
@@ -22,11 +24,14 @@ class DataHandler:
             'median': np.median(values),
         }
     
-    def create_features(self, filename, requested_features):
+    def create_features(self, project_name, requested_features):
+        filename = f"raw/{project_name}.json"
         commit_data = Utils.read_json(filename)
+
         graph_creator = MockGraphCreator()
 
         commit_ids = list(commit_data.keys())
+
         global_graph_scores = {}
         changed_graph_scores = {}
         bad_commits = []
@@ -74,7 +79,6 @@ class DataHandler:
             global_graph_diffs[next_cid] = calc_diff(global_graph_scores[current_cid], global_graph_scores[next_cid])
             changed_graph_diffs[next_cid] = calc_diff(changed_graph_scores[current_cid], changed_graph_scores[next_cid])
 
-
         metrics_order = ['pagerank', 'centrality', 'closeness', 'clustering_coefficient']
         def linearize_metrics(metric_dict):
             linear_vectors = {}
@@ -89,12 +93,8 @@ class DataHandler:
         def attach_cid_to_features(metrics_dicts):
             linearized_metrics = {name: linearize_metrics(metric_dict) for name, metric_dict in metrics_dicts.items()}
 
-            all_commit_ids = set()
-            for metric_dict in linearized_metrics.values():
-                all_commit_ids.update(metric_dict.keys())
-
             consolidated_features = {}
-            for cid in all_commit_ids:
+            for cid in commit_ids:
                 consolidated_features[cid] = {name: linearized_metrics[name].get(cid, []) for name in linearized_metrics}
 
             return consolidated_features
@@ -108,3 +108,19 @@ class DataHandler:
 
         filtered_metrics_dicts = {name: metrics for name, metrics in metrics_dicts.items() if name in requested_features}
         return attach_cid_to_features(filtered_metrics_dicts)
+    
+    def create_labels(self, project_name):
+        fonte_dataset_path = "fonte_dataset.csv"
+        fonte_dataset = pd.read_csv(fonte_dataset_path)
+
+        raw_json_path = f"raw/{project_name}.json"
+        with open(raw_json_path, 'r') as file:
+            data = json.load(file)
+
+        commit_ids = [sha[:7] for sha in data.keys()]
+        fonte_dataset_for_pid = fonte_dataset[fonte_dataset['pid'] == project_name]
+
+        fonte_commit_ids = set(fonte_dataset_for_pid['commit'])
+        labels = [1 if commit_id in fonte_commit_ids else 0 for commit_id in commit_ids]
+
+        return commit_ids, labels
