@@ -3,12 +3,11 @@
 TODO for MVP (Inshallah completed in 6th of December):
 ---
 Selen & Gökberk:
-- Check one of these to create method caller-callee pairs
-  - [ ] https://github.com/gousiosg/java-callgraph
-  - [ ] AST tool
-  - [ ] Hoca'nın tool
-  - [ ] Possibly others?
-  - [ ] If static call graph creation proves hard for methods, use file-level graph.
+- Check one of these to create method caller-callee pairs 
+  - [X] AST tool
+  - [X] Hoca'nın tool
+  - [ ] Possibly others? (https://github.com/gousiosg/java-callgraph)
+  - [X] CodeShovel
 
 Batu & Berat:
 - [X] Read Fonte and understand BIC results
