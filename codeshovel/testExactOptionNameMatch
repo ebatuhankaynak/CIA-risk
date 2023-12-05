@@ -1,0 +1,61 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "BugCLI252Test.java",
+  "functionName": "testExactOptionNameMatch",
+  "functionId": "testExactOptionNameMatch",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/bug/BugCLI252Test.java",
+  "functionAnnotation": "@Test",
+  "functionDoc": "",
+  "functionStartLine": 46,
+  "functionEndLine": 48,
+  "numCommitsSeen": 9,
+  "timeTaken": 149,
+  "changeHistory": [
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df",
+    "085a1538fa20d8e48faad49eaffd697f024bf1af"
+  ],
+  "changeHistoryShort": {
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df": "Yformatchange",
+    "085a1538fa20d8e48faad49eaffd697f024bf1af": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df": {
+      "type": "Yformatchange",
+      "commitMessage": "Clean ups.\n\n- maven-checkstyle-plugin 3.1.1 -\u003e 3.1.2.\n- checkstyle -\u003e 9.0\n- Updates for 21st century.\n- No need to nest else clause.\n- Use simple array declarations.\n- Use valueOf instead of new for Numbers.\n- Consistent formatting.\n- Remove some inline comments //-----...\n",
+      "commitDate": "10/2/21 11:04 PM",
+      "commitName": "bc0edc47dbf47cdaa3485cfb724982f377c900df",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "6/5/17 7:37 PM",
+      "commitNameOld": "357a8b0b8f1090db29e0d541a9419f570a78457b",
+      "commitAuthorOld": "Gary D. Gregory",
+      "daysBetweenCommits": 1580.14,
+      "commitsBetweenForRepo": 149,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test\r\npublic void testExactOptionNameMatch() throws ParseException {\r\n    new DefaultParser().parse(getOptions(), new String[] { \"--prefix\" });\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/bug/BugCLI252Test.java",
+      "functionStartLine": 30,
+      "functionName": "testExactOptionNameMatch",
+      "functionAnnotation": "@Test",
+      "functionDoc": "",
+      "diff": "",
+      "extendedDetails": {}
+    },
+    "085a1538fa20d8e48faad49eaffd697f024bf1af": {
+      "type": "Yintroduced",
+      "commitMessage": "CLI-252: LongOpt falsely detected as ambiguous. This closes #2 from github. Thanks to Simon Harrer.\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1684315 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/9/15 8:18 AM",
+      "commitName": "085a1538fa20d8e48faad49eaffd697f024bf1af",
+      "commitAuthor": "Benedikt Ritter",
+      "diff": "@@ -0,0 +1,4 @@\n+@Test\r\n+public void testExactOptionNameMatch() throws ParseException {\r\n+    new DefaultParser().parse(getOptions(), new String[] { \"--prefix\" });\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "@Test\r\npublic void testExactOptionNameMatch() throws ParseException {\r\n    new DefaultParser().parse(getOptions(), new String[] { \"--prefix\" });\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/bug/BugCLI252Test.java",
+      "functionStartLine": 9,
+      "functionName": "testExactOptionNameMatch",
+      "functionAnnotation": "@Test",
+      "functionDoc": ""
+    }
+  }
+}

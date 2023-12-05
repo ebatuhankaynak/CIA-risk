@@ -1,0 +1,38 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "HelpFormatterTest.java",
+  "functionName": "testPrintHelpNewlineFooter",
+  "functionId": "testPrintHelpNewlineFooter",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/HelpFormatterTest.java",
+  "functionAnnotation": "@Test",
+  "functionDoc": "",
+  "functionStartLine": 296,
+  "functionEndLine": 320,
+  "numCommitsSeen": 25,
+  "timeTaken": 75,
+  "changeHistory": [
+    "82403d07579665a0c194a638425ac24e08581ac2"
+  ],
+  "changeHistoryShort": {
+    "82403d07579665a0c194a638425ac24e08581ac2": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "82403d07579665a0c194a638425ac24e08581ac2": {
+      "type": "Yintroduced",
+      "commitMessage": "[CLI-287] Allow whitespace-only header and footer (#26)\n\n* [CLI-287] Allow whitespace-only header and footer\r\n\r\n* [CLI-287] Add tests",
+      "commitDate": "10/22/21 5:24 PM",
+      "commitName": "82403d07579665a0c194a638425ac24e08581ac2",
+      "commitAuthor": "Jakub Nowak",
+      "diff": "@@ -0,0 +1,12 @@\n+@Test\r\n+public void testPrintHelpNewlineFooter() {\r\n+    final HelpFormatter formatter \u003d new HelpFormatter();\r\n+    final ByteArrayOutputStream out \u003d new ByteArrayOutputStream();\r\n+    final PrintWriter pw \u003d new PrintWriter(out);\r\n+    final Options options \u003d new Options();\r\n+    options.addOption(\"a\", \"b\");\r\n+    formatter.printHelp(pw, 80, \"test\" + EOL, \"header\" + EOL, options, 0, 0, EOL);\r\n+    final String expected \u003d \"usage: test\" + EOL + \"header\" + EOL + \"-ab\" + EOL + EOL;\r\n+    pw.flush();\r\n+    assertEquals(\"footer newline\", expected, out.toString());\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "@Test\r\npublic void testPrintHelpNewlineFooter() {\r\n    final HelpFormatter formatter \u003d new HelpFormatter();\r\n    final ByteArrayOutputStream out \u003d new ByteArrayOutputStream();\r\n    final PrintWriter pw \u003d new PrintWriter(out);\r\n    final Options options \u003d new Options();\r\n    options.addOption(\"a\", \"b\");\r\n    formatter.printHelp(pw, 80, \"test\" + EOL, \"header\" + EOL, options, 0, 0, EOL);\r\n    final String expected \u003d \"usage: test\" + EOL + \"header\" + EOL + \"-ab\" + EOL + EOL;\r\n    pw.flush();\r\n    assertEquals(\"footer newline\", expected, out.toString());\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/HelpFormatterTest.java",
+      "functionStartLine": 297,
+      "functionName": "testPrintHelpNewlineFooter",
+      "functionAnnotation": "@Test",
+      "functionDoc": ""
+    }
+  }
+}

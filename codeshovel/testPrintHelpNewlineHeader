@@ -1,0 +1,61 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "HelpFormatterTest.java",
+  "functionName": "testPrintHelpNewlineHeader",
+  "functionId": "testPrintHelpNewlineHeader",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/HelpFormatterTest.java",
+  "functionAnnotation": "@Test",
+  "functionDoc": "",
+  "functionStartLine": 323,
+  "functionEndLine": 347,
+  "numCommitsSeen": 25,
+  "timeTaken": 49,
+  "changeHistory": [
+    "62b510f93283fee7225b56c95b6d017b8546367f",
+    "82403d07579665a0c194a638425ac24e08581ac2"
+  ],
+  "changeHistoryShort": {
+    "62b510f93283fee7225b56c95b6d017b8546367f": "Ybodychange",
+    "82403d07579665a0c194a638425ac24e08581ac2": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "62b510f93283fee7225b56c95b6d017b8546367f": {
+      "type": "Ybodychange",
+      "commitMessage": "Use final.\n",
+      "commitDate": "10/23/21 3:53 PM",
+      "commitName": "62b510f93283fee7225b56c95b6d017b8546367f",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "10/22/21 5:29 PM",
+      "commitNameOld": "897593c0f09ba8b87b3dd13dce00b0d5fbdf2c3f",
+      "commitAuthorOld": "Gary Gregory",
+      "daysBetweenCommits": 0.93,
+      "commitsBetweenForRepo": 5,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test\r\npublic void testPrintHelpNewlineHeader() {\r\n    final HelpFormatter formatter \u003d new HelpFormatter();\r\n    final ByteArrayOutputStream out \u003d new ByteArrayOutputStream();\r\n    final PrintWriter pw \u003d new PrintWriter(out);\r\n    final Options options \u003d new Options();\r\n    options.addOption(\"a\", \"b\");\r\n    formatter.printHelp(pw, 80, \"test\" + EOL, EOL, options, 0, 0, \"footer\" + EOL);\r\n    final String expected \u003d \"usage: test\" + EOL + EOL + \"-ab\" + EOL + \"footer\" + EOL;\r\n    pw.flush();\r\n    assertEquals(\"header newline\", expected, out.toString());\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/HelpFormatterTest.java",
+      "functionStartLine": 324,
+      "functionName": "testPrintHelpNewlineHeader",
+      "functionAnnotation": "@Test",
+      "functionDoc": "",
+      "diff": "@@ -1,12 +1,12 @@\n @Test\r\n public void testPrintHelpNewlineHeader() {\r\n     final HelpFormatter formatter \u003d new HelpFormatter();\r\n     final ByteArrayOutputStream out \u003d new ByteArrayOutputStream();\r\n     final PrintWriter pw \u003d new PrintWriter(out);\r\n     final Options options \u003d new Options();\r\n     options.addOption(\"a\", \"b\");\r\n     formatter.printHelp(pw, 80, \"test\" + EOL, EOL, options, 0, 0, \"footer\" + EOL);\r\n-    String expected \u003d \"usage: test\" + EOL + EOL + \"-ab\" + EOL + \"footer\" + EOL;\r\n+    final String expected \u003d \"usage: test\" + EOL + EOL + \"-ab\" + EOL + \"footer\" + EOL;\r\n     pw.flush();\r\n     assertEquals(\"header newline\", expected, out.toString());\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {}
+    },
+    "82403d07579665a0c194a638425ac24e08581ac2": {
+      "type": "Yintroduced",
+      "commitMessage": "[CLI-287] Allow whitespace-only header and footer (#26)\n\n* [CLI-287] Allow whitespace-only header and footer\r\n\r\n* [CLI-287] Add tests",
+      "commitDate": "10/22/21 5:24 PM",
+      "commitName": "82403d07579665a0c194a638425ac24e08581ac2",
+      "commitAuthor": "Jakub Nowak",
+      "diff": "@@ -0,0 +1,12 @@\n+@Test\r\n+public void testPrintHelpNewlineHeader() {\r\n+    final HelpFormatter formatter \u003d new HelpFormatter();\r\n+    final ByteArrayOutputStream out \u003d new ByteArrayOutputStream();\r\n+    final PrintWriter pw \u003d new PrintWriter(out);\r\n+    final Options options \u003d new Options();\r\n+    options.addOption(\"a\", \"b\");\r\n+    formatter.printHelp(pw, 80, \"test\" + EOL, EOL, options, 0, 0, \"footer\" + EOL);\r\n+    String expected \u003d \"usage: test\" + EOL + EOL + \"-ab\" + EOL + \"footer\" + EOL;\r\n+    pw.flush();\r\n+    assertEquals(\"header newline\", expected, out.toString());\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "@Test\r\npublic void testPrintHelpNewlineHeader() {\r\n    final HelpFormatter formatter \u003d new HelpFormatter();\r\n    final ByteArrayOutputStream out \u003d new ByteArrayOutputStream();\r\n    final PrintWriter pw \u003d new PrintWriter(out);\r\n    final Options options \u003d new Options();\r\n    options.addOption(\"a\", \"b\");\r\n    formatter.printHelp(pw, 80, \"test\" + EOL, EOL, options, 0, 0, \"footer\" + EOL);\r\n    String expected \u003d \"usage: test\" + EOL + EOL + \"-ab\" + EOL + \"footer\" + EOL;\r\n    pw.flush();\r\n    assertEquals(\"header newline\", expected, out.toString());\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/HelpFormatterTest.java",
+      "functionStartLine": 325,
+      "functionName": "testPrintHelpNewlineHeader",
+      "functionAnnotation": "@Test",
+      "functionDoc": ""
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "AbstractParserTestCase.java",
+  "functionName": "testAmbiguousArgParsing",
+  "functionId": "testAmbiguousArgParsing",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/AbstractParserTestCase.java",
+  "functionAnnotation": "@Test(expected \u003d UnrecognizedOptionException.class)",
+  "functionDoc": "",
+  "functionStartLine": 64,
+  "functionEndLine": 69,
+  "numCommitsSeen": 4,
+  "timeTaken": 48,
+  "changeHistory": [
+    "53972781993e79eb48f17cb67ac463ba7f1bc4c8"
+  ],
+  "changeHistoryShort": {
+    "53972781993e79eb48f17cb67ac463ba7f1bc4c8": "Yformatchange"
+  },
+  "changeHistoryDetails": {
+    "53972781993e79eb48f17cb67ac463ba7f1bc4c8": {
+      "type": "Yformatchange",
+      "commitMessage": "Use better JRE API\n",
+      "commitDate": "9/16/23 12:45 AM",
+      "commitName": "53972781993e79eb48f17cb67ac463ba7f1bc4c8",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "8/19/23 4:37 PM",
+      "commitNameOld": "0374deecea322be7500dd7164106b1bfe1dd0ce9",
+      "commitAuthorOld": "",
+      "daysBetweenCommits": 27.34,
+      "commitsBetweenForRepo": 12,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test(expected \u003d UnrecognizedOptionException.class)\r\npublic void testAmbiguousArgParsing() throws Exception {\r\n    final String[] args \u003d { \"-\u003d-\" };\r\n    final Options options \u003d new Options();\r\n    final CommandLine cl \u003d parser.parse(options, args);\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/AbstractParserTestCase.java",
+      "functionStartLine": 1026,
+      "functionName": "testAmbiguousArgParsing",
+      "functionAnnotation": "@Test(expected \u003d UnrecognizedOptionException.class)",
+      "functionDoc": "",
+      "diff": "",
+      "extendedDetails": {}
+    }
+  }
+}

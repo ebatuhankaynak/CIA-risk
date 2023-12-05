@@ -1,0 +1,87 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "DefaultParser.java",
+  "functionName": "stripLeadingAndTrailingQuotesDefaultOn",
+  "functionId": "stripLeadingAndTrailingQuotesDefaultOn___token-String(modifiers-final)",
+  "sourceFilePath": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+  "functionAnnotation": "",
+  "functionDoc": "Strips balanced leading and trailing quotes if the stripLeadingAndTrailingQuotes is set\r\nIf stripLeadingAndTrailingQuotes is null, then do not strip\r\n\r\n@param token a string\r\n@return token with the quotes stripped (if set)\r\n",
+  "functionStartLine": 748,
+  "functionEndLine": 753,
+  "numCommitsSeen": 44,
+  "timeTaken": 69,
+  "changeHistory": [
+    "ac96d6242fa9c88f7fad3b3a08b8a5f11fa2b979",
+    "7b52ba80498be2c019d7b4cba9e1af9bce2b7e2e",
+    "44173949e8165537b201d4efd024e31e6e8b06eb"
+  ],
+  "changeHistoryShort": {
+    "ac96d6242fa9c88f7fad3b3a08b8a5f11fa2b979": "Ybodychange",
+    "7b52ba80498be2c019d7b4cba9e1af9bce2b7e2e": "Ydocchange",
+    "44173949e8165537b201d4efd024e31e6e8b06eb": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "ac96d6242fa9c88f7fad3b3a08b8a5f11fa2b979": {
+      "type": "Ybodychange",
+      "commitMessage": "No need to nest.\n",
+      "commitDate": "10/17/21 5:42 PM",
+      "commitName": "ac96d6242fa9c88f7fad3b3a08b8a5f11fa2b979",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "10/17/21 5:42 PM",
+      "commitNameOld": "7b52ba80498be2c019d7b4cba9e1af9bce2b7e2e",
+      "commitAuthorOld": "Gary Gregory",
+      "daysBetweenCommits": 0.0,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "private String stripLeadingAndTrailingQuotesDefaultOn(final String token) {\r\n    if (stripLeadingAndTrailingQuotes \u003d\u003d null || stripLeadingAndTrailingQuotes) {\r\n        return Util.stripLeadingAndTrailingQuotes(token);\r\n    }\r\n    return token;\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+      "functionStartLine": 670,
+      "functionName": "stripLeadingAndTrailingQuotesDefaultOn",
+      "functionAnnotation": "",
+      "functionDoc": "Strips balanced leading and trailing quotes if the stripLeadingAndTrailingQuotes is set\r\nIf stripLeadingAndTrailingQuotes is null, then do not strip\r\n\r\n@param token a string\r\n@return token with the quotes stripped (if set)\r\n",
+      "diff": "@@ -1,7 +1,6 @@\n private String stripLeadingAndTrailingQuotesDefaultOn(final String token) {\r\n     if (stripLeadingAndTrailingQuotes \u003d\u003d null || stripLeadingAndTrailingQuotes) {\r\n         return Util.stripLeadingAndTrailingQuotes(token);\r\n-    } else {\r\n-        return token;\r\n     }\r\n+    return token;\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {}
+    },
+    "7b52ba80498be2c019d7b4cba9e1af9bce2b7e2e": {
+      "type": "Ydocchange",
+      "commitMessage": "Javadoc.\n",
+      "commitDate": "10/17/21 5:42 PM",
+      "commitName": "7b52ba80498be2c019d7b4cba9e1af9bce2b7e2e",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "10/17/21 5:37 PM",
+      "commitNameOld": "44173949e8165537b201d4efd024e31e6e8b06eb",
+      "commitAuthorOld": "Istvan Toth",
+      "daysBetweenCommits": 0.0,
+      "commitsBetweenForRepo": 2,
+      "commitsBetweenForFile": 1,
+      "actualSource": "private String stripLeadingAndTrailingQuotesDefaultOn(final String token) {\r\n    if (stripLeadingAndTrailingQuotes \u003d\u003d null || stripLeadingAndTrailingQuotes) {\r\n        return Util.stripLeadingAndTrailingQuotes(token);\r\n    } else {\r\n        return token;\r\n    }\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+      "functionStartLine": 671,
+      "functionName": "stripLeadingAndTrailingQuotesDefaultOn",
+      "functionAnnotation": "",
+      "functionDoc": "Strips balanced leading and trailing quotes if the stripLeadingAndTrailingQuotes is set\r\nIf stripLeadingAndTrailingQuotes is null, then do not strip\r\n\r\n@param token a string\r\n@return token with the quotes stripped (if set)\r\n",
+      "diff": "",
+      "extendedDetails": {
+        "oldValue": "Strip balanced leading and trailing quotes if the stripLeadingAndTrailingQuotes is set\r\nIf stripLeadingAndTrailingQuotes is null, then do not strip\r\n\r\n@param token a string\r\n@return token with the quotes stripped (if set)\r\n",
+        "newValue": "Strips balanced leading and trailing quotes if the stripLeadingAndTrailingQuotes is set\r\nIf stripLeadingAndTrailingQuotes is null, then do not strip\r\n\r\n@param token a string\r\n@return token with the quotes stripped (if set)\r\n"
+      }
+    },
+    "44173949e8165537b201d4efd024e31e6e8b06eb": {
+      "type": "Yintroduced",
+      "commitMessage": "CLI-254: \"test\" gets parsed as test, quotes die :-( (#58)\n\n* CLI-254 \"test\" gets parsed as test, quotes die :-(\r\n\r\n* address review comments, improve backwards compatibility",
+      "commitDate": "10/17/21 5:37 PM",
+      "commitName": "44173949e8165537b201d4efd024e31e6e8b06eb",
+      "commitAuthor": "Istvan Toth",
+      "diff": "@@ -0,0 +1,7 @@\n+private String stripLeadingAndTrailingQuotesDefaultOn(final String token) {\r\n+    if (stripLeadingAndTrailingQuotes \u003d\u003d null || stripLeadingAndTrailingQuotes) {\r\n+        return Util.stripLeadingAndTrailingQuotes(token);\r\n+    } else {\r\n+        return token;\r\n+    }\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "private String stripLeadingAndTrailingQuotesDefaultOn(final String token) {\r\n    if (stripLeadingAndTrailingQuotes \u003d\u003d null || stripLeadingAndTrailingQuotes) {\r\n        return Util.stripLeadingAndTrailingQuotes(token);\r\n    } else {\r\n        return token;\r\n    }\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+      "functionStartLine": 670,
+      "functionName": "stripLeadingAndTrailingQuotesDefaultOn",
+      "functionAnnotation": "",
+      "functionDoc": "Strip balanced leading and trailing quotes if the stripLeadingAndTrailingQuotes is set\r\nIf stripLeadingAndTrailingQuotes is null, then do not strip\r\n\r\n@param token a string\r\n@return token with the quotes stripped (if set)\r\n"
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "BugCLI252Test.java",
+  "functionName": "testAmbiquousOptionName",
+  "functionId": "testAmbiquousOptionName",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/bug/BugCLI252Test.java",
+  "functionAnnotation": "@Test",
+  "functionDoc": "",
+  "functionStartLine": 39,
+  "functionEndLine": 43,
+  "numCommitsSeen": 9,
+  "timeTaken": 149,
+  "changeHistory": [
+    "6f82a1f0270b6b78a28491ce08fdf9206ce8d984",
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df",
+    "085a1538fa20d8e48faad49eaffd697f024bf1af"
+  ],
+  "changeHistoryShort": {
+    "6f82a1f0270b6b78a28491ce08fdf9206ce8d984": "Ymultichange(Yexceptionschange,Ybodychange,Yannotationchange)",
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df": "Yformatchange",
+    "085a1538fa20d8e48faad49eaffd697f024bf1af": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "6f82a1f0270b6b78a28491ce08fdf9206ce8d984": {
+      "type": "Ymultichange(Yexceptionschange,Ybodychange,Yannotationchange)",
+      "commitMessage": "JUnit5 assertThrows BugCLI252Test (#139)\n\n* JUnit5 Api Dependency\r\n\r\n* JUnit5 assertThrows BugCLI252Test",
+      "commitDate": "11/12/22 12:28 AM",
+      "commitName": "6f82a1f0270b6b78a28491ce08fdf9206ce8d984",
+      "commitAuthor": "John Patrick",
+      "subchanges": [
+        {
+          "type": "Yexceptionschange",
+          "commitMessage": "JUnit5 assertThrows BugCLI252Test (#139)\n\n* JUnit5 Api Dependency\r\n\r\n* JUnit5 assertThrows BugCLI252Test",
+          "commitDate": "11/12/22 12:28 AM",
+          "commitName": "6f82a1f0270b6b78a28491ce08fdf9206ce8d984",
+          "commitAuthor": "John Patrick",
+          "commitDateOld": "10/2/21 11:07 PM",
+          "commitNameOld": "4e8b3a2584ddac7411e20cdaca75b160787d7fa9",
+          "commitAuthorOld": "Gary Gregory",
+          "daysBetweenCommits": 405.06,
+          "commitsBetweenForRepo": 202,
+          "commitsBetweenForFile": 1,
+          "actualSource": "@Test\r\npublic void testAmbiquousOptionName() {\r\n    assertThrows(AmbiguousOptionException.class, () -\u003e new DefaultParser().parse(getOptions(), new String[] { \"--pref\" }));\r\n}",
+          "path": "src/test/java/org/apache/commons/cli/bug/BugCLI252Test.java",
+          "functionStartLine": 39,
+          "functionName": "testAmbiquousOptionName",
+          "functionAnnotation": "@Test",
+          "functionDoc": "",
+          "diff": "@@ -1,4 +1,4 @@\n-@Test(expected \u003d AmbiguousOptionException.class)\r\n-public void testAmbiquousOptionName() throws ParseException {\r\n-    new DefaultParser().parse(getOptions(), new String[] { \"--pref\" });\r\n+@Test\r\n+public void testAmbiquousOptionName() {\r\n+    assertThrows(AmbiguousOptionException.class, () -\u003e new DefaultParser().parse(getOptions(), new String[] { \"--pref\" }));\r\n }\n\\ No newline at end of file\n",
+          "extendedDetails": {
+            "oldValue": "[ParseException]",
+            "newValue": "[]"
+          }
+        },
+        {
+          "type": "Ybodychange",
+          "commitMessage": "JUnit5 assertThrows BugCLI252Test (#139)\n\n* JUnit5 Api Dependency\r\n\r\n* JUnit5 assertThrows BugCLI252Test",
+          "commitDate": "11/12/22 12:28 AM",
+          "commitName": "6f82a1f0270b6b78a28491ce08fdf9206ce8d984",
+          "commitAuthor": "John Patrick",
+          "commitDateOld": "10/2/21 11:07 PM",
+          "commitNameOld": "4e8b3a2584ddac7411e20cdaca75b160787d7fa9",
+          "commitAuthorOld": "Gary Gregory",
+          "daysBetweenCommits": 405.06,
+          "commitsBetweenForRepo": 202,
+          "commitsBetweenForFile": 1,
+          "actualSource": "@Test\r\npublic void testAmbiquousOptionName() {\r\n    assertThrows(AmbiguousOptionException.class, () -\u003e new DefaultParser().parse(getOptions(), new String[] { \"--pref\" }));\r\n}",
+          "path": "src/test/java/org/apache/commons/cli/bug/BugCLI252Test.java",
+          "functionStartLine": 39,
+          "functionName": "testAmbiquousOptionName",
+          "functionAnnotation": "@Test",
+          "functionDoc": "",
+          "diff": "@@ -1,4 +1,4 @@\n-@Test(expected \u003d AmbiguousOptionException.class)\r\n-public void testAmbiquousOptionName() throws ParseException {\r\n-    new DefaultParser().parse(getOptions(), new String[] { \"--pref\" });\r\n+@Test\r\n+public void testAmbiquousOptionName() {\r\n+    assertThrows(AmbiguousOptionException.class, () -\u003e new DefaultParser().parse(getOptions(), new String[] { \"--pref\" }));\r\n }\n\\ No newline at end of file\n",
+          "extendedDetails": {}
+        },
+        {
+          "type": "Yannotationchange",
+          "commitMessage": "JUnit5 assertThrows BugCLI252Test (#139)\n\n* JUnit5 Api Dependency\r\n\r\n* JUnit5 assertThrows BugCLI252Test",
+          "commitDate": "11/12/22 12:28 AM",
+          "commitName": "6f82a1f0270b6b78a28491ce08fdf9206ce8d984",
+          "commitAuthor": "John Patrick",
+          "commitDateOld": "10/2/21 11:07 PM",
+          "commitNameOld": "4e8b3a2584ddac7411e20cdaca75b160787d7fa9",
+          "commitAuthorOld": "Gary Gregory",
+          "daysBetweenCommits": 405.06,
+          "commitsBetweenForRepo": 202,
+          "commitsBetweenForFile": 1,
+          "actualSource": "@Test\r\npublic void testAmbiquousOptionName() {\r\n    assertThrows(AmbiguousOptionException.class, () -\u003e new DefaultParser().parse(getOptions(), new String[] { \"--pref\" }));\r\n}",
+          "path": "src/test/java/org/apache/commons/cli/bug/BugCLI252Test.java",
+          "functionStartLine": 39,
+          "functionName": "testAmbiquousOptionName",
+          "functionAnnotation": "@Test",
+          "functionDoc": "",
+          "diff": "@@ -1,4 +1,4 @@\n-@Test(expected \u003d AmbiguousOptionException.class)\r\n-public void testAmbiquousOptionName() throws ParseException {\r\n-    new DefaultParser().parse(getOptions(), new String[] { \"--pref\" });\r\n+@Test\r\n+public void testAmbiquousOptionName() {\r\n+    assertThrows(AmbiguousOptionException.class, () -\u003e new DefaultParser().parse(getOptions(), new String[] { \"--pref\" }));\r\n }\n\\ No newline at end of file\n",
+          "extendedDetails": {
+            "oldValue": "@Test(expected \u003d AmbiguousOptionException.class)",
+            "newValue": "@Test"
+          }
+        }
+      ]
+    },
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df": {
+      "type": "Yformatchange",
+      "commitMessage": "Clean ups.\n\n- maven-checkstyle-plugin 3.1.1 -\u003e 3.1.2.\n- checkstyle -\u003e 9.0\n- Updates for 21st century.\n- No need to nest else clause.\n- Use simple array declarations.\n- Use valueOf instead of new for Numbers.\n- Consistent formatting.\n- Remove some inline comments //-----...\n",
+      "commitDate": "10/2/21 11:04 PM",
+      "commitName": "bc0edc47dbf47cdaa3485cfb724982f377c900df",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "6/5/17 7:37 PM",
+      "commitNameOld": "357a8b0b8f1090db29e0d541a9419f570a78457b",
+      "commitAuthorOld": "Gary D. Gregory",
+      "daysBetweenCommits": 1580.14,
+      "commitsBetweenForRepo": 149,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test(expected \u003d AmbiguousOptionException.class)\r\npublic void testAmbiquousOptionName() throws ParseException {\r\n    new DefaultParser().parse(getOptions(), new String[] { \"--pref\" });\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/bug/BugCLI252Test.java",
+      "functionStartLine": 35,
+      "functionName": "testAmbiquousOptionName",
+      "functionAnnotation": "@Test(expected \u003d AmbiguousOptionException.class)",
+      "functionDoc": "",
+      "diff": "",
+      "extendedDetails": {}
+    },
+    "085a1538fa20d8e48faad49eaffd697f024bf1af": {
+      "type": "Yintroduced",
+      "commitMessage": "CLI-252: LongOpt falsely detected as ambiguous. This closes #2 from github. Thanks to Simon Harrer.\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1684315 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/9/15 8:18 AM",
+      "commitName": "085a1538fa20d8e48faad49eaffd697f024bf1af",
+      "commitAuthor": "Benedikt Ritter",
+      "diff": "@@ -0,0 +1,4 @@\n+@Test(expected \u003d AmbiguousOptionException.class)\r\n+public void testAmbiquousOptionName() throws ParseException {\r\n+    new DefaultParser().parse(getOptions(), new String[] { \"--pref\" });\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "@Test(expected \u003d AmbiguousOptionException.class)\r\npublic void testAmbiquousOptionName() throws ParseException {\r\n    new DefaultParser().parse(getOptions(), new String[] { \"--pref\" });\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/bug/BugCLI252Test.java",
+      "functionStartLine": 14,
+      "functionName": "testAmbiquousOptionName",
+      "functionAnnotation": "@Test(expected \u003d AmbiguousOptionException.class)",
+      "functionDoc": ""
+    }
+  }
+}

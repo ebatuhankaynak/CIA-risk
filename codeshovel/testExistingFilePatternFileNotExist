@@ -1,0 +1,61 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "PatternOptionBuilderTest.java",
+  "functionName": "testExistingFilePatternFileNotExist",
+  "functionId": "testExistingFilePatternFileNotExist",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/PatternOptionBuilderTest.java",
+  "functionAnnotation": "@Test",
+  "functionDoc": "",
+  "functionStartLine": 70,
+  "functionEndLine": 76,
+  "numCommitsSeen": 19,
+  "timeTaken": 52,
+  "changeHistory": [
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df",
+    "f4a28c0463a414464ebe214a7790fde0b0069e3e"
+  ],
+  "changeHistoryShort": {
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df": "Yformatchange",
+    "f4a28c0463a414464ebe214a7790fde0b0069e3e": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df": {
+      "type": "Yformatchange",
+      "commitMessage": "Clean ups.\n\n- maven-checkstyle-plugin 3.1.1 -\u003e 3.1.2.\n- checkstyle -\u003e 9.0\n- Updates for 21st century.\n- No need to nest else clause.\n- Use simple array declarations.\n- Use valueOf instead of new for Numbers.\n- Consistent formatting.\n- Remove some inline comments //-----...\n",
+      "commitDate": "10/2/21 11:04 PM",
+      "commitName": "bc0edc47dbf47cdaa3485cfb724982f377c900df",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "12/28/20 6:44 PM",
+      "commitNameOld": "c67275279176504a6f5fc556cfa247e1df02a580",
+      "commitAuthorOld": "Arturo Bernal",
+      "daysBetweenCommits": 278.18,
+      "commitsBetweenForRepo": 38,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test\r\npublic void testExistingFilePatternFileNotExist() throws Exception {\r\n    final Options options \u003d PatternOptionBuilder.parsePattern(\"f\u003c\");\r\n    final CommandLineParser parser \u003d new PosixParser();\r\n    final CommandLine line \u003d parser.parse(options, new String[] { \"-f\", \"non-existing.file\" });\r\n    assertNull(\"option f parsed\", line.getOptionObject(\"f\"));\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/PatternOptionBuilderTest.java",
+      "functionStartLine": 167,
+      "functionName": "testExistingFilePatternFileNotExist",
+      "functionAnnotation": "@Test",
+      "functionDoc": "",
+      "diff": "",
+      "extendedDetails": {}
+    },
+    "f4a28c0463a414464ebe214a7790fde0b0069e3e": {
+      "type": "Yintroduced",
+      "commitMessage": "separate testcases\n",
+      "commitDate": "6/13/17 2:58 PM",
+      "commitName": "f4a28c0463a414464ebe214a7790fde0b0069e3e",
+      "commitAuthor": "Béla Schaum",
+      "diff": "@@ -0,0 +1,7 @@\n+@Test\r\n+public void testExistingFilePatternFileNotExist() throws Exception {\r\n+    final Options options \u003d PatternOptionBuilder.parsePattern(\"f\u003c\");\r\n+    final CommandLineParser parser \u003d new PosixParser();\r\n+    final CommandLine line \u003d parser.parse(options, new String[] { \"-f\", \"non-existing.file\" });\r\n+    assertNull(\"option f parsed\", line.getOptionObject(\"f\"));\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "@Test\r\npublic void testExistingFilePatternFileNotExist() throws Exception {\r\n    final Options options \u003d PatternOptionBuilder.parsePattern(\"f\u003c\");\r\n    final CommandLineParser parser \u003d new PosixParser();\r\n    final CommandLine line \u003d parser.parse(options, new String[] { \"-f\", \"non-existing.file\" });\r\n    assertNull(\"option f parsed\", line.getOptionObject(\"f\"));\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/PatternOptionBuilderTest.java",
+      "functionStartLine": 175,
+      "functionName": "testExistingFilePatternFileNotExist",
+      "functionAnnotation": "@Test",
+      "functionDoc": ""
+    }
+  }
+}

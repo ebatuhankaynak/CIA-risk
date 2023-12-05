@@ -1,0 +1,61 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "ValueTest.java",
+  "functionName": "testShortWithArgWithOption",
+  "functionId": "testShortWithArgWithOption",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/ValueTest.java",
+  "functionAnnotation": "@Test",
+  "functionDoc": "",
+  "functionStartLine": 291,
+  "functionEndLine": 295,
+  "numCommitsSeen": 11,
+  "timeTaken": 61,
+  "changeHistory": [
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df",
+    "269eae18a911f792895d0402f5dd4e7913410523"
+  ],
+  "changeHistoryShort": {
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df": "Ybodychange",
+    "269eae18a911f792895d0402f5dd4e7913410523": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df": {
+      "type": "Ybodychange",
+      "commitMessage": "Clean ups.\n\n- maven-checkstyle-plugin 3.1.1 -\u003e 3.1.2.\n- checkstyle -\u003e 9.0\n- Updates for 21st century.\n- No need to nest else clause.\n- Use simple array declarations.\n- Use valueOf instead of new for Numbers.\n- Consistent formatting.\n- Remove some inline comments //-----...\n",
+      "commitDate": "10/2/21 11:04 PM",
+      "commitName": "bc0edc47dbf47cdaa3485cfb724982f377c900df",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "12/28/20 6:44 PM",
+      "commitNameOld": "c67275279176504a6f5fc556cfa247e1df02a580",
+      "commitAuthorOld": "Arturo Bernal",
+      "daysBetweenCommits": 278.18,
+      "commitsBetweenForRepo": 38,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test\r\npublic void testShortWithArgWithOption() {\r\n    assertTrue(cl.hasOption(opts.getOption(\"b\")));\r\n    assertNotNull(cl.getOptionValue(opts.getOption(\"b\")));\r\n    assertEquals(cl.getOptionValue(opts.getOption(\"b\")), \"foo\");\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/ValueTest.java",
+      "functionStartLine": 73,
+      "functionName": "testShortWithArgWithOption",
+      "functionAnnotation": "@Test",
+      "functionDoc": "",
+      "diff": "@@ -1,6 +1,6 @@\n @Test\r\n public void testShortWithArgWithOption() {\r\n-    assertTrue(_cl.hasOption(opts.getOption(\"b\")));\r\n-    assertNotNull(_cl.getOptionValue(opts.getOption(\"b\")));\r\n-    assertEquals(_cl.getOptionValue(opts.getOption(\"b\")), \"foo\");\r\n+    assertTrue(cl.hasOption(opts.getOption(\"b\")));\r\n+    assertNotNull(cl.getOptionValue(opts.getOption(\"b\")));\r\n+    assertEquals(cl.getOptionValue(opts.getOption(\"b\")), \"foo\");\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {}
+    },
+    "269eae18a911f792895d0402f5dd4e7913410523": {
+      "type": "Yintroduced",
+      "commitMessage": "CLI-271: CommandLine.getXXX and CommandLine.hasXXX should accept an Option as a\nparameter. Thanks to Christoph Läubrich. This also fixes #9 from GitHub\n\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1788678 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "3/25/17 9:32 PM",
+      "commitName": "269eae18a911f792895d0402f5dd4e7913410523",
+      "commitAuthor": "Benedikt Ritter",
+      "diff": "@@ -0,0 +1,6 @@\n+@Test\r\n+public void testShortWithArgWithOption() {\r\n+    assertTrue(_cl.hasOption(opts.getOption(\"b\")));\r\n+    assertNotNull(_cl.getOptionValue(opts.getOption(\"b\")));\r\n+    assertEquals(_cl.getOptionValue(opts.getOption(\"b\")), \"foo\");\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "@Test\r\npublic void testShortWithArgWithOption() {\r\n    assertTrue(_cl.hasOption(opts.getOption(\"b\")));\r\n    assertNotNull(_cl.getOptionValue(opts.getOption(\"b\")));\r\n    assertEquals(_cl.getOptionValue(opts.getOption(\"b\")), \"foo\");\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/ValueTest.java",
+      "functionStartLine": 82,
+      "functionName": "testShortWithArgWithOption",
+      "functionAnnotation": "@Test",
+      "functionDoc": ""
+    }
+  }
+}

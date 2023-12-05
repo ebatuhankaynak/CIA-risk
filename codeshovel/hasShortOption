@@ -1,0 +1,64 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "Options.java",
+  "functionName": "hasShortOption",
+  "functionId": "hasShortOption___opt-String",
+  "sourceFilePath": "src/main/java/org/apache/commons/cli/Options.java",
+  "functionAnnotation": "",
+  "functionDoc": "Returns whether the named {@link Option} is a member of this {@link Options}.\r\n\r\n@param opt short name of the {@link Option}\r\n@return true if the named {@link Option} is a member of this {@link Options}\r\n@since 1.3\r\n",
+  "functionStartLine": 301,
+  "functionEndLine": 305,
+  "numCommitsSeen": 63,
+  "timeTaken": 57,
+  "changeHistory": [
+    "1596f3bbe57986361da4ac1a23634dd5b00d10df",
+    "f43698527ef2b5ba15fe85d46d2d505418f68243"
+  ],
+  "changeHistoryShort": {
+    "1596f3bbe57986361da4ac1a23634dd5b00d10df": "Yfilerename",
+    "f43698527ef2b5ba15fe85d46d2d505418f68243": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "1596f3bbe57986361da4ac1a23634dd5b00d10df": {
+      "type": "Yfilerename",
+      "commitMessage": "Switched to the Maven 2 default directory layout (part 3)\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@955173 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/16/10 12:45 PM",
+      "commitName": "1596f3bbe57986361da4ac1a23634dd5b00d10df",
+      "commitAuthor": "Emmanuel Bourg",
+      "commitDateOld": "6/16/10 12:42 PM",
+      "commitNameOld": "406a35f1a128944b7c51dcbc4a1f04c3f8bec3e6",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 0.0,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public boolean hasShortOption(String opt) {\r\n    opt \u003d Util.stripLeadingHyphens(opt);\r\n    return shortOpts.containsKey(opt);\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/Options.java",
+      "functionStartLine": 276,
+      "functionName": "hasShortOption",
+      "functionAnnotation": "",
+      "functionDoc": "Returns whether the named {@link Option} is a member of this {@link Options}.\r\n\r\n@param opt short name of the {@link Option}\r\n@return true if the named {@link Option} is a member of this {@link Options}\r\n@since 1.3\r\n",
+      "diff": "",
+      "extendedDetails": {
+        "oldPath": "src/java/org/apache/commons/cli/Options.java",
+        "newPath": "src/main/java/org/apache/commons/cli/Options.java"
+      }
+    },
+    "f43698527ef2b5ba15fe85d46d2d505418f68243": {
+      "type": "Yintroduced",
+      "commitMessage": "New unified parser (CLI-181, also fixes CLI-160, CLI-161, CLI-167, CLI-184)\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@780264 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "5/30/09 4:43 PM",
+      "commitName": "f43698527ef2b5ba15fe85d46d2d505418f68243",
+      "commitAuthor": "Emmanuel Bourg",
+      "diff": "@@ -0,0 +1,4 @@\n+public boolean hasShortOption(String opt) {\r\n+    opt \u003d Util.stripLeadingHyphens(opt);\r\n+    return shortOpts.containsKey(opt);\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "public boolean hasShortOption(String opt) {\r\n    opt \u003d Util.stripLeadingHyphens(opt);\r\n    return shortOpts.containsKey(opt);\r\n}",
+      "path": "src/java/org/apache/commons/cli/Options.java",
+      "functionStartLine": 276,
+      "functionName": "hasShortOption",
+      "functionAnnotation": "",
+      "functionDoc": "Returns whether the named {@link Option} is a member of this {@link Options}.\r\n\r\n@param opt short name of the {@link Option}\r\n@return true if the named {@link Option} is a member of this {@link Options}\r\n@since 1.3\r\n"
+    }
+  }
+}

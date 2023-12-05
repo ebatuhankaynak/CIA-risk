@@ -1,0 +1,113 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "UtilTest.java",
+  "functionName": "testStripLeadingAndTrailingQuotes",
+  "functionId": "testStripLeadingAndTrailingQuotes",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/UtilTest.java",
+  "functionAnnotation": "@Test",
+  "functionDoc": "",
+  "functionStartLine": 27,
+  "functionEndLine": 33,
+  "numCommitsSeen": 10,
+  "timeTaken": 76,
+  "changeHistory": [
+    "60835e2f29d4ec09eead7789405d99f92c36a29e",
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0",
+    "20002f7f4e971349a1c95dd3b05846c5b824b65c",
+    "92e4871c2ccc39882a1e522bbe8b226ca02752a5"
+  ],
+  "changeHistoryShort": {
+    "60835e2f29d4ec09eead7789405d99f92c36a29e": "Yannotationchange",
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0": "Yfilerename",
+    "20002f7f4e971349a1c95dd3b05846c5b824b65c": "Ybodychange",
+    "92e4871c2ccc39882a1e522bbe8b226ca02752a5": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "60835e2f29d4ec09eead7789405d99f92c36a29e": {
+      "type": "Yannotationchange",
+      "commitMessage": "[CLI-227] Convert unit tests to junit 4, upgrade junit to 4.11, move authors to pom.xml.\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1442904 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "2/6/13 12:57 PM",
+      "commitName": "60835e2f29d4ec09eead7789405d99f92c36a29e",
+      "commitAuthor": "Thomas Neidhart",
+      "commitDateOld": "6/16/10 12:41 PM",
+      "commitNameOld": "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 966.05,
+      "commitsBetweenForRepo": 109,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test\r\npublic void testStripLeadingAndTrailingQuotes() {\r\n    assertEquals(\"foo\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\"\"));\r\n    assertEquals(\"foo \\\"bar\\\"\", Util.stripLeadingAndTrailingQuotes(\"foo \\\"bar\\\"\"));\r\n    assertEquals(\"\\\"foo\\\" bar\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\" bar\"));\r\n    assertEquals(\"\\\"foo\\\" and \\\"bar\\\"\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\" and \\\"bar\\\"\"));\r\n    assertEquals(\"\\\"\", Util.stripLeadingAndTrailingQuotes(\"\\\"\"));\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/UtilTest.java",
+      "functionStartLine": 37,
+      "functionName": "testStripLeadingAndTrailingQuotes",
+      "functionAnnotation": "@Test",
+      "functionDoc": "",
+      "diff": "@@ -1,7 +1,8 @@\n+@Test\r\n public void testStripLeadingAndTrailingQuotes() {\r\n     assertEquals(\"foo\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\"\"));\r\n     assertEquals(\"foo \\\"bar\\\"\", Util.stripLeadingAndTrailingQuotes(\"foo \\\"bar\\\"\"));\r\n     assertEquals(\"\\\"foo\\\" bar\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\" bar\"));\r\n     assertEquals(\"\\\"foo\\\" and \\\"bar\\\"\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\" and \\\"bar\\\"\"));\r\n     assertEquals(\"\\\"\", Util.stripLeadingAndTrailingQuotes(\"\\\"\"));\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {
+        "oldValue": "",
+        "newValue": "@Test"
+      }
+    },
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0": {
+      "type": "Yfilerename",
+      "commitMessage": "Switched to the Maven 2 default directory layout (part 1)\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@955169 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/16/10 12:41 PM",
+      "commitName": "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0",
+      "commitAuthor": "Emmanuel Bourg",
+      "commitDateOld": "6/16/10 12:36 PM",
+      "commitNameOld": "106f3b8dd48d32cbfcba4a42e1161505c2e3cac6",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 0.0,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public void testStripLeadingAndTrailingQuotes() {\r\n    assertEquals(\"foo\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\"\"));\r\n    assertEquals(\"foo \\\"bar\\\"\", Util.stripLeadingAndTrailingQuotes(\"foo \\\"bar\\\"\"));\r\n    assertEquals(\"\\\"foo\\\" bar\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\" bar\"));\r\n    assertEquals(\"\\\"foo\\\" and \\\"bar\\\"\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\" and \\\"bar\\\"\"));\r\n    assertEquals(\"\\\"\", Util.stripLeadingAndTrailingQuotes(\"\\\"\"));\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/UtilTest.java",
+      "functionStartLine": 35,
+      "functionName": "testStripLeadingAndTrailingQuotes",
+      "functionAnnotation": "",
+      "functionDoc": "",
+      "diff": "",
+      "extendedDetails": {
+        "oldPath": "src/test/org/apache/commons/cli/UtilTest.java",
+        "newPath": "src/test/java/org/apache/commons/cli/UtilTest.java"
+      }
+    },
+    "20002f7f4e971349a1c95dd3b05846c5b824b65c": {
+      "type": "Ybodychange",
+      "commitMessage": "Restricted quote stripping to values containing exactly 2 quotes, one at the beginning and one at the end (CLI-185)\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@955156 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/16/10 11:35 AM",
+      "commitName": "20002f7f4e971349a1c95dd3b05846c5b824b65c",
+      "commitAuthor": "Emmanuel Bourg",
+      "commitDateOld": "7/29/08 11:13 AM",
+      "commitNameOld": "147df44faa4eb12ffd4a0063fc3284f784ea67c8",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 687.01,
+      "commitsBetweenForRepo": 132,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public void testStripLeadingAndTrailingQuotes() {\r\n    assertEquals(\"foo\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\"\"));\r\n    assertEquals(\"foo \\\"bar\\\"\", Util.stripLeadingAndTrailingQuotes(\"foo \\\"bar\\\"\"));\r\n    assertEquals(\"\\\"foo\\\" bar\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\" bar\"));\r\n    assertEquals(\"\\\"foo\\\" and \\\"bar\\\"\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\" and \\\"bar\\\"\"));\r\n    assertEquals(\"\\\"\", Util.stripLeadingAndTrailingQuotes(\"\\\"\"));\r\n}",
+      "path": "src/test/org/apache/commons/cli/UtilTest.java",
+      "functionStartLine": 35,
+      "functionName": "testStripLeadingAndTrailingQuotes",
+      "functionAnnotation": "",
+      "functionDoc": "",
+      "diff": "@@ -1,3 +1,7 @@\n public void testStripLeadingAndTrailingQuotes() {\r\n     assertEquals(\"foo\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\"\"));\r\n+    assertEquals(\"foo \\\"bar\\\"\", Util.stripLeadingAndTrailingQuotes(\"foo \\\"bar\\\"\"));\r\n+    assertEquals(\"\\\"foo\\\" bar\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\" bar\"));\r\n+    assertEquals(\"\\\"foo\\\" and \\\"bar\\\"\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\" and \\\"bar\\\"\"));\r\n+    assertEquals(\"\\\"\", Util.stripLeadingAndTrailingQuotes(\"\\\"\"));\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {}
+    },
+    "92e4871c2ccc39882a1e522bbe8b226ca02752a5": {
+      "type": "Yintroduced",
+      "commitMessage": "Added a unit test for Util.stripLeadingAndTrailingQuotes\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/branches/cli-1.x@661586 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "5/30/08 11:13 AM",
+      "commitName": "92e4871c2ccc39882a1e522bbe8b226ca02752a5",
+      "commitAuthor": "Emmanuel Bourg",
+      "diff": "@@ -0,0 +1,3 @@\n+public void testStripLeadingAndTrailingQuotes() {\r\n+    assertEquals(\"foo\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\"\"));\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "public void testStripLeadingAndTrailingQuotes() {\r\n    assertEquals(\"foo\", Util.stripLeadingAndTrailingQuotes(\"\\\"foo\\\"\"));\r\n}",
+      "path": "src/test/org/apache/commons/cli/UtilTest.java",
+      "functionStartLine": 34,
+      "functionName": "testStripLeadingAndTrailingQuotes",
+      "functionAnnotation": "",
+      "functionDoc": ""
+    }
+  }
+}

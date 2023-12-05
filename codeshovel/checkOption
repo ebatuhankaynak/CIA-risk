@@ -1,0 +1,87 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "OptionTest.java",
+  "functionName": "checkOption",
+  "functionId": "checkOption___option-Option(modifiers-final)__opt-String(modifiers-final)__description-String(modifiers-final)__longOpt-String(modifiers-final)__numArgs-int(modifiers-final)__argName-String(modifiers-final)__required-boolean(modifiers-final)__optionalArg-boolean(modifiers-final)__valueSeparator-char(modifiers-final)__cls-Class__?__(modifiers-final)",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/OptionTest.java",
+  "functionAnnotation": "",
+  "functionDoc": "",
+  "functionStartLine": 62,
+  "functionEndLine": 74,
+  "numCommitsSeen": 31,
+  "timeTaken": 93,
+  "changeHistory": [
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df",
+    "5fb9e5009a8cdc7366b7a762f0e43dc47decf67c",
+    "df52eee396b1e8ce24fd1ec34752e1049618255a"
+  ],
+  "changeHistoryShort": {
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df": "Yformatchange",
+    "5fb9e5009a8cdc7366b7a762f0e43dc47decf67c": "Yparametermetachange",
+    "df52eee396b1e8ce24fd1ec34752e1049618255a": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df": {
+      "type": "Yformatchange",
+      "commitMessage": "Clean ups.\n\n- maven-checkstyle-plugin 3.1.1 -\u003e 3.1.2.\n- checkstyle -\u003e 9.0\n- Updates for 21st century.\n- No need to nest else clause.\n- Use simple array declarations.\n- Use valueOf instead of new for Numbers.\n- Consistent formatting.\n- Remove some inline comments //-----...\n",
+      "commitDate": "10/2/21 11:04 PM",
+      "commitName": "bc0edc47dbf47cdaa3485cfb724982f377c900df",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "12/18/19 11:28 PM",
+      "commitNameOld": "c12260c05ebcd27558265395df79b8b049534fbd",
+      "commitAuthorOld": "Gary Gregory",
+      "daysBetweenCommits": 653.98,
+      "commitsBetweenForRepo": 87,
+      "commitsBetweenForFile": 1,
+      "actualSource": "private static void checkOption(final Option option, final String opt, final String description, final String longOpt, final int numArgs, final String argName, final boolean required, final boolean optionalArg, final char valueSeparator, final Class\u003c?\u003e cls) {\r\n    assertEquals(opt, option.getOpt());\r\n    assertEquals(description, option.getDescription());\r\n    assertEquals(longOpt, option.getLongOpt());\r\n    assertEquals(numArgs, option.getArgs());\r\n    assertEquals(argName, option.getArgName());\r\n    assertEquals(required, option.isRequired());\r\n    assertEquals(optionalArg, option.hasOptionalArg());\r\n    assertEquals(valueSeparator, option.getValueSeparator());\r\n    assertEquals(cls, option.getType());\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/OptionTest.java",
+      "functionStartLine": 190,
+      "functionName": "checkOption",
+      "functionAnnotation": "",
+      "functionDoc": "",
+      "diff": "",
+      "extendedDetails": {}
+    },
+    "5fb9e5009a8cdc7366b7a762f0e43dc47decf67c": {
+      "type": "Yparametermetachange",
+      "commitMessage": "Add final modifier to method parameters.\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1797674 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/5/17 7:38 PM",
+      "commitName": "5fb9e5009a8cdc7366b7a762f0e43dc47decf67c",
+      "commitAuthor": "Gary D. Gregory",
+      "commitDateOld": "6/5/17 7:37 PM",
+      "commitNameOld": "357a8b0b8f1090db29e0d541a9419f570a78457b",
+      "commitAuthorOld": "Gary D. Gregory",
+      "daysBetweenCommits": 0.0,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "private static void checkOption(final Option option, final String opt, final String description, final String longOpt, final int numArgs, final String argName, final boolean required, final boolean optionalArg, final char valueSeparator, final Class\u003c?\u003e cls) {\r\n    assertEquals(opt, option.getOpt());\r\n    assertEquals(description, option.getDescription());\r\n    assertEquals(longOpt, option.getLongOpt());\r\n    assertEquals(numArgs, option.getArgs());\r\n    assertEquals(argName, option.getArgName());\r\n    assertEquals(required, option.isRequired());\r\n    assertEquals(optionalArg, option.hasOptionalArg());\r\n    assertEquals(valueSeparator, option.getValueSeparator());\r\n    assertEquals(cls, option.getType());\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/OptionTest.java",
+      "functionStartLine": 211,
+      "functionName": "checkOption",
+      "functionAnnotation": "",
+      "functionDoc": "",
+      "diff": "@@ -1,11 +1,11 @@\n-private static void checkOption(Option option, String opt, String description, String longOpt, int numArgs, String argName, boolean required, boolean optionalArg, char valueSeparator, Class\u003c?\u003e cls) {\r\n+private static void checkOption(final Option option, final String opt, final String description, final String longOpt, final int numArgs, final String argName, final boolean required, final boolean optionalArg, final char valueSeparator, final Class\u003c?\u003e cls) {\r\n     assertEquals(opt, option.getOpt());\r\n     assertEquals(description, option.getDescription());\r\n     assertEquals(longOpt, option.getLongOpt());\r\n     assertEquals(numArgs, option.getArgs());\r\n     assertEquals(argName, option.getArgName());\r\n     assertEquals(required, option.isRequired());\r\n     assertEquals(optionalArg, option.hasOptionalArg());\r\n     assertEquals(valueSeparator, option.getValueSeparator());\r\n     assertEquals(cls, option.getType());\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {
+        "oldValue": "[option-Option, opt-String, description-String, longOpt-String, numArgs-int, argName-String, required-boolean, optionalArg-boolean, valueSeparator-char, cls-Class\u003c?\u003e]",
+        "newValue": "[option-Option(modifiers-final), opt-String(modifiers-final), description-String(modifiers-final), longOpt-String(modifiers-final), numArgs-int(modifiers-final), argName-String(modifiers-final), required-boolean(modifiers-final), optionalArg-boolean(modifiers-final), valueSeparator-char(modifiers-final), cls-Class\u003c?\u003e(modifiers-final)]"
+      }
+    },
+    "df52eee396b1e8ce24fd1ec34752e1049618255a": {
+      "type": "Yintroduced",
+      "commitMessage": "[CLI-224] Added new fluent builder API to Option, deprecating OptionBuilder, adapting the PatternOptionBuilder to use the new API, thanks to Duncan Jones.\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1444720 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "2/11/13 12:14 PM",
+      "commitName": "df52eee396b1e8ce24fd1ec34752e1049618255a",
+      "commitAuthor": "Thomas Neidhart",
+      "diff": "@@ -0,0 +1,11 @@\n+private static void checkOption(Option option, String opt, String description, String longOpt, int numArgs, String argName, boolean required, boolean optionalArg, char valueSeparator, Class\u003c?\u003e cls) {\r\n+    assertEquals(opt, option.getOpt());\r\n+    assertEquals(description, option.getDescription());\r\n+    assertEquals(longOpt, option.getLongOpt());\r\n+    assertEquals(numArgs, option.getArgs());\r\n+    assertEquals(argName, option.getArgName());\r\n+    assertEquals(required, option.isRequired());\r\n+    assertEquals(optionalArg, option.hasOptionalArg());\r\n+    assertEquals(valueSeparator, option.getValueSeparator());\r\n+    assertEquals(cls, option.getType());\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "private static void checkOption(Option option, String opt, String description, String longOpt, int numArgs, String argName, boolean required, boolean optionalArg, char valueSeparator, Class\u003c?\u003e cls) {\r\n    assertEquals(opt, option.getOpt());\r\n    assertEquals(description, option.getDescription());\r\n    assertEquals(longOpt, option.getLongOpt());\r\n    assertEquals(numArgs, option.getArgs());\r\n    assertEquals(argName, option.getArgName());\r\n    assertEquals(required, option.isRequired());\r\n    assertEquals(optionalArg, option.hasOptionalArg());\r\n    assertEquals(valueSeparator, option.getValueSeparator());\r\n    assertEquals(cls, option.getType());\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/OptionTest.java",
+      "functionStartLine": 187,
+      "functionName": "checkOption",
+      "functionAnnotation": "",
+      "functionDoc": ""
+    }
+  }
+}

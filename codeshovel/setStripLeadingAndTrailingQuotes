@@ -1,0 +1,116 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "DefaultParser.java",
+  "functionName": "setStripLeadingAndTrailingQuotes",
+  "functionId": "$setStripLeadingAndTrailingQuotes___stripLeadingAndTrailingQuotes-Boolean(modifiers-final)",
+  "sourceFilePath": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+  "functionAnnotation": "",
+  "functionDoc": "Sets if balanced leading and trailing double quotes should be stripped from option arguments.\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is true,\r\nthe outermost balanced double quotes of option arguments values will be removed.\r\nFor example, {@code -o \u0027\"x\"\u0027} getValue() will return {@code x}, instead of {@code \"x\"}\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is null,\r\nthen quotes will be stripped from option values separated by space from the option, but\r\nkept in other cases, which is the historic behavior.\r\n\r\n@param stripLeadingAndTrailingQuotes whether balanced leading and trailing double quotes should be stripped from option arguments.\r\n@return this builder, to allow method chaining\r\n@since 1.5.0\r\n",
+  "functionStartLine": 115,
+  "functionEndLine": 118,
+  "numCommitsSeen": 44,
+  "timeTaken": 101,
+  "changeHistory": [
+    "ed0e3dbc0c7213eadb108ddb7668572aec2624d6",
+    "cc37692b8edbb78cdee140d5c487e0bb42ec3e05",
+    "9aae655438b46e33213f50e27997be667ec9ff38",
+    "44173949e8165537b201d4efd024e31e6e8b06eb"
+  ],
+  "changeHistoryShort": {
+    "ed0e3dbc0c7213eadb108ddb7668572aec2624d6": "Ydocchange",
+    "cc37692b8edbb78cdee140d5c487e0bb42ec3e05": "Ydocchange",
+    "9aae655438b46e33213f50e27997be667ec9ff38": "Ydocchange",
+    "44173949e8165537b201d4efd024e31e6e8b06eb": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "ed0e3dbc0c7213eadb108ddb7668572aec2624d6": {
+      "type": "Ydocchange",
+      "commitMessage": "Javadocs and comments\n\nNormalize spelling to \"behavior\"\n",
+      "commitDate": "11/7/22 4:38 PM",
+      "commitName": "ed0e3dbc0c7213eadb108ddb7668572aec2624d6",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "10/23/21 3:40 PM",
+      "commitNameOld": "cc37692b8edbb78cdee140d5c487e0bb42ec3e05",
+      "commitAuthorOld": "Gary Gregory",
+      "daysBetweenCommits": 380.04,
+      "commitsBetweenForRepo": 122,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public Builder setStripLeadingAndTrailingQuotes(final Boolean stripLeadingAndTrailingQuotes) {\r\n    this.stripLeadingAndTrailingQuotes \u003d stripLeadingAndTrailingQuotes;\r\n    return this;\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+      "functionStartLine": 115,
+      "functionName": "setStripLeadingAndTrailingQuotes",
+      "functionAnnotation": "",
+      "functionDoc": "Sets if balanced leading and trailing double quotes should be stripped from option arguments.\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is true,\r\nthe outermost balanced double quotes of option arguments values will be removed.\r\nFor example, {@code -o \u0027\"x\"\u0027} getValue() will return {@code x}, instead of {@code \"x\"}\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is null,\r\nthen quotes will be stripped from option values separated by space from the option, but\r\nkept in other cases, which is the historic behavior.\r\n\r\n@param stripLeadingAndTrailingQuotes whether balanced leading and trailing double quotes should be stripped from option arguments.\r\n@return this builder, to allow method chaining\r\n@since 1.5.0\r\n",
+      "diff": "",
+      "extendedDetails": {
+        "oldValue": "Sets if balanced leading and trailing double quotes should be stripped from option arguments.\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is true,\r\nthe outermost balanced double quotes of option arguments values will be removed.\r\nFor example, {@code -o \u0027\"x\"\u0027} getValue() will return {@code x}, instead of {@code \"x\"}\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is null,\r\nthen quotes will be stripped from option values separated by space from the option, but\r\nkept in other cases, which is the historic behaviour.\r\n\r\n@param stripLeadingAndTrailingQuotes whether balanced leading and trailing double quotes should be stripped from option arguments.\r\n@return this builder, to allow method chaining\r\n@since 1.5.0\r\n",
+        "newValue": "Sets if balanced leading and trailing double quotes should be stripped from option arguments.\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is true,\r\nthe outermost balanced double quotes of option arguments values will be removed.\r\nFor example, {@code -o \u0027\"x\"\u0027} getValue() will return {@code x}, instead of {@code \"x\"}\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is null,\r\nthen quotes will be stripped from option values separated by space from the option, but\r\nkept in other cases, which is the historic behavior.\r\n\r\n@param stripLeadingAndTrailingQuotes whether balanced leading and trailing double quotes should be stripped from option arguments.\r\n@return this builder, to allow method chaining\r\n@since 1.5.0\r\n"
+      }
+    },
+    "cc37692b8edbb78cdee140d5c487e0bb42ec3e05": {
+      "type": "Ydocchange",
+      "commitMessage": "Next version is 1.5.0.\n",
+      "commitDate": "10/23/21 3:40 PM",
+      "commitName": "cc37692b8edbb78cdee140d5c487e0bb42ec3e05",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "10/19/21 12:32 AM",
+      "commitNameOld": "15e12379bea9bb9ce112fcfbab0a0a9c8899845a",
+      "commitAuthorOld": "Gary Gregory",
+      "daysBetweenCommits": 4.63,
+      "commitsBetweenForRepo": 16,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public Builder setStripLeadingAndTrailingQuotes(final Boolean stripLeadingAndTrailingQuotes) {\r\n    this.stripLeadingAndTrailingQuotes \u003d stripLeadingAndTrailingQuotes;\r\n    return this;\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+      "functionStartLine": 115,
+      "functionName": "setStripLeadingAndTrailingQuotes",
+      "functionAnnotation": "",
+      "functionDoc": "Sets if balanced leading and trailing double quotes should be stripped from option arguments.\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is true,\r\nthe outermost balanced double quotes of option arguments values will be removed.\r\nFor example, {@code -o \u0027\"x\"\u0027} getValue() will return {@code x}, instead of {@code \"x\"}\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is null,\r\nthen quotes will be stripped from option values separated by space from the option, but\r\nkept in other cases, which is the historic behaviour.\r\n\r\n@param stripLeadingAndTrailingQuotes whether balanced leading and trailing double quotes should be stripped from option arguments.\r\n@return this builder, to allow method chaining\r\n@since 1.5.0\r\n",
+      "diff": "",
+      "extendedDetails": {
+        "oldValue": "Sets if balanced leading and trailing double quotes should be stripped from option arguments.\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is true,\r\nthe outermost balanced double quotes of option arguments values will be removed.\r\nFor example, {@code -o \u0027\"x\"\u0027} getValue() will return {@code x}, instead of {@code \"x\"}\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is null,\r\nthen quotes will be stripped from option values separated by space from the option, but\r\nkept in other cases, which is the historic behaviour.\r\n\r\n@param stripLeadingAndTrailingQuotes whether balanced leading and trailing double quotes should be stripped from option arguments.\r\n@return this builder, to allow method chaining\r\n@since 1.5\r\n",
+        "newValue": "Sets if balanced leading and trailing double quotes should be stripped from option arguments.\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is true,\r\nthe outermost balanced double quotes of option arguments values will be removed.\r\nFor example, {@code -o \u0027\"x\"\u0027} getValue() will return {@code x}, instead of {@code \"x\"}\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is null,\r\nthen quotes will be stripped from option values separated by space from the option, but\r\nkept in other cases, which is the historic behaviour.\r\n\r\n@param stripLeadingAndTrailingQuotes whether balanced leading and trailing double quotes should be stripped from option arguments.\r\n@return this builder, to allow method chaining\r\n@since 1.5.0\r\n"
+      }
+    },
+    "9aae655438b46e33213f50e27997be667ec9ff38": {
+      "type": "Ydocchange",
+      "commitMessage": "Use Javadoc tags instead of HTML.\n",
+      "commitDate": "10/17/21 5:44 PM",
+      "commitName": "9aae655438b46e33213f50e27997be667ec9ff38",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "10/17/21 5:42 PM",
+      "commitNameOld": "ac96d6242fa9c88f7fad3b3a08b8a5f11fa2b979",
+      "commitAuthorOld": "Gary Gregory",
+      "daysBetweenCommits": 0.0,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public Builder setStripLeadingAndTrailingQuotes(final Boolean stripLeadingAndTrailingQuotes) {\r\n    this.stripLeadingAndTrailingQuotes \u003d stripLeadingAndTrailingQuotes;\r\n    return this;\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+      "functionStartLine": 761,
+      "functionName": "setStripLeadingAndTrailingQuotes",
+      "functionAnnotation": "",
+      "functionDoc": "Sets if balanced leading and trailing double quotes should be stripped from option arguments.\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is true,\r\nthe outermost balanced double quotes of option arguments values will be removed.\r\nFor example, {@code -o \u0027\"x\"\u0027} getValue() will return {@code x}, instead of {@code \"x\"}\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is null,\r\nthen quotes will be stripped from option values separated by space from the option, but\r\nkept in other cases, which is the historic behaviour.\r\n\r\n@param stripLeadingAndTrailingQuotes whether balanced leading and trailing double quotes should be stripped from option arguments.\r\n@return this builder, to allow method chaining\r\n@since 1.5\r\n",
+      "diff": "",
+      "extendedDetails": {
+        "oldValue": "Sets if balanced leading and trailing double quotes should be stripped from option arguments.\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is true,\r\nthe outermost balanced double quotes of option arguments values will be removed.\r\nFor example, \u003ccode\u003e-o \u0027\"x\"\u0027\u003c/code\u003e getValue() will return \u003ccode\u003ex\u003c/code\u003e, instead of \u003ccode\u003e\"x\"\u003c/code\u003e\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is null,\r\nthen quotes will be stripped from option values separated by space from the option, but\r\nkept in other cases, which is the historic behaviour.\r\n\r\n@param stripLeadingAndTrailingQuotes whether balanced leading and trailing double quotes should be stripped from option arguments.\r\n@return this builder, to allow method chaining\r\n@since 1.5\r\n",
+        "newValue": "Sets if balanced leading and trailing double quotes should be stripped from option arguments.\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is true,\r\nthe outermost balanced double quotes of option arguments values will be removed.\r\nFor example, {@code -o \u0027\"x\"\u0027} getValue() will return {@code x}, instead of {@code \"x\"}\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is null,\r\nthen quotes will be stripped from option values separated by space from the option, but\r\nkept in other cases, which is the historic behaviour.\r\n\r\n@param stripLeadingAndTrailingQuotes whether balanced leading and trailing double quotes should be stripped from option arguments.\r\n@return this builder, to allow method chaining\r\n@since 1.5\r\n"
+      }
+    },
+    "44173949e8165537b201d4efd024e31e6e8b06eb": {
+      "type": "Yintroduced",
+      "commitMessage": "CLI-254: \"test\" gets parsed as test, quotes die :-( (#58)\n\n* CLI-254 \"test\" gets parsed as test, quotes die :-(\r\n\r\n* address review comments, improve backwards compatibility",
+      "commitDate": "10/17/21 5:37 PM",
+      "commitName": "44173949e8165537b201d4efd024e31e6e8b06eb",
+      "commitAuthor": "Istvan Toth",
+      "diff": "@@ -0,0 +1,4 @@\n+public Builder setStripLeadingAndTrailingQuotes(final Boolean stripLeadingAndTrailingQuotes) {\r\n+    this.stripLeadingAndTrailingQuotes \u003d stripLeadingAndTrailingQuotes;\r\n+    return this;\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "public Builder setStripLeadingAndTrailingQuotes(final Boolean stripLeadingAndTrailingQuotes) {\r\n    this.stripLeadingAndTrailingQuotes \u003d stripLeadingAndTrailingQuotes;\r\n    return this;\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+      "functionStartLine": 762,
+      "functionName": "setStripLeadingAndTrailingQuotes",
+      "functionAnnotation": "",
+      "functionDoc": "Sets if balanced leading and trailing double quotes should be stripped from option arguments.\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is true,\r\nthe outermost balanced double quotes of option arguments values will be removed.\r\nFor example, \u003ccode\u003e-o \u0027\"x\"\u0027\u003c/code\u003e getValue() will return \u003ccode\u003ex\u003c/code\u003e, instead of \u003ccode\u003e\"x\"\u003c/code\u003e\r\n\r\nIf \"stripping of balanced leading and trailing double quotes from option arguments\" is null,\r\nthen quotes will be stripped from option values separated by space from the option, but\r\nkept in other cases, which is the historic behaviour.\r\n\r\n@param stripLeadingAndTrailingQuotes whether balanced leading and trailing double quotes should be stripped from option arguments.\r\n@return this builder, to allow method chaining\r\n@since 1.5\r\n"
+    }
+  }
+}

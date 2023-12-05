@@ -1,0 +1,87 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "AbstractParserTestCase.java",
+  "functionName": "testLongOptionQuoteHandling",
+  "functionId": "testLongOptionQuoteHandling",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/AbstractParserTestCase.java",
+  "functionAnnotation": "@Test",
+  "functionDoc": "",
+  "functionStartLine": 237,
+  "functionEndLine": 243,
+  "numCommitsSeen": 25,
+  "timeTaken": 111,
+  "changeHistory": [
+    "4891e50c9c0f4c12be552420343e581f3cf17426",
+    "f45c4301de8bbcb50227e0663f20c5f0870636d3",
+    "44173949e8165537b201d4efd024e31e6e8b06eb"
+  ],
+  "changeHistoryShort": {
+    "4891e50c9c0f4c12be552420343e581f3cf17426": "Yfilerename",
+    "f45c4301de8bbcb50227e0663f20c5f0870636d3": "Ybodychange",
+    "44173949e8165537b201d4efd024e31e6e8b06eb": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "4891e50c9c0f4c12be552420343e581f3cf17426": {
+      "type": "Yfilerename",
+      "commitMessage": "Better class name\n",
+      "commitDate": "8/18/23 5:45 PM",
+      "commitName": "4891e50c9c0f4c12be552420343e581f3cf17426",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "8/18/23 12:35 PM",
+      "commitNameOld": "16ccfbd55b63f200141ddf8abc3f6704927e5cd3",
+      "commitAuthorOld": "dependabot[bot]",
+      "daysBetweenCommits": 0.22,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test\r\npublic void testLongOptionQuoteHandling() throws Exception {\r\n    final String[] args \u003d { \"--bfile\", \"\\\"quoted string\\\"\" };\r\n    final CommandLine cl \u003d parser.parse(options, args);\r\n    assertEquals(\"Confirm --bfile \\\"arg\\\" strips quotes\", \"quoted string\", cl.getOptionValue(\"b\"));\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/AbstractParserTestCase.java",
+      "functionStartLine": 228,
+      "functionName": "testLongOptionQuoteHandling",
+      "functionAnnotation": "@Test",
+      "functionDoc": "",
+      "diff": "",
+      "extendedDetails": {
+        "oldPath": "src/test/java/org/apache/commons/cli/ParserTestCase.java",
+        "newPath": "src/test/java/org/apache/commons/cli/AbstractParserTestCase.java"
+      }
+    },
+    "f45c4301de8bbcb50227e0663f20c5f0870636d3": {
+      "type": "Ybodychange",
+      "commitMessage": "Use final and {} notation for array declarations.\n",
+      "commitDate": "10/19/21 12:30 AM",
+      "commitName": "f45c4301de8bbcb50227e0663f20c5f0870636d3",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "10/17/21 5:37 PM",
+      "commitNameOld": "44173949e8165537b201d4efd024e31e6e8b06eb",
+      "commitAuthorOld": "Istvan Toth",
+      "daysBetweenCommits": 1.29,
+      "commitsBetweenForRepo": 11,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test\r\npublic void testLongOptionQuoteHandling() throws Exception {\r\n    final String[] args \u003d { \"--bfile\", \"\\\"quoted string\\\"\" };\r\n    final CommandLine cl \u003d parser.parse(options, args);\r\n    assertEquals(\"Confirm --bfile \\\"arg\\\" strips quotes\", \"quoted string\", cl.getOptionValue(\"b\"));\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/ParserTestCase.java",
+      "functionStartLine": 968,
+      "functionName": "testLongOptionQuoteHandling",
+      "functionAnnotation": "@Test",
+      "functionDoc": "",
+      "diff": "@@ -1,6 +1,6 @@\n @Test\r\n public void testLongOptionQuoteHandling() throws Exception {\r\n-    final String[] args \u003d new String[] { \"--bfile\", \"\\\"quoted string\\\"\" };\r\n+    final String[] args \u003d { \"--bfile\", \"\\\"quoted string\\\"\" };\r\n     final CommandLine cl \u003d parser.parse(options, args);\r\n     assertEquals(\"Confirm --bfile \\\"arg\\\" strips quotes\", \"quoted string\", cl.getOptionValue(\"b\"));\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {}
+    },
+    "44173949e8165537b201d4efd024e31e6e8b06eb": {
+      "type": "Yintroduced",
+      "commitMessage": "CLI-254: \"test\" gets parsed as test, quotes die :-( (#58)\n\n* CLI-254 \"test\" gets parsed as test, quotes die :-(\r\n\r\n* address review comments, improve backwards compatibility",
+      "commitDate": "10/17/21 5:37 PM",
+      "commitName": "44173949e8165537b201d4efd024e31e6e8b06eb",
+      "commitAuthor": "Istvan Toth",
+      "diff": "@@ -0,0 +1,6 @@\n+@Test\r\n+public void testLongOptionQuoteHandling() throws Exception {\r\n+    final String[] args \u003d new String[] { \"--bfile\", \"\\\"quoted string\\\"\" };\r\n+    final CommandLine cl \u003d parser.parse(options, args);\r\n+    assertEquals(\"Confirm --bfile \\\"arg\\\" strips quotes\", \"quoted string\", cl.getOptionValue(\"b\"));\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "@Test\r\npublic void testLongOptionQuoteHandling() throws Exception {\r\n    final String[] args \u003d new String[] { \"--bfile\", \"\\\"quoted string\\\"\" };\r\n    final CommandLine cl \u003d parser.parse(options, args);\r\n    assertEquals(\"Confirm --bfile \\\"arg\\\" strips quotes\", \"quoted string\", cl.getOptionValue(\"b\"));\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/ParserTestCase.java",
+      "functionStartLine": 968,
+      "functionName": "testLongOptionQuoteHandling",
+      "functionAnnotation": "@Test",
+      "functionDoc": ""
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "BugCLI71Test.java",
+  "functionName": "testMistakenArgument",
+  "functionId": "testMistakenArgument",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/bug/BugCLI71Test.java",
+  "functionAnnotation": "@Test",
+  "functionDoc": "",
+  "functionStartLine": 82,
+  "functionEndLine": 89,
+  "numCommitsSeen": 13,
+  "timeTaken": 79,
+  "changeHistory": [
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df",
+    "60835e2f29d4ec09eead7789405d99f92c36a29e",
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0",
+    "c155cebd4127367a7b649ca167c0c69284cc066b"
+  ],
+  "changeHistoryShort": {
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df": "Ybodychange",
+    "60835e2f29d4ec09eead7789405d99f92c36a29e": "Yannotationchange",
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0": "Yfilerename",
+    "c155cebd4127367a7b649ca167c0c69284cc066b": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df": {
+      "type": "Ybodychange",
+      "commitMessage": "Clean ups.\n\n- maven-checkstyle-plugin 3.1.1 -\u003e 3.1.2.\n- checkstyle -\u003e 9.0\n- Updates for 21st century.\n- No need to nest else clause.\n- Use simple array declarations.\n- Use valueOf instead of new for Numbers.\n- Consistent formatting.\n- Remove some inline comments //-----...\n",
+      "commitDate": "10/2/21 11:04 PM",
+      "commitName": "bc0edc47dbf47cdaa3485cfb724982f377c900df",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "12/18/19 11:28 PM",
+      "commitNameOld": "c12260c05ebcd27558265395df79b8b049534fbd",
+      "commitAuthorOld": "Gary Gregory",
+      "daysBetweenCommits": 653.98,
+      "commitsBetweenForRepo": 87,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test\r\npublic void testMistakenArgument() throws Exception {\r\n    String[] args \u003d { \"-a\", \"Caesar\", \"-k\", \"A\" };\r\n    CommandLine line \u003d parser.parse(options, args);\r\n    args \u003d new String[] { \"-a\", \"Caesar\", \"-k\", \"a\" };\r\n    line \u003d parser.parse(options, args);\r\n    assertEquals(\"Caesar\", line.getOptionValue(\"a\"));\r\n    assertEquals(\"a\", line.getOptionValue(\"k\"));\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/bug/BugCLI71Test.java",
+      "functionStartLine": 61,
+      "functionName": "testMistakenArgument",
+      "functionAnnotation": "@Test",
+      "functionDoc": "",
+      "diff": "@@ -1,9 +1,9 @@\n @Test\r\n public void testMistakenArgument() throws Exception {\r\n-    String[] args \u003d new String[] { \"-a\", \"Caesar\", \"-k\", \"A\" };\r\n+    String[] args \u003d { \"-a\", \"Caesar\", \"-k\", \"A\" };\r\n     CommandLine line \u003d parser.parse(options, args);\r\n     args \u003d new String[] { \"-a\", \"Caesar\", \"-k\", \"a\" };\r\n     line \u003d parser.parse(options, args);\r\n     assertEquals(\"Caesar\", line.getOptionValue(\"a\"));\r\n     assertEquals(\"a\", line.getOptionValue(\"k\"));\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {}
+    },
+    "60835e2f29d4ec09eead7789405d99f92c36a29e": {
+      "type": "Yannotationchange",
+      "commitMessage": "[CLI-227] Convert unit tests to junit 4, upgrade junit to 4.11, move authors to pom.xml.\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1442904 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "2/6/13 12:57 PM",
+      "commitName": "60835e2f29d4ec09eead7789405d99f92c36a29e",
+      "commitAuthor": "Thomas Neidhart",
+      "commitDateOld": "1/30/13 7:25 PM",
+      "commitNameOld": "c6cf0e72d4df77417a010c2a2d6d09f69be3cfac",
+      "commitAuthorOld": "Sebastian Bazley",
+      "daysBetweenCommits": 6.73,
+      "commitsBetweenForRepo": 6,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test\r\npublic void testMistakenArgument() throws Exception {\r\n    String[] args \u003d new String[] { \"-a\", \"Caesar\", \"-k\", \"A\" };\r\n    CommandLine line \u003d parser.parse(options, args);\r\n    args \u003d new String[] { \"-a\", \"Caesar\", \"-k\", \"a\" };\r\n    line \u003d parser.parse(options, args);\r\n    assertEquals(\"Caesar\", line.getOptionValue(\"a\"));\r\n    assertEquals(\"a\", line.getOptionValue(\"k\"));\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/bug/BugCLI71Test.java",
+      "functionStartLine": 62,
+      "functionName": "testMistakenArgument",
+      "functionAnnotation": "@Test",
+      "functionDoc": "",
+      "diff": "@@ -1,8 +1,9 @@\n+@Test\r\n public void testMistakenArgument() throws Exception {\r\n     String[] args \u003d new String[] { \"-a\", \"Caesar\", \"-k\", \"A\" };\r\n     CommandLine line \u003d parser.parse(options, args);\r\n     args \u003d new String[] { \"-a\", \"Caesar\", \"-k\", \"a\" };\r\n     line \u003d parser.parse(options, args);\r\n     assertEquals(\"Caesar\", line.getOptionValue(\"a\"));\r\n     assertEquals(\"a\", line.getOptionValue(\"k\"));\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {
+        "oldValue": "",
+        "newValue": "@Test"
+      }
+    },
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0": {
+      "type": "Yfilerename",
+      "commitMessage": "Switched to the Maven 2 default directory layout (part 1)\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@955169 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/16/10 12:41 PM",
+      "commitName": "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0",
+      "commitAuthor": "Emmanuel Bourg",
+      "commitDateOld": "6/16/10 12:36 PM",
+      "commitNameOld": "106f3b8dd48d32cbfcba4a42e1161505c2e3cac6",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 0.0,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public void testMistakenArgument() throws Exception {\r\n    String[] args \u003d new String[] { \"-a\", \"Caesar\", \"-k\", \"A\" };\r\n    CommandLine line \u003d parser.parse(options, args);\r\n    args \u003d new String[] { \"-a\", \"Caesar\", \"-k\", \"a\" };\r\n    line \u003d parser.parse(options, args);\r\n    assertEquals(\"Caesar\", line.getOptionValue(\"a\"));\r\n    assertEquals(\"a\", line.getOptionValue(\"k\"));\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/bug/BugCLI71Test.java",
+      "functionStartLine": 56,
+      "functionName": "testMistakenArgument",
+      "functionAnnotation": "",
+      "functionDoc": "",
+      "diff": "",
+      "extendedDetails": {
+        "oldPath": "src/test/org/apache/commons/cli/bug/BugCLI71Test.java",
+        "newPath": "src/test/java/org/apache/commons/cli/bug/BugCLI71Test.java"
+      }
+    },
+    "c155cebd4127367a7b649ca167c0c69284cc066b": {
+      "type": "Yintroduced",
+      "commitMessage": "Applying Brian Egge and my work from CLI-71 to fix a lingering data problem in the parser and to confirm that other bugs have already been fixed\n\ngit-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/cli/branches/cli-1.0.x@541408 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "5/24/07 11:07 PM",
+      "commitName": "c155cebd4127367a7b649ca167c0c69284cc066b",
+      "commitAuthor": "Henri Yandell",
+      "diff": "@@ -0,0 +1,8 @@\n+public void testMistakenArgument() throws Exception {\r\n+    String[] args \u003d new String[] { \"-a\", \"Caesar\", \"-k\", \"A\" };\r\n+    CommandLine line \u003d parser.parse(options, args);\r\n+    args \u003d new String[] { \"-a\", \"Caesar\", \"-k\", \"a\" };\r\n+    line \u003d parser.parse(options, args);\r\n+    assertEquals(\"Caesar\", line.getOptionValue(\"a\"));\r\n+    assertEquals(\"a\", line.getOptionValue(\"k\"));\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "public void testMistakenArgument() throws Exception {\r\n    String[] args \u003d new String[] { \"-a\", \"Caesar\", \"-k\", \"A\" };\r\n    CommandLine line \u003d parser.parse(options, args);\r\n    args \u003d new String[] { \"-a\", \"Caesar\", \"-k\", \"a\" };\r\n    line \u003d parser.parse(options, args);\r\n    assertEquals(\"Caesar\", line.getOptionValue(\"a\"));\r\n    assertEquals(\"a\", line.getOptionValue(\"k\"));\r\n}",
+      "path": "src/test/org/apache/commons/cli/bug/BugCLI71Test.java",
+      "functionStartLine": 49,
+      "functionName": "testMistakenArgument",
+      "functionAnnotation": "",
+      "functionDoc": ""
+    }
+  }
+}

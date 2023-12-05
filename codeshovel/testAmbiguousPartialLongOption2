@@ -1,0 +1,146 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "GnuParserTest.java",
+  "functionName": "testAmbiguousPartialLongOption2",
+  "functionId": "testAmbiguousPartialLongOption2",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/GnuParserTest.java",
+  "functionAnnotation": "@Override,@Test,@Ignore(\"not supported by the GnuParser\")",
+  "functionDoc": "",
+  "functionStartLine": 54,
+  "functionEndLine": 55,
+  "numCommitsSeen": 23,
+  "timeTaken": 90,
+  "changeHistory": [
+    "f6af62367494ff8d0d7844f7f435e5ee36c81dcf",
+    "445ddaaa89bdcd003645b02b600fde1d3730d715",
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0",
+    "e366a69318c97c70bd3278ffd8c61fad3c4a4456"
+  ],
+  "changeHistoryShort": {
+    "f6af62367494ff8d0d7844f7f435e5ee36c81dcf": "Ymultichange(Ybodychange,Yannotationchange)",
+    "445ddaaa89bdcd003645b02b600fde1d3730d715": "Yannotationchange",
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0": "Yfilerename",
+    "e366a69318c97c70bd3278ffd8c61fad3c4a4456": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "f6af62367494ff8d0d7844f7f435e5ee36c81dcf": {
+      "type": "Ymultichange(Ybodychange,Yannotationchange)",
+      "commitMessage": "Ignore tests purposely left empty test bodies. Thanks to GitHub user august782. This also closes #5 from GitHub.\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1749393 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/20/16 10:41 PM",
+      "commitName": "f6af62367494ff8d0d7844f7f435e5ee36c81dcf",
+      "commitAuthor": "Benedikt Ritter",
+      "subchanges": [
+        {
+          "type": "Ybodychange",
+          "commitMessage": "Ignore tests purposely left empty test bodies. Thanks to GitHub user august782. This also closes #5 from GitHub.\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1749393 13f79535-47bb-0310-9956-ffa450edef68\n",
+          "commitDate": "6/20/16 10:41 PM",
+          "commitName": "f6af62367494ff8d0d7844f7f435e5ee36c81dcf",
+          "commitAuthor": "Benedikt Ritter",
+          "commitDateOld": "2/6/13 12:57 PM",
+          "commitNameOld": "60835e2f29d4ec09eead7789405d99f92c36a29e",
+          "commitAuthorOld": "Thomas Neidhart",
+          "daysBetweenCommits": 1230.36,
+          "commitsBetweenForRepo": 94,
+          "commitsBetweenForFile": 1,
+          "actualSource": "@Override\r\n@Test\r\n@Ignore(\"not supported by the GnuParser\")\r\npublic void testAmbiguousPartialLongOption2() throws Exception {\r\n}",
+          "path": "src/test/java/org/apache/commons/cli/GnuParserTest.java",
+          "functionStartLine": 95,
+          "functionName": "testAmbiguousPartialLongOption2",
+          "functionAnnotation": "@Override,@Test,@Ignore(\"not supported by the GnuParser\")",
+          "functionDoc": "",
+          "diff": "@@ -1,3 +1,5 @@\n @Override\r\n+@Test\r\n+@Ignore(\"not supported by the GnuParser\")\r\n public void testAmbiguousPartialLongOption2() throws Exception {\r\n }\n\\ No newline at end of file\n",
+          "extendedDetails": {}
+        },
+        {
+          "type": "Yannotationchange",
+          "commitMessage": "Ignore tests purposely left empty test bodies. Thanks to GitHub user august782. This also closes #5 from GitHub.\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1749393 13f79535-47bb-0310-9956-ffa450edef68\n",
+          "commitDate": "6/20/16 10:41 PM",
+          "commitName": "f6af62367494ff8d0d7844f7f435e5ee36c81dcf",
+          "commitAuthor": "Benedikt Ritter",
+          "commitDateOld": "2/6/13 12:57 PM",
+          "commitNameOld": "60835e2f29d4ec09eead7789405d99f92c36a29e",
+          "commitAuthorOld": "Thomas Neidhart",
+          "daysBetweenCommits": 1230.36,
+          "commitsBetweenForRepo": 94,
+          "commitsBetweenForFile": 1,
+          "actualSource": "@Override\r\n@Test\r\n@Ignore(\"not supported by the GnuParser\")\r\npublic void testAmbiguousPartialLongOption2() throws Exception {\r\n}",
+          "path": "src/test/java/org/apache/commons/cli/GnuParserTest.java",
+          "functionStartLine": 95,
+          "functionName": "testAmbiguousPartialLongOption2",
+          "functionAnnotation": "@Override,@Test,@Ignore(\"not supported by the GnuParser\")",
+          "functionDoc": "",
+          "diff": "@@ -1,3 +1,5 @@\n @Override\r\n+@Test\r\n+@Ignore(\"not supported by the GnuParser\")\r\n public void testAmbiguousPartialLongOption2() throws Exception {\r\n }\n\\ No newline at end of file\n",
+          "extendedDetails": {
+            "oldValue": "@Override",
+            "newValue": "@Override,@Test,@Ignore(\"not supported by the GnuParser\")"
+          }
+        }
+      ]
+    },
+    "445ddaaa89bdcd003645b02b600fde1d3730d715": {
+      "type": "Yannotationchange",
+      "commitMessage": "Missing @Override\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1440517 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "1/30/13 6:51 PM",
+      "commitName": "445ddaaa89bdcd003645b02b600fde1d3730d715",
+      "commitAuthor": "Sebastian Bazley",
+      "commitDateOld": "6/16/10 12:41 PM",
+      "commitNameOld": "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 959.3,
+      "commitsBetweenForRepo": 96,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Override\r\npublic void testAmbiguousPartialLongOption2() throws Exception {\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/GnuParserTest.java",
+      "functionStartLine": 102,
+      "functionName": "testAmbiguousPartialLongOption2",
+      "functionAnnotation": "@Override",
+      "functionDoc": "",
+      "diff": "@@ -1,2 +1,3 @@\n+@Override\r\n public void testAmbiguousPartialLongOption2() throws Exception {\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {
+        "oldValue": "",
+        "newValue": "@Override"
+      }
+    },
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0": {
+      "type": "Yfilerename",
+      "commitMessage": "Switched to the Maven 2 default directory layout (part 1)\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@955169 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/16/10 12:41 PM",
+      "commitName": "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0",
+      "commitAuthor": "Emmanuel Bourg",
+      "commitDateOld": "6/16/10 12:36 PM",
+      "commitNameOld": "106f3b8dd48d32cbfcba4a42e1161505c2e3cac6",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 0.0,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public void testAmbiguousPartialLongOption2() throws Exception {\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/GnuParserTest.java",
+      "functionStartLine": 88,
+      "functionName": "testAmbiguousPartialLongOption2",
+      "functionAnnotation": "",
+      "functionDoc": "",
+      "diff": "",
+      "extendedDetails": {
+        "oldPath": "src/test/org/apache/commons/cli/GnuParserTest.java",
+        "newPath": "src/test/java/org/apache/commons/cli/GnuParserTest.java"
+      }
+    },
+    "e366a69318c97c70bd3278ffd8c61fad3c4a4456": {
+      "type": "Yintroduced",
+      "commitMessage": "Implemented the partial matching for long options in the PosixParser (CLI-160)\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@778664 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "5/26/09 2:48 PM",
+      "commitName": "e366a69318c97c70bd3278ffd8c61fad3c4a4456",
+      "commitAuthor": "Emmanuel Bourg",
+      "diff": "@@ -0,0 +1,2 @@\n+public void testAmbiguousPartialLongOption2() throws Exception {\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "public void testAmbiguousPartialLongOption2() throws Exception {\r\n}",
+      "path": "src/test/org/apache/commons/cli/GnuParserTest.java",
+      "functionStartLine": 43,
+      "functionName": "testAmbiguousPartialLongOption2",
+      "functionAnnotation": "",
+      "functionDoc": ""
+    }
+  }
+}

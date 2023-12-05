@@ -1,0 +1,113 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "OptionGroupTest.java",
+  "functionName": "testGetNames",
+  "functionId": "testGetNames",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/OptionGroupTest.java",
+  "functionAnnotation": "@Test",
+  "functionDoc": "",
+  "functionStartLine": 64,
+  "functionEndLine": 73,
+  "numCommitsSeen": 28,
+  "timeTaken": 89,
+  "changeHistory": [
+    "357a8b0b8f1090db29e0d541a9419f570a78457b",
+    "60835e2f29d4ec09eead7789405d99f92c36a29e",
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0",
+    "535beb125f0627c5399fc365208d3be24da81048"
+  ],
+  "changeHistoryShort": {
+    "357a8b0b8f1090db29e0d541a9419f570a78457b": "Ybodychange",
+    "60835e2f29d4ec09eead7789405d99f92c36a29e": "Yannotationchange",
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0": "Yfilerename",
+    "535beb125f0627c5399fc365208d3be24da81048": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "357a8b0b8f1090db29e0d541a9419f570a78457b": {
+      "type": "Ybodychange",
+      "commitMessage": "Add final modifier to local variables.\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1797673 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/5/17 7:37 PM",
+      "commitName": "357a8b0b8f1090db29e0d541a9419f570a78457b",
+      "commitAuthor": "Gary D. Gregory",
+      "commitDateOld": "3/28/15 8:09 PM",
+      "commitNameOld": "78e9b51e45a3b563092f741aa52a7be8f6c538dc",
+      "commitAuthorOld": "Benedikt Ritter",
+      "daysBetweenCommits": 799.94,
+      "commitsBetweenForRepo": 77,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test\r\npublic void testGetNames() {\r\n    final OptionGroup group \u003d new OptionGroup();\r\n    group.addOption(OptionBuilder.create(\u0027a\u0027));\r\n    group.addOption(OptionBuilder.create(\u0027b\u0027));\r\n    assertNotNull(\"null names\", group.getNames());\r\n    assertEquals(2, group.getNames().size());\r\n    assertTrue(group.getNames().contains(\"a\"));\r\n    assertTrue(group.getNames().contains(\"b\"));\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/OptionGroupTest.java",
+      "functionStartLine": 248,
+      "functionName": "testGetNames",
+      "functionAnnotation": "@Test",
+      "functionDoc": "",
+      "diff": "@@ -1,10 +1,10 @@\n @Test\r\n public void testGetNames() {\r\n-    OptionGroup group \u003d new OptionGroup();\r\n+    final OptionGroup group \u003d new OptionGroup();\r\n     group.addOption(OptionBuilder.create(\u0027a\u0027));\r\n     group.addOption(OptionBuilder.create(\u0027b\u0027));\r\n     assertNotNull(\"null names\", group.getNames());\r\n     assertEquals(2, group.getNames().size());\r\n     assertTrue(group.getNames().contains(\"a\"));\r\n     assertTrue(group.getNames().contains(\"b\"));\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {}
+    },
+    "60835e2f29d4ec09eead7789405d99f92c36a29e": {
+      "type": "Yannotationchange",
+      "commitMessage": "[CLI-227] Convert unit tests to junit 4, upgrade junit to 4.11, move authors to pom.xml.\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1442904 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "2/6/13 12:57 PM",
+      "commitName": "60835e2f29d4ec09eead7789405d99f92c36a29e",
+      "commitAuthor": "Thomas Neidhart",
+      "commitDateOld": "1/30/13 7:20 PM",
+      "commitNameOld": "0cbe33506c92b790fd4dc866237d7e430a6c91dd",
+      "commitAuthorOld": "Sebastian Bazley",
+      "daysBetweenCommits": 6.73,
+      "commitsBetweenForRepo": 8,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test\r\npublic void testGetNames() {\r\n    OptionGroup group \u003d new OptionGroup();\r\n    group.addOption(OptionBuilder.create(\u0027a\u0027));\r\n    group.addOption(OptionBuilder.create(\u0027b\u0027));\r\n    assertNotNull(\"null names\", group.getNames());\r\n    assertEquals(2, group.getNames().size());\r\n    assertTrue(group.getNames().contains(\"a\"));\r\n    assertTrue(group.getNames().contains(\"b\"));\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/OptionGroupTest.java",
+      "functionStartLine": 248,
+      "functionName": "testGetNames",
+      "functionAnnotation": "@Test",
+      "functionDoc": "",
+      "diff": "@@ -1,9 +1,10 @@\n+@Test\r\n public void testGetNames() {\r\n     OptionGroup group \u003d new OptionGroup();\r\n     group.addOption(OptionBuilder.create(\u0027a\u0027));\r\n     group.addOption(OptionBuilder.create(\u0027b\u0027));\r\n     assertNotNull(\"null names\", group.getNames());\r\n     assertEquals(2, group.getNames().size());\r\n     assertTrue(group.getNames().contains(\"a\"));\r\n     assertTrue(group.getNames().contains(\"b\"));\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {
+        "oldValue": "",
+        "newValue": "@Test"
+      }
+    },
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0": {
+      "type": "Yfilerename",
+      "commitMessage": "Switched to the Maven 2 default directory layout (part 1)\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@955169 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/16/10 12:41 PM",
+      "commitName": "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0",
+      "commitAuthor": "Emmanuel Bourg",
+      "commitDateOld": "6/16/10 12:36 PM",
+      "commitNameOld": "106f3b8dd48d32cbfcba4a42e1161505c2e3cac6",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 0.0,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public void testGetNames() {\r\n    OptionGroup group \u003d new OptionGroup();\r\n    group.addOption(OptionBuilder.create(\u0027a\u0027));\r\n    group.addOption(OptionBuilder.create(\u0027b\u0027));\r\n    assertNotNull(\"null names\", group.getNames());\r\n    assertEquals(2, group.getNames().size());\r\n    assertTrue(group.getNames().contains(\"a\"));\r\n    assertTrue(group.getNames().contains(\"b\"));\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/OptionGroupTest.java",
+      "functionStartLine": 217,
+      "functionName": "testGetNames",
+      "functionAnnotation": "",
+      "functionDoc": "",
+      "diff": "",
+      "extendedDetails": {
+        "oldPath": "src/test/org/apache/commons/cli/OptionGroupTest.java",
+        "newPath": "src/test/java/org/apache/commons/cli/OptionGroupTest.java"
+      }
+    },
+    "535beb125f0627c5399fc365208d3be24da81048": {
+      "type": "Yintroduced",
+      "commitMessage": "Improved the test coverage for OptionGroup and Options\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/branches/cli-1.x@680311 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "7/28/08 1:25 PM",
+      "commitName": "535beb125f0627c5399fc365208d3be24da81048",
+      "commitAuthor": "Emmanuel Bourg",
+      "diff": "@@ -0,0 +1,9 @@\n+public void testGetNames() {\r\n+    OptionGroup group \u003d new OptionGroup();\r\n+    group.addOption(OptionBuilder.create(\u0027a\u0027));\r\n+    group.addOption(OptionBuilder.create(\u0027b\u0027));\r\n+    assertNotNull(\"null names\", group.getNames());\r\n+    assertEquals(2, group.getNames().size());\r\n+    assertTrue(group.getNames().contains(\"a\"));\r\n+    assertTrue(group.getNames().contains(\"b\"));\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "public void testGetNames() {\r\n    OptionGroup group \u003d new OptionGroup();\r\n    group.addOption(OptionBuilder.create(\u0027a\u0027));\r\n    group.addOption(OptionBuilder.create(\u0027b\u0027));\r\n    assertNotNull(\"null names\", group.getNames());\r\n    assertEquals(2, group.getNames().size());\r\n    assertTrue(group.getNames().contains(\"a\"));\r\n    assertTrue(group.getNames().contains(\"b\"));\r\n}",
+      "path": "src/test/org/apache/commons/cli/OptionGroupTest.java",
+      "functionStartLine": 213,
+      "functionName": "testGetNames",
+      "functionAnnotation": "",
+      "functionDoc": ""
+    }
+  }
+}

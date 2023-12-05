@@ -1,0 +1,38 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "java-design-patterns",
+  "repositoryPath": "D:/_SELEN/_2022-2023/H-INDEX/JavaGitHubProjects/JavaDesignPatternsGitHub/java-design-patterns/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "VisitorTest.java",
+  "functionName": "append",
+  "functionId": "$append___eventObject-ILoggingEvent",
+  "sourceFilePath": "visitor/src/test/java/com/iluwatar/visitor/VisitorTest.java",
+  "functionAnnotation": "@Override",
+  "functionDoc": "",
+  "functionStartLine": 135,
+  "functionEndLine": 137,
+  "numCommitsSeen": 16,
+  "timeTaken": 2718,
+  "changeHistory": [
+    "e138163c4f1688678dc8bc43e9683b142d534fe7"
+  ],
+  "changeHistoryShort": {
+    "e138163c4f1688678dc8bc43e9683b142d534fe7": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "e138163c4f1688678dc8bc43e9683b142d534fe7": {
+      "type": "Yintroduced",
+      "commitMessage": "#502 Adjusted tests for logger introduction\n",
+      "commitDate": "11/4/16, 1:47 PM",
+      "commitName": "e138163c4f1688678dc8bc43e9683b142d534fe7",
+      "commitAuthor": "daniel-bryla",
+      "diff": "@@ -0,0 +1,4 @@\n+@Override\r\n+protected void append(ILoggingEvent eventObject) {\r\n+    log.add(eventObject);\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "@Override\r\nprotected void append(ILoggingEvent eventObject) {\r\n    log.add(eventObject);\r\n}",
+      "path": "visitor/src/test/java/com/iluwatar/visitor/VisitorTest.java",
+      "functionStartLine": 130,
+      "functionName": "append",
+      "functionAnnotation": "@Override",
+      "functionDoc": ""
+    }
+  }
+}

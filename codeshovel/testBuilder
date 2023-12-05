@@ -1,0 +1,64 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "DefaultParserTest.java",
+  "functionName": "testBuilder",
+  "functionId": "testBuilder",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/DefaultParserTest.java",
+  "functionAnnotation": "@Test",
+  "functionDoc": "",
+  "functionStartLine": 35,
+  "functionEndLine": 41,
+  "numCommitsSeen": 11,
+  "timeTaken": 74,
+  "changeHistory": [
+    "69dd16f5348514607101931c982ff2c377dd02bf",
+    "44173949e8165537b201d4efd024e31e6e8b06eb"
+  ],
+  "changeHistoryShort": {
+    "69dd16f5348514607101931c982ff2c377dd02bf": "Yexceptionschange",
+    "44173949e8165537b201d4efd024e31e6e8b06eb": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "69dd16f5348514607101931c982ff2c377dd02bf": {
+      "type": "Yexceptionschange",
+      "commitMessage": "Remove unused exception.\n",
+      "commitDate": "10/20/21 3:16 PM",
+      "commitName": "69dd16f5348514607101931c982ff2c377dd02bf",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "10/19/21 12:32 AM",
+      "commitNameOld": "15e12379bea9bb9ce112fcfbab0a0a9c8899845a",
+      "commitAuthorOld": "Gary Gregory",
+      "daysBetweenCommits": 1.61,
+      "commitsBetweenForRepo": 7,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test\r\npublic void testBuilder() {\r\n    parser \u003d DefaultParser.builder().setStripLeadingAndTrailingQuotes(false).setAllowPartialMatching(false).build();\r\n    assertEquals(DefaultParser.class, parser.getClass());\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/DefaultParserTest.java",
+      "functionStartLine": 35,
+      "functionName": "testBuilder",
+      "functionAnnotation": "@Test",
+      "functionDoc": "",
+      "diff": "@@ -1,5 +1,5 @@\n @Test\r\n-public void testBuilder() throws Exception {\r\n+public void testBuilder() {\r\n     parser \u003d DefaultParser.builder().setStripLeadingAndTrailingQuotes(false).setAllowPartialMatching(false).build();\r\n     assertEquals(DefaultParser.class, parser.getClass());\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {
+        "oldValue": "[Exception]",
+        "newValue": "[]"
+      }
+    },
+    "44173949e8165537b201d4efd024e31e6e8b06eb": {
+      "type": "Yintroduced",
+      "commitMessage": "CLI-254: \"test\" gets parsed as test, quotes die :-( (#58)\n\n* CLI-254 \"test\" gets parsed as test, quotes die :-(\r\n\r\n* address review comments, improve backwards compatibility",
+      "commitDate": "10/17/21 5:37 PM",
+      "commitName": "44173949e8165537b201d4efd024e31e6e8b06eb",
+      "commitAuthor": "Istvan Toth",
+      "diff": "@@ -0,0 +1,5 @@\n+@Test\r\n+public void testBuilder() throws Exception {\r\n+    parser \u003d DefaultParser.builder().setStripLeadingAndTrailingQuotes(false).setAllowPartialMatching(false).build();\r\n+    assertEquals(DefaultParser.class, parser.getClass());\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "@Test\r\npublic void testBuilder() throws Exception {\r\n    parser \u003d DefaultParser.builder().setStripLeadingAndTrailingQuotes(false).setAllowPartialMatching(false).build();\r\n    assertEquals(DefaultParser.class, parser.getClass());\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/DefaultParserTest.java",
+      "functionStartLine": 116,
+      "functionName": "testBuilder",
+      "functionAnnotation": "@Test",
+      "functionDoc": ""
+    }
+  }
+}

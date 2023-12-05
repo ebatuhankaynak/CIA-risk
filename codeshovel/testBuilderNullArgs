@@ -1,0 +1,94 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "CommandLineTest.java",
+  "functionName": "testBuilderNullArgs",
+  "functionId": "testBuilderNullArgs",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/CommandLineTest.java",
+  "functionAnnotation": "@Test",
+  "functionDoc": "",
+  "functionStartLine": 44,
+  "functionEndLine": 52,
+  "numCommitsSeen": 29,
+  "timeTaken": 136,
+  "changeHistory": [
+    "08f8c5034a8492be6db65b2086341c292489ee53",
+    "834d696d8943aaa80eb213e1f8e67e1d14ac811f"
+  ],
+  "changeHistoryShort": {
+    "08f8c5034a8492be6db65b2086341c292489ee53": "Ymultichange(Yrename,Ybodychange)",
+    "834d696d8943aaa80eb213e1f8e67e1d14ac811f": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "08f8c5034a8492be6db65b2086341c292489ee53": {
+      "type": "Ymultichange(Yrename,Ybodychange)",
+      "commitMessage": "CommandLine.addArgs(String) should not allow a null String\n",
+      "commitDate": "8/14/23 7:34 PM",
+      "commitName": "08f8c5034a8492be6db65b2086341c292489ee53",
+      "commitAuthor": "Gary Gregory",
+      "subchanges": [
+        {
+          "type": "Yrename",
+          "commitMessage": "CommandLine.addArgs(String) should not allow a null String\n",
+          "commitDate": "8/14/23 7:34 PM",
+          "commitName": "08f8c5034a8492be6db65b2086341c292489ee53",
+          "commitAuthor": "Gary Gregory",
+          "commitDateOld": "8/14/23 7:30 PM",
+          "commitNameOld": "834d696d8943aaa80eb213e1f8e67e1d14ac811f",
+          "commitAuthorOld": "Gary Gregory",
+          "daysBetweenCommits": 0.0,
+          "commitsBetweenForRepo": 1,
+          "commitsBetweenForFile": 1,
+          "actualSource": "@Test\r\npublic void testBuilderNullArgs() {\r\n    final CommandLine.Builder builder \u003d new CommandLine.Builder();\r\n    builder.addArg(null).addArg(null);\r\n    builder.addOption(Option.builder(\"T\").build());\r\n    final CommandLine cmd \u003d builder.build();\r\n    assertEquals(0, cmd.getArgs().length);\r\n    assertEquals(\"T\", cmd.getOptions()[0].getOpt());\r\n}",
+          "path": "src/test/java/org/apache/commons/cli/CommandLineTest.java",
+          "functionStartLine": 44,
+          "functionName": "testBuilderNullArgs",
+          "functionAnnotation": "@Test",
+          "functionDoc": "",
+          "diff": "@@ -1,10 +1,9 @@\n @Test\r\n-public void testBuilderNulls() {\r\n+public void testBuilderNullArgs() {\r\n     final CommandLine.Builder builder \u003d new CommandLine.Builder();\r\n-    builder.addArg(\"foo\").addArg(\"bar\");\r\n-    builder.addOption(null);\r\n+    builder.addArg(null).addArg(null);\r\n+    builder.addOption(Option.builder(\"T\").build());\r\n     final CommandLine cmd \u003d builder.build();\r\n-    assertEquals(\"foo\", cmd.getArgs()[0]);\r\n-    assertEquals(\"bar\", cmd.getArgList().get(1));\r\n-    assertEquals(0, cmd.getOptions().length);\r\n+    assertEquals(0, cmd.getArgs().length);\r\n+    assertEquals(\"T\", cmd.getOptions()[0].getOpt());\r\n }\n\\ No newline at end of file\n",
+          "extendedDetails": {
+            "oldValue": "testBuilderNulls",
+            "newValue": "testBuilderNullArgs"
+          }
+        },
+        {
+          "type": "Ybodychange",
+          "commitMessage": "CommandLine.addArgs(String) should not allow a null String\n",
+          "commitDate": "8/14/23 7:34 PM",
+          "commitName": "08f8c5034a8492be6db65b2086341c292489ee53",
+          "commitAuthor": "Gary Gregory",
+          "commitDateOld": "8/14/23 7:30 PM",
+          "commitNameOld": "834d696d8943aaa80eb213e1f8e67e1d14ac811f",
+          "commitAuthorOld": "Gary Gregory",
+          "daysBetweenCommits": 0.0,
+          "commitsBetweenForRepo": 1,
+          "commitsBetweenForFile": 1,
+          "actualSource": "@Test\r\npublic void testBuilderNullArgs() {\r\n    final CommandLine.Builder builder \u003d new CommandLine.Builder();\r\n    builder.addArg(null).addArg(null);\r\n    builder.addOption(Option.builder(\"T\").build());\r\n    final CommandLine cmd \u003d builder.build();\r\n    assertEquals(0, cmd.getArgs().length);\r\n    assertEquals(\"T\", cmd.getOptions()[0].getOpt());\r\n}",
+          "path": "src/test/java/org/apache/commons/cli/CommandLineTest.java",
+          "functionStartLine": 44,
+          "functionName": "testBuilderNullArgs",
+          "functionAnnotation": "@Test",
+          "functionDoc": "",
+          "diff": "@@ -1,10 +1,9 @@\n @Test\r\n-public void testBuilderNulls() {\r\n+public void testBuilderNullArgs() {\r\n     final CommandLine.Builder builder \u003d new CommandLine.Builder();\r\n-    builder.addArg(\"foo\").addArg(\"bar\");\r\n-    builder.addOption(null);\r\n+    builder.addArg(null).addArg(null);\r\n+    builder.addOption(Option.builder(\"T\").build());\r\n     final CommandLine cmd \u003d builder.build();\r\n-    assertEquals(\"foo\", cmd.getArgs()[0]);\r\n-    assertEquals(\"bar\", cmd.getArgList().get(1));\r\n-    assertEquals(0, cmd.getOptions().length);\r\n+    assertEquals(0, cmd.getArgs().length);\r\n+    assertEquals(\"T\", cmd.getOptions()[0].getOpt());\r\n }\n\\ No newline at end of file\n",
+          "extendedDetails": {}
+        }
+      ]
+    },
+    "834d696d8943aaa80eb213e1f8e67e1d14ac811f": {
+      "type": "Yintroduced",
+      "commitMessage": "CommandLine.addOption(Option) should not allow a null Option\n",
+      "commitDate": "8/14/23 7:30 PM",
+      "commitName": "834d696d8943aaa80eb213e1f8e67e1d14ac811f",
+      "commitAuthor": "Gary Gregory",
+      "diff": "@@ -0,0 +1,10 @@\n+@Test\r\n+public void testBuilderNulls() {\r\n+    final CommandLine.Builder builder \u003d new CommandLine.Builder();\r\n+    builder.addArg(\"foo\").addArg(\"bar\");\r\n+    builder.addOption(null);\r\n+    final CommandLine cmd \u003d builder.build();\r\n+    assertEquals(\"foo\", cmd.getArgs()[0]);\r\n+    assertEquals(\"bar\", cmd.getArgList().get(1));\r\n+    assertEquals(0, cmd.getOptions().length);\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "@Test\r\npublic void testBuilderNulls() {\r\n    final CommandLine.Builder builder \u003d new CommandLine.Builder();\r\n    builder.addArg(\"foo\").addArg(\"bar\");\r\n    builder.addOption(null);\r\n    final CommandLine cmd \u003d builder.build();\r\n    assertEquals(\"foo\", cmd.getArgs()[0]);\r\n    assertEquals(\"bar\", cmd.getArgList().get(1));\r\n    assertEquals(0, cmd.getOptions().length);\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/CommandLineTest.java",
+      "functionStartLine": 44,
+      "functionName": "testBuilderNulls",
+      "functionAnnotation": "@Test",
+      "functionDoc": ""
+    }
+  }
+}

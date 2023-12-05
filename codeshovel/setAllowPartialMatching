@@ -1,0 +1,64 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "DefaultParser.java",
+  "functionName": "setAllowPartialMatching",
+  "functionId": "$setAllowPartialMatching___allowPartialMatching-boolean(modifiers-final)",
+  "sourceFilePath": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+  "functionAnnotation": "",
+  "functionDoc": "Sets if partial matching of long options is supported.\r\n\r\nBy \"partial matching\" we mean that given the following code:\r\n\r\n\u003cpre\u003e\r\n{\r\n    \u0026#64;code\r\n    final Options options \u003d new Options();\r\n    options.addOption(new Option(\"d\", \"debug\", false, \"Turn on debug.\"));\r\n    options.addOption(new Option(\"e\", \"extract\", false, \"Turn on extract.\"));\r\n    options.addOption(new Option(\"o\", \"option\", true, \"Turn on option with argument.\"));\r\n}\r\n\u003c/pre\u003e\r\n\r\nIf \"partial matching\" is turned on, {@code -de} only matches the {@code \"debug\"} option. However, with\r\n\"partial matching\" disabled, {@code -de} would enable both {@code debug} as well as {@code extract}\r\n\r\n@param allowPartialMatching whether to allow partial matching of long options\r\n@return this builder, to allow method chaining\r\n@since 1.5.0\r\n",
+  "functionStartLine": 95,
+  "functionEndLine": 98,
+  "numCommitsSeen": 44,
+  "timeTaken": 57,
+  "changeHistory": [
+    "cc37692b8edbb78cdee140d5c487e0bb42ec3e05",
+    "44173949e8165537b201d4efd024e31e6e8b06eb"
+  ],
+  "changeHistoryShort": {
+    "cc37692b8edbb78cdee140d5c487e0bb42ec3e05": "Ydocchange",
+    "44173949e8165537b201d4efd024e31e6e8b06eb": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "cc37692b8edbb78cdee140d5c487e0bb42ec3e05": {
+      "type": "Ydocchange",
+      "commitMessage": "Next version is 1.5.0.\n",
+      "commitDate": "10/23/21 3:40 PM",
+      "commitName": "cc37692b8edbb78cdee140d5c487e0bb42ec3e05",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "10/19/21 12:32 AM",
+      "commitNameOld": "15e12379bea9bb9ce112fcfbab0a0a9c8899845a",
+      "commitAuthorOld": "Gary Gregory",
+      "daysBetweenCommits": 4.63,
+      "commitsBetweenForRepo": 16,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public Builder setAllowPartialMatching(final boolean allowPartialMatching) {\r\n    this.allowPartialMatching \u003d allowPartialMatching;\r\n    return this;\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+      "functionStartLine": 95,
+      "functionName": "setAllowPartialMatching",
+      "functionAnnotation": "",
+      "functionDoc": "Sets if partial matching of long options is supported.\r\n\r\nBy \"partial matching\" we mean that given the following code:\r\n\r\n\u003cpre\u003e\r\n{\r\n    \u0026#64;code\r\n    final Options options \u003d new Options();\r\n    options.addOption(new Option(\"d\", \"debug\", false, \"Turn on debug.\"));\r\n    options.addOption(new Option(\"e\", \"extract\", false, \"Turn on extract.\"));\r\n    options.addOption(new Option(\"o\", \"option\", true, \"Turn on option with argument.\"));\r\n}\r\n\u003c/pre\u003e\r\n\r\nIf \"partial matching\" is turned on, {@code -de} only matches the {@code \"debug\"} option. However, with\r\n\"partial matching\" disabled, {@code -de} would enable both {@code debug} as well as {@code extract}\r\n\r\n@param allowPartialMatching whether to allow partial matching of long options\r\n@return this builder, to allow method chaining\r\n@since 1.5.0\r\n",
+      "diff": "",
+      "extendedDetails": {
+        "oldValue": "Sets if partial matching of long options is supported.\r\n\r\nBy \"partial matching\" we mean that given the following code:\r\n\r\n\u003cpre\u003e\r\n{\r\n    \u0026#64;code\r\n    final Options options \u003d new Options();\r\n    options.addOption(new Option(\"d\", \"debug\", false, \"Turn on debug.\"));\r\n    options.addOption(new Option(\"e\", \"extract\", false, \"Turn on extract.\"));\r\n    options.addOption(new Option(\"o\", \"option\", true, \"Turn on option with argument.\"));\r\n}\r\n\u003c/pre\u003e\r\n\r\nIf \"partial matching\" is turned on, {@code -de} only matches the {@code \"debug\"} option. However, with\r\n\"partial matching\" disabled, {@code -de} would enable both {@code debug} as well as {@code extract}\r\n\r\n@param allowPartialMatching whether to allow partial matching of long options\r\n@return this builder, to allow method chaining\r\n@since 1.5\r\n",
+        "newValue": "Sets if partial matching of long options is supported.\r\n\r\nBy \"partial matching\" we mean that given the following code:\r\n\r\n\u003cpre\u003e\r\n{\r\n    \u0026#64;code\r\n    final Options options \u003d new Options();\r\n    options.addOption(new Option(\"d\", \"debug\", false, \"Turn on debug.\"));\r\n    options.addOption(new Option(\"e\", \"extract\", false, \"Turn on extract.\"));\r\n    options.addOption(new Option(\"o\", \"option\", true, \"Turn on option with argument.\"));\r\n}\r\n\u003c/pre\u003e\r\n\r\nIf \"partial matching\" is turned on, {@code -de} only matches the {@code \"debug\"} option. However, with\r\n\"partial matching\" disabled, {@code -de} would enable both {@code debug} as well as {@code extract}\r\n\r\n@param allowPartialMatching whether to allow partial matching of long options\r\n@return this builder, to allow method chaining\r\n@since 1.5.0\r\n"
+      }
+    },
+    "44173949e8165537b201d4efd024e31e6e8b06eb": {
+      "type": "Yintroduced",
+      "commitMessage": "CLI-254: \"test\" gets parsed as test, quotes die :-( (#58)\n\n* CLI-254 \"test\" gets parsed as test, quotes die :-(\r\n\r\n* address review comments, improve backwards compatibility",
+      "commitDate": "10/17/21 5:37 PM",
+      "commitName": "44173949e8165537b201d4efd024e31e6e8b06eb",
+      "commitAuthor": "Istvan Toth",
+      "diff": "@@ -0,0 +1,4 @@\n+public Builder setAllowPartialMatching(final boolean allowPartialMatching) {\r\n+    this.allowPartialMatching \u003d allowPartialMatching;\r\n+    return this;\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "public Builder setAllowPartialMatching(final boolean allowPartialMatching) {\r\n    this.allowPartialMatching \u003d allowPartialMatching;\r\n    return this;\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+      "functionStartLine": 742,
+      "functionName": "setAllowPartialMatching",
+      "functionAnnotation": "",
+      "functionDoc": "Sets if partial matching of long options is supported.\r\n\r\nBy \"partial matching\" we mean that given the following code:\r\n\r\n\u003cpre\u003e\r\n{\r\n    \u0026#64;code\r\n    final Options options \u003d new Options();\r\n    options.addOption(new Option(\"d\", \"debug\", false, \"Turn on debug.\"));\r\n    options.addOption(new Option(\"e\", \"extract\", false, \"Turn on extract.\"));\r\n    options.addOption(new Option(\"o\", \"option\", true, \"Turn on option with argument.\"));\r\n}\r\n\u003c/pre\u003e\r\n\r\nIf \"partial matching\" is turned on, {@code -de} only matches the {@code \"debug\"} option. However, with\r\n\"partial matching\" disabled, {@code -de} would enable both {@code debug} as well as {@code extract}\r\n\r\n@param allowPartialMatching whether to allow partial matching of long options\r\n@return this builder, to allow method chaining\r\n@since 1.5\r\n"
+    }
+  }
+}

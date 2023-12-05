@@ -1,0 +1,113 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "HelpFormatter.java",
+  "functionName": "getLongOptPrefix",
+  "functionId": "getLongOptPrefix",
+  "sourceFilePath": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+  "functionAnnotation": "",
+  "functionDoc": "Gets the \u0027longOptPrefix\u0027.\r\n\r\n@return the \u0027longOptPrefix\u0027\r\n",
+  "functionStartLine": 345,
+  "functionEndLine": 347,
+  "numCommitsSeen": 92,
+  "timeTaken": 112,
+  "changeHistory": [
+    "cbb7227c1f19e9b72e9ab65230d3fce570bf9f8b",
+    "1596f3bbe57986361da4ac1a23634dd5b00d10df",
+    "147df44faa4eb12ffd4a0063fc3284f784ea67c8",
+    "9b2b8038b52be022e42c8c7fdf26e236888f94c5"
+  ],
+  "changeHistoryShort": {
+    "cbb7227c1f19e9b72e9ab65230d3fce570bf9f8b": "Ydocchange",
+    "1596f3bbe57986361da4ac1a23634dd5b00d10df": "Yfilerename",
+    "147df44faa4eb12ffd4a0063fc3284f784ea67c8": "Ybodychange",
+    "9b2b8038b52be022e42c8c7fdf26e236888f94c5": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "cbb7227c1f19e9b72e9ab65230d3fce570bf9f8b": {
+      "type": "Ydocchange",
+      "commitMessage": "Normalize Javadoc for getters.\n",
+      "commitDate": "10/4/21 12:41 AM",
+      "commitName": "cbb7227c1f19e9b72e9ab65230d3fce570bf9f8b",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "10/4/21 12:32 AM",
+      "commitNameOld": "9539506e87648d753c44b68b3dfbdd1938c09315",
+      "commitAuthorOld": "Gary Gregory",
+      "daysBetweenCommits": 0.01,
+      "commitsBetweenForRepo": 2,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public String getLongOptPrefix() {\r\n    return defaultLongOptPrefix;\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+      "functionStartLine": 346,
+      "functionName": "getLongOptPrefix",
+      "functionAnnotation": "",
+      "functionDoc": "Gets the \u0027longOptPrefix\u0027.\r\n\r\n@return the \u0027longOptPrefix\u0027\r\n",
+      "diff": "",
+      "extendedDetails": {
+        "oldValue": "Returns the \u0027longOptPrefix\u0027.\r\n\r\n@return the \u0027longOptPrefix\u0027\r\n",
+        "newValue": "Gets the \u0027longOptPrefix\u0027.\r\n\r\n@return the \u0027longOptPrefix\u0027\r\n"
+      }
+    },
+    "1596f3bbe57986361da4ac1a23634dd5b00d10df": {
+      "type": "Yfilerename",
+      "commitMessage": "Switched to the Maven 2 default directory layout (part 3)\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@955173 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/16/10 12:45 PM",
+      "commitName": "1596f3bbe57986361da4ac1a23634dd5b00d10df",
+      "commitAuthor": "Emmanuel Bourg",
+      "commitDateOld": "6/16/10 12:42 PM",
+      "commitNameOld": "406a35f1a128944b7c51dcbc4a1f04c3f8bec3e6",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 0.0,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public String getLongOptPrefix() {\r\n    return defaultLongOptPrefix;\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+      "functionStartLine": 278,
+      "functionName": "getLongOptPrefix",
+      "functionAnnotation": "",
+      "functionDoc": "Returns the \u0027longOptPrefix\u0027.\r\n\r\n@return the \u0027longOptPrefix\u0027\r\n",
+      "diff": "",
+      "extendedDetails": {
+        "oldPath": "src/java/org/apache/commons/cli/HelpFormatter.java",
+        "newPath": "src/main/java/org/apache/commons/cli/HelpFormatter.java"
+      }
+    },
+    "147df44faa4eb12ffd4a0063fc3284f784ea67c8": {
+      "type": "Ybodychange",
+      "commitMessage": "Style update\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/branches/cli-1.x@680644 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "7/29/08 11:13 AM",
+      "commitName": "147df44faa4eb12ffd4a0063fc3284f784ea67c8",
+      "commitAuthor": "Emmanuel Bourg",
+      "commitDateOld": "5/30/08 1:22 PM",
+      "commitNameOld": "d36adebd3547279b709960c902c3fb7b89a9a4ef",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 59.91,
+      "commitsBetweenForRepo": 39,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public String getLongOptPrefix() {\r\n    return defaultLongOptPrefix;\r\n}",
+      "path": "src/java/org/apache/commons/cli/HelpFormatter.java",
+      "functionStartLine": 272,
+      "functionName": "getLongOptPrefix",
+      "functionAnnotation": "",
+      "functionDoc": "Returns the \u0027longOptPrefix\u0027.\r\n\r\n@return the \u0027longOptPrefix\u0027\r\n",
+      "diff": "@@ -1,3 +1,3 @@\n public String getLongOptPrefix() {\r\n-    return this.defaultLongOptPrefix;\r\n+    return defaultLongOptPrefix;\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {}
+    },
+    "9b2b8038b52be022e42c8c7fdf26e236888f94c5": {
+      "type": "Yintroduced",
+      "commitMessage": "checkstyle fixes\n\n\ngit-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/cli/trunk@129857 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "12/10/02 1:47 AM",
+      "commitName": "9b2b8038b52be022e42c8c7fdf26e236888f94c5",
+      "commitAuthor": "John Keyes",
+      "diff": "@@ -0,0 +1,3 @@\n+public String getLongOptPrefix() {\r\n+    return this.defaultLongOptPrefix;\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "public String getLongOptPrefix() {\r\n    return this.defaultLongOptPrefix;\r\n}",
+      "path": "src/java/org/apache/commons/cli/HelpFormatter.java",
+      "functionStartLine": 263,
+      "functionName": "getLongOptPrefix",
+      "functionAnnotation": "",
+      "functionDoc": "Returns the \u0027longOptPrefix\u0027.\r\n\r\n@return the \u0027longOptPrefix\u0027\r\n"
+    }
+  }
+}

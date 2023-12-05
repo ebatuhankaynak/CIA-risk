@@ -1,0 +1,38 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "Option.java",
+  "functionName": "desc",
+  "functionId": "$desc___description-String(modifiers-final)",
+  "sourceFilePath": "src/main/java/org/apache/commons/cli/Option.java",
+  "functionAnnotation": "",
+  "functionDoc": "Sets the description for this option.\r\n\r\n@param description the description of the option.\r\n@return this builder, to allow method chaining\r\n",
+  "functionStartLine": 126,
+  "functionEndLine": 129,
+  "numCommitsSeen": 63,
+  "timeTaken": 63,
+  "changeHistory": [
+    "faa6455a9a0bccf29d049f0b0958eb9b2e804fc3"
+  ],
+  "changeHistoryShort": {
+    "faa6455a9a0bccf29d049f0b0958eb9b2e804fc3": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "faa6455a9a0bccf29d049f0b0958eb9b2e804fc3": {
+      "type": "Yintroduced",
+      "commitMessage": "[CLI-224] Add static builder methods to Option, check if at least one of opt/longOpt has been specified, update javadoc.\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1447005 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "2/17/13 1:11 PM",
+      "commitName": "faa6455a9a0bccf29d049f0b0958eb9b2e804fc3",
+      "commitAuthor": "Thomas Neidhart",
+      "diff": "@@ -0,0 +1,4 @@\n+public Builder desc(final String description) {\r\n+    this.description \u003d description;\r\n+    return this;\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "public Builder desc(final String description) {\r\n    this.description \u003d description;\r\n    return this;\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/Option.java",
+      "functionStartLine": 854,
+      "functionName": "desc",
+      "functionAnnotation": "",
+      "functionDoc": "Sets the description for this option.\r\n\r\n@param description the description of the option.\r\n@return this builder, to allow method chaining\r\n"
+    }
+  }
+}

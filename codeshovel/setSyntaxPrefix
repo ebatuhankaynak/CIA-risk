@@ -1,0 +1,90 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "HelpFormatter.java",
+  "functionName": "setSyntaxPrefix",
+  "functionId": "setSyntaxPrefix___prefix-String(modifiers-final)",
+  "sourceFilePath": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+  "functionAnnotation": "",
+  "functionDoc": "Sets the \u0027syntaxPrefix\u0027.\r\n\r\n@param prefix the new value of \u0027syntaxPrefix\u0027\r\n",
+  "functionStartLine": 919,
+  "functionEndLine": 921,
+  "numCommitsSeen": 92,
+  "timeTaken": 72,
+  "changeHistory": [
+    "5fb9e5009a8cdc7366b7a762f0e43dc47decf67c",
+    "1596f3bbe57986361da4ac1a23634dd5b00d10df",
+    "9b2b8038b52be022e42c8c7fdf26e236888f94c5"
+  ],
+  "changeHistoryShort": {
+    "5fb9e5009a8cdc7366b7a762f0e43dc47decf67c": "Yparametermetachange",
+    "1596f3bbe57986361da4ac1a23634dd5b00d10df": "Yfilerename",
+    "9b2b8038b52be022e42c8c7fdf26e236888f94c5": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "5fb9e5009a8cdc7366b7a762f0e43dc47decf67c": {
+      "type": "Yparametermetachange",
+      "commitMessage": "Add final modifier to method parameters.\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1797674 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/5/17 7:38 PM",
+      "commitName": "5fb9e5009a8cdc7366b7a762f0e43dc47decf67c",
+      "commitAuthor": "Gary D. Gregory",
+      "commitDateOld": "6/5/17 7:37 PM",
+      "commitNameOld": "357a8b0b8f1090db29e0d541a9419f570a78457b",
+      "commitAuthorOld": "Gary D. Gregory",
+      "daysBetweenCommits": 0.0,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public void setSyntaxPrefix(final String prefix) {\r\n    this.defaultSyntaxPrefix \u003d prefix;\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+      "functionStartLine": 255,
+      "functionName": "setSyntaxPrefix",
+      "functionAnnotation": "",
+      "functionDoc": "Sets the \u0027syntaxPrefix\u0027.\r\n\r\n@param prefix the new value of \u0027syntaxPrefix\u0027\r\n",
+      "diff": "@@ -1,3 +1,3 @@\n-public void setSyntaxPrefix(String prefix) {\r\n+public void setSyntaxPrefix(final String prefix) {\r\n     this.defaultSyntaxPrefix \u003d prefix;\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {
+        "oldValue": "[prefix-String]",
+        "newValue": "[prefix-String(modifiers-final)]"
+      }
+    },
+    "1596f3bbe57986361da4ac1a23634dd5b00d10df": {
+      "type": "Yfilerename",
+      "commitMessage": "Switched to the Maven 2 default directory layout (part 3)\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@955173 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/16/10 12:45 PM",
+      "commitName": "1596f3bbe57986361da4ac1a23634dd5b00d10df",
+      "commitAuthor": "Emmanuel Bourg",
+      "commitDateOld": "6/16/10 12:42 PM",
+      "commitNameOld": "406a35f1a128944b7c51dcbc4a1f04c3f8bec3e6",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 0.0,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public void setSyntaxPrefix(String prefix) {\r\n    this.defaultSyntaxPrefix \u003d prefix;\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+      "functionStartLine": 208,
+      "functionName": "setSyntaxPrefix",
+      "functionAnnotation": "",
+      "functionDoc": "Sets the \u0027syntaxPrefix\u0027.\r\n\r\n@param prefix the new value of \u0027syntaxPrefix\u0027\r\n",
+      "diff": "",
+      "extendedDetails": {
+        "oldPath": "src/java/org/apache/commons/cli/HelpFormatter.java",
+        "newPath": "src/main/java/org/apache/commons/cli/HelpFormatter.java"
+      }
+    },
+    "9b2b8038b52be022e42c8c7fdf26e236888f94c5": {
+      "type": "Yintroduced",
+      "commitMessage": "checkstyle fixes\n\n\ngit-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/cli/trunk@129857 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "12/10/02 1:47 AM",
+      "commitName": "9b2b8038b52be022e42c8c7fdf26e236888f94c5",
+      "commitAuthor": "John Keyes",
+      "diff": "@@ -0,0 +1,3 @@\n+public void setSyntaxPrefix(String prefix) {\r\n+    this.defaultSyntaxPrefix \u003d prefix;\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "public void setSyntaxPrefix(String prefix) {\r\n    this.defaultSyntaxPrefix \u003d prefix;\r\n}",
+      "path": "src/java/org/apache/commons/cli/HelpFormatter.java",
+      "functionStartLine": 193,
+      "functionName": "setSyntaxPrefix",
+      "functionAnnotation": "",
+      "functionDoc": "Sets the \u0027syntaxPrefix\u0027.\r\n\r\n@param prefix the new value of \u0027syntaxPrefix\u0027\r\n"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "UnrecognizedOptionException.java",
+  "functionName": "getOption",
+  "functionId": "getOption",
+  "sourceFilePath": "src/main/java/org/apache/commons/cli/UnrecognizedOptionException.java",
+  "functionAnnotation": "",
+  "functionDoc": "Gets the unrecognized option.\r\n\r\n@return the related option\r\n@since 1.2\r\n",
+  "functionStartLine": 60,
+  "functionEndLine": 62,
+  "numCommitsSeen": 20,
+  "timeTaken": 141,
+  "changeHistory": [
+    "dc9af47ef6149c7895ffcac9ede4d33fb37dfd3b",
+    "1596f3bbe57986361da4ac1a23634dd5b00d10df",
+    "147df44faa4eb12ffd4a0063fc3284f784ea67c8",
+    "0a8de54ff89093fc8c5a2b00f7c0c856c5cbe57d"
+  ],
+  "changeHistoryShort": {
+    "dc9af47ef6149c7895ffcac9ede4d33fb37dfd3b": "Ydocchange",
+    "1596f3bbe57986361da4ac1a23634dd5b00d10df": "Yfilerename",
+    "147df44faa4eb12ffd4a0063fc3284f784ea67c8": "Ydocchange",
+    "0a8de54ff89093fc8c5a2b00f7c0c856c5cbe57d": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "dc9af47ef6149c7895ffcac9ede4d33fb37dfd3b": {
+      "type": "Ydocchange",
+      "commitMessage": "Use final.\n",
+      "commitDate": "10/4/21 12:28 AM",
+      "commitName": "dc9af47ef6149c7895ffcac9ede4d33fb37dfd3b",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "10/2/21 11:04 PM",
+      "commitNameOld": "bc0edc47dbf47cdaa3485cfb724982f377c900df",
+      "commitAuthorOld": "Gary Gregory",
+      "daysBetweenCommits": 1.06,
+      "commitsBetweenForRepo": 9,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public String getOption() {\r\n    return option;\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/UnrecognizedOptionException.java",
+      "functionStartLine": 60,
+      "functionName": "getOption",
+      "functionAnnotation": "",
+      "functionDoc": "Gets the unrecognized option.\r\n\r\n@return the related option\r\n@since 1.2\r\n",
+      "diff": "",
+      "extendedDetails": {
+        "oldValue": "Returns the unrecognized option.\r\n\r\n@return the related option\r\n@since 1.2\r\n",
+        "newValue": "Gets the unrecognized option.\r\n\r\n@return the related option\r\n@since 1.2\r\n"
+      }
+    },
+    "1596f3bbe57986361da4ac1a23634dd5b00d10df": {
+      "type": "Yfilerename",
+      "commitMessage": "Switched to the Maven 2 default directory layout (part 3)\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@955173 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/16/10 12:45 PM",
+      "commitName": "1596f3bbe57986361da4ac1a23634dd5b00d10df",
+      "commitAuthor": "Emmanuel Bourg",
+      "commitDateOld": "6/16/10 12:42 PM",
+      "commitNameOld": "406a35f1a128944b7c51dcbc4a1f04c3f8bec3e6",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 0.0,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public String getOption() {\r\n    return option;\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/UnrecognizedOptionException.java",
+      "functionStartLine": 63,
+      "functionName": "getOption",
+      "functionAnnotation": "",
+      "functionDoc": "Returns the unrecognized option.\r\n\r\n@return the related option\r\n@since 1.2\r\n",
+      "diff": "",
+      "extendedDetails": {
+        "oldPath": "src/java/org/apache/commons/cli/UnrecognizedOptionException.java",
+        "newPath": "src/main/java/org/apache/commons/cli/UnrecognizedOptionException.java"
+      }
+    },
+    "147df44faa4eb12ffd4a0063fc3284f784ea67c8": {
+      "type": "Ydocchange",
+      "commitMessage": "Style update\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/branches/cli-1.x@680644 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "7/29/08 11:13 AM",
+      "commitName": "147df44faa4eb12ffd4a0063fc3284f784ea67c8",
+      "commitAuthor": "Emmanuel Bourg",
+      "commitDateOld": "7/25/08 1:25 AM",
+      "commitNameOld": "0a8de54ff89093fc8c5a2b00f7c0c856c5cbe57d",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 4.41,
+      "commitsBetweenForRepo": 11,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public String getOption() {\r\n    return option;\r\n}",
+      "path": "src/java/org/apache/commons/cli/UnrecognizedOptionException.java",
+      "functionStartLine": 63,
+      "functionName": "getOption",
+      "functionAnnotation": "",
+      "functionDoc": "Returns the unrecognized option.\r\n\r\n@return the related option\r\n@since 1.2\r\n",
+      "diff": "",
+      "extendedDetails": {
+        "oldValue": "Returns the unrecognized option.\r\n\r\n@since 1.2\r\n",
+        "newValue": "Returns the unrecognized option.\r\n\r\n@return the related option\r\n@since 1.2\r\n"
+      }
+    },
+    "0a8de54ff89093fc8c5a2b00f7c0c856c5cbe57d": {
+      "type": "Yintroduced",
+      "commitMessage": "Changed UnrecognizedOptionException to include the option that wasn\u0027t recognized\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/branches/cli-1.x@679583 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "7/25/08 1:25 AM",
+      "commitName": "0a8de54ff89093fc8c5a2b00f7c0c856c5cbe57d",
+      "commitAuthor": "Emmanuel Bourg",
+      "diff": "@@ -0,0 +1,3 @@\n+public String getOption() {\r\n+    return option;\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "public String getOption() {\r\n    return option;\r\n}",
+      "path": "src/java/org/apache/commons/cli/UnrecognizedOptionException.java",
+      "functionStartLine": 62,
+      "functionName": "getOption",
+      "functionAnnotation": "",
+      "functionDoc": "Returns the unrecognized option.\r\n\r\n@since 1.2\r\n"
+    }
+  }
+}

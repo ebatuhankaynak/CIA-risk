@@ -1,0 +1,113 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "HelpFormatterTest.java",
+  "functionName": "testAccessors",
+  "functionId": "testAccessors",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/HelpFormatterTest.java",
+  "functionAnnotation": "@Test",
+  "functionDoc": "",
+  "functionStartLine": 37,
+  "functionEndLine": 63,
+  "numCommitsSeen": 40,
+  "timeTaken": 1069,
+  "changeHistory": [
+    "357a8b0b8f1090db29e0d541a9419f570a78457b",
+    "60835e2f29d4ec09eead7789405d99f92c36a29e",
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0",
+    "8214cec49675d881c49a22172a20edee09add6f7"
+  ],
+  "changeHistoryShort": {
+    "357a8b0b8f1090db29e0d541a9419f570a78457b": "Ybodychange",
+    "60835e2f29d4ec09eead7789405d99f92c36a29e": "Yannotationchange",
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0": "Yfilerename",
+    "8214cec49675d881c49a22172a20edee09add6f7": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "357a8b0b8f1090db29e0d541a9419f570a78457b": {
+      "type": "Ybodychange",
+      "commitMessage": "Add final modifier to local variables.\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1797673 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/5/17 7:37 PM",
+      "commitName": "357a8b0b8f1090db29e0d541a9419f570a78457b",
+      "commitAuthor": "Gary D. Gregory",
+      "commitDateOld": "3/28/15 8:06 PM",
+      "commitNameOld": "ec363cc653aaaa2c10b19e0ae880ede6084dd420",
+      "commitAuthorOld": "Benedikt Ritter",
+      "daysBetweenCommits": 799.94,
+      "commitsBetweenForRepo": 78,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test\r\npublic void testAccessors() {\r\n    final HelpFormatter formatter \u003d new HelpFormatter();\r\n    formatter.setArgName(\"argname\");\r\n    assertEquals(\"arg name\", \"argname\", formatter.getArgName());\r\n    formatter.setDescPadding(3);\r\n    assertEquals(\"desc padding\", 3, formatter.getDescPadding());\r\n    formatter.setLeftPadding(7);\r\n    assertEquals(\"left padding\", 7, formatter.getLeftPadding());\r\n    formatter.setLongOptPrefix(\"~~\");\r\n    assertEquals(\"long opt prefix\", \"~~\", formatter.getLongOptPrefix());\r\n    formatter.setNewLine(\"\\n\");\r\n    assertEquals(\"new line\", \"\\n\", formatter.getNewLine());\r\n    formatter.setOptPrefix(\"~\");\r\n    assertEquals(\"opt prefix\", \"~\", formatter.getOptPrefix());\r\n    formatter.setSyntaxPrefix(\"-\u003e \");\r\n    assertEquals(\"syntax prefix\", \"-\u003e \", formatter.getSyntaxPrefix());\r\n    formatter.setWidth(80);\r\n    assertEquals(\"width\", 80, formatter.getWidth());\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/HelpFormatterTest.java",
+      "functionStartLine": 405,
+      "functionName": "testAccessors",
+      "functionAnnotation": "@Test",
+      "functionDoc": "",
+      "diff": "@@ -1,20 +1,20 @@\n @Test\r\n public void testAccessors() {\r\n-    HelpFormatter formatter \u003d new HelpFormatter();\r\n+    final HelpFormatter formatter \u003d new HelpFormatter();\r\n     formatter.setArgName(\"argname\");\r\n     assertEquals(\"arg name\", \"argname\", formatter.getArgName());\r\n     formatter.setDescPadding(3);\r\n     assertEquals(\"desc padding\", 3, formatter.getDescPadding());\r\n     formatter.setLeftPadding(7);\r\n     assertEquals(\"left padding\", 7, formatter.getLeftPadding());\r\n     formatter.setLongOptPrefix(\"~~\");\r\n     assertEquals(\"long opt prefix\", \"~~\", formatter.getLongOptPrefix());\r\n     formatter.setNewLine(\"\\n\");\r\n     assertEquals(\"new line\", \"\\n\", formatter.getNewLine());\r\n     formatter.setOptPrefix(\"~\");\r\n     assertEquals(\"opt prefix\", \"~\", formatter.getOptPrefix());\r\n     formatter.setSyntaxPrefix(\"-\u003e \");\r\n     assertEquals(\"syntax prefix\", \"-\u003e \", formatter.getSyntaxPrefix());\r\n     formatter.setWidth(80);\r\n     assertEquals(\"width\", 80, formatter.getWidth());\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {}
+    },
+    "60835e2f29d4ec09eead7789405d99f92c36a29e": {
+      "type": "Yannotationchange",
+      "commitMessage": "[CLI-227] Convert unit tests to junit 4, upgrade junit to 4.11, move authors to pom.xml.\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1442904 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "2/6/13 12:57 PM",
+      "commitName": "60835e2f29d4ec09eead7789405d99f92c36a29e",
+      "commitAuthor": "Thomas Neidhart",
+      "commitDateOld": "1/29/13 6:58 PM",
+      "commitNameOld": "6ba1a28a39f42d411689d71bc11932c820cb4265",
+      "commitAuthorOld": "Thomas Neidhart",
+      "daysBetweenCommits": 7.75,
+      "commitsBetweenForRepo": 19,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test\r\npublic void testAccessors() {\r\n    HelpFormatter formatter \u003d new HelpFormatter();\r\n    formatter.setArgName(\"argname\");\r\n    assertEquals(\"arg name\", \"argname\", formatter.getArgName());\r\n    formatter.setDescPadding(3);\r\n    assertEquals(\"desc padding\", 3, formatter.getDescPadding());\r\n    formatter.setLeftPadding(7);\r\n    assertEquals(\"left padding\", 7, formatter.getLeftPadding());\r\n    formatter.setLongOptPrefix(\"~~\");\r\n    assertEquals(\"long opt prefix\", \"~~\", formatter.getLongOptPrefix());\r\n    formatter.setNewLine(\"\\n\");\r\n    assertEquals(\"new line\", \"\\n\", formatter.getNewLine());\r\n    formatter.setOptPrefix(\"~\");\r\n    assertEquals(\"opt prefix\", \"~\", formatter.getOptPrefix());\r\n    formatter.setSyntaxPrefix(\"-\u003e \");\r\n    assertEquals(\"syntax prefix\", \"-\u003e \", formatter.getSyntaxPrefix());\r\n    formatter.setWidth(80);\r\n    assertEquals(\"width\", 80, formatter.getWidth());\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/HelpFormatterTest.java",
+      "functionStartLine": 406,
+      "functionName": "testAccessors",
+      "functionAnnotation": "@Test",
+      "functionDoc": "",
+      "diff": "@@ -1,19 +1,20 @@\n+@Test\r\n public void testAccessors() {\r\n     HelpFormatter formatter \u003d new HelpFormatter();\r\n     formatter.setArgName(\"argname\");\r\n     assertEquals(\"arg name\", \"argname\", formatter.getArgName());\r\n     formatter.setDescPadding(3);\r\n     assertEquals(\"desc padding\", 3, formatter.getDescPadding());\r\n     formatter.setLeftPadding(7);\r\n     assertEquals(\"left padding\", 7, formatter.getLeftPadding());\r\n     formatter.setLongOptPrefix(\"~~\");\r\n     assertEquals(\"long opt prefix\", \"~~\", formatter.getLongOptPrefix());\r\n     formatter.setNewLine(\"\\n\");\r\n     assertEquals(\"new line\", \"\\n\", formatter.getNewLine());\r\n     formatter.setOptPrefix(\"~\");\r\n     assertEquals(\"opt prefix\", \"~\", formatter.getOptPrefix());\r\n     formatter.setSyntaxPrefix(\"-\u003e \");\r\n     assertEquals(\"syntax prefix\", \"-\u003e \", formatter.getSyntaxPrefix());\r\n     formatter.setWidth(80);\r\n     assertEquals(\"width\", 80, formatter.getWidth());\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {
+        "oldValue": "",
+        "newValue": "@Test"
+      }
+    },
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0": {
+      "type": "Yfilerename",
+      "commitMessage": "Switched to the Maven 2 default directory layout (part 1)\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@955169 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/16/10 12:41 PM",
+      "commitName": "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0",
+      "commitAuthor": "Emmanuel Bourg",
+      "commitDateOld": "6/16/10 12:36 PM",
+      "commitNameOld": "106f3b8dd48d32cbfcba4a42e1161505c2e3cac6",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 0.0,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public void testAccessors() {\r\n    HelpFormatter formatter \u003d new HelpFormatter();\r\n    formatter.setArgName(\"argname\");\r\n    assertEquals(\"arg name\", \"argname\", formatter.getArgName());\r\n    formatter.setDescPadding(3);\r\n    assertEquals(\"desc padding\", 3, formatter.getDescPadding());\r\n    formatter.setLeftPadding(7);\r\n    assertEquals(\"left padding\", 7, formatter.getLeftPadding());\r\n    formatter.setLongOptPrefix(\"~~\");\r\n    assertEquals(\"long opt prefix\", \"~~\", formatter.getLongOptPrefix());\r\n    formatter.setNewLine(\"\\n\");\r\n    assertEquals(\"new line\", \"\\n\", formatter.getNewLine());\r\n    formatter.setOptPrefix(\"~\");\r\n    assertEquals(\"opt prefix\", \"~\", formatter.getOptPrefix());\r\n    formatter.setSyntaxPrefix(\"-\u003e \");\r\n    assertEquals(\"syntax prefix\", \"-\u003e \", formatter.getSyntaxPrefix());\r\n    formatter.setWidth(80);\r\n    assertEquals(\"width\", 80, formatter.getWidth());\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/HelpFormatterTest.java",
+      "functionStartLine": 317,
+      "functionName": "testAccessors",
+      "functionAnnotation": "",
+      "functionDoc": "",
+      "diff": "",
+      "extendedDetails": {
+        "oldPath": "src/test/org/apache/commons/cli/HelpFormatterTest.java",
+        "newPath": "src/test/java/org/apache/commons/cli/HelpFormatterTest.java"
+      }
+    },
+    "8214cec49675d881c49a22172a20edee09add6f7": {
+      "type": "Yintroduced",
+      "commitMessage": "Added tests for the accessors of HelpFormatter\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/branches/cli-1.x@661649 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "5/30/08 2:13 PM",
+      "commitName": "8214cec49675d881c49a22172a20edee09add6f7",
+      "commitAuthor": "Emmanuel Bourg",
+      "diff": "@@ -0,0 +1,19 @@\n+public void testAccessors() {\r\n+    HelpFormatter formatter \u003d new HelpFormatter();\r\n+    formatter.setArgName(\"argname\");\r\n+    assertEquals(\"arg name\", \"argname\", formatter.getArgName());\r\n+    formatter.setDescPadding(3);\r\n+    assertEquals(\"desc padding\", 3, formatter.getDescPadding());\r\n+    formatter.setLeftPadding(7);\r\n+    assertEquals(\"left padding\", 7, formatter.getLeftPadding());\r\n+    formatter.setLongOptPrefix(\"~~\");\r\n+    assertEquals(\"long opt prefix\", \"~~\", formatter.getLongOptPrefix());\r\n+    formatter.setNewLine(\"\\n\");\r\n+    assertEquals(\"new line\", \"\\n\", formatter.getNewLine());\r\n+    formatter.setOptPrefix(\"~\");\r\n+    assertEquals(\"opt prefix\", \"~\", formatter.getOptPrefix());\r\n+    formatter.setSyntaxPrefix(\"-\u003e \");\r\n+    assertEquals(\"syntax prefix\", \"-\u003e \", formatter.getSyntaxPrefix());\r\n+    formatter.setWidth(80);\r\n+    assertEquals(\"width\", 80, formatter.getWidth());\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "public void testAccessors() {\r\n    HelpFormatter formatter \u003d new HelpFormatter();\r\n    formatter.setArgName(\"argname\");\r\n    assertEquals(\"arg name\", \"argname\", formatter.getArgName());\r\n    formatter.setDescPadding(3);\r\n    assertEquals(\"desc padding\", 3, formatter.getDescPadding());\r\n    formatter.setLeftPadding(7);\r\n    assertEquals(\"left padding\", 7, formatter.getLeftPadding());\r\n    formatter.setLongOptPrefix(\"~~\");\r\n    assertEquals(\"long opt prefix\", \"~~\", formatter.getLongOptPrefix());\r\n    formatter.setNewLine(\"\\n\");\r\n    assertEquals(\"new line\", \"\\n\", formatter.getNewLine());\r\n    formatter.setOptPrefix(\"~\");\r\n    assertEquals(\"opt prefix\", \"~\", formatter.getOptPrefix());\r\n    formatter.setSyntaxPrefix(\"-\u003e \");\r\n    assertEquals(\"syntax prefix\", \"-\u003e \", formatter.getSyntaxPrefix());\r\n    formatter.setWidth(80);\r\n    assertEquals(\"width\", 80, formatter.getWidth());\r\n}",
+      "path": "src/test/org/apache/commons/cli/HelpFormatterTest.java",
+      "functionStartLine": 311,
+      "functionName": "testAccessors",
+      "functionAnnotation": "",
+      "functionDoc": ""
+    }
+  }
+}

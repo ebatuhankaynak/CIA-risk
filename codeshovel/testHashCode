@@ -1,0 +1,61 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "OptionTest.java",
+  "functionName": "testHashCode",
+  "functionId": "testHashCode",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/OptionTest.java",
+  "functionAnnotation": "@Test",
+  "functionDoc": "",
+  "functionStartLine": 221,
+  "functionEndLine": 225,
+  "numCommitsSeen": 22,
+  "timeTaken": 53,
+  "changeHistory": [
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df",
+    "269eae18a911f792895d0402f5dd4e7913410523"
+  ],
+  "changeHistoryShort": {
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df": "Yformatchange",
+    "269eae18a911f792895d0402f5dd4e7913410523": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "bc0edc47dbf47cdaa3485cfb724982f377c900df": {
+      "type": "Yformatchange",
+      "commitMessage": "Clean ups.\n\n- maven-checkstyle-plugin 3.1.1 -\u003e 3.1.2.\n- checkstyle -\u003e 9.0\n- Updates for 21st century.\n- No need to nest else clause.\n- Use simple array declarations.\n- Use valueOf instead of new for Numbers.\n- Consistent formatting.\n- Remove some inline comments //-----...\n",
+      "commitDate": "10/2/21 11:04 PM",
+      "commitName": "bc0edc47dbf47cdaa3485cfb724982f377c900df",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "12/18/19 11:28 PM",
+      "commitNameOld": "c12260c05ebcd27558265395df79b8b049534fbd",
+      "commitAuthorOld": "Gary Gregory",
+      "daysBetweenCommits": 653.98,
+      "commitsBetweenForRepo": 87,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Test\r\npublic void testHashCode() {\r\n    assertNotEquals(Option.builder(\"test\").build().hashCode(), Option.builder(\"test2\").build().hashCode());\r\n    assertNotEquals(Option.builder(\"test\").build().hashCode(), Option.builder().longOpt(\"test\").build().hashCode());\r\n    assertNotEquals(Option.builder(\"test\").build().hashCode(), Option.builder(\"test\").longOpt(\"long test\").build().hashCode());\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/OptionTest.java",
+      "functionStartLine": 71,
+      "functionName": "testHashCode",
+      "functionAnnotation": "@Test",
+      "functionDoc": "",
+      "diff": "",
+      "extendedDetails": {}
+    },
+    "269eae18a911f792895d0402f5dd4e7913410523": {
+      "type": "Yintroduced",
+      "commitMessage": "CLI-271: CommandLine.getXXX and CommandLine.hasXXX should accept an Option as a\nparameter. Thanks to Christoph Läubrich. This also fixes #9 from GitHub\n\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1788678 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "3/25/17 9:32 PM",
+      "commitName": "269eae18a911f792895d0402f5dd4e7913410523",
+      "commitAuthor": "Benedikt Ritter",
+      "diff": "@@ -0,0 +1,6 @@\n+@Test\r\n+public void testHashCode() {\r\n+    assertNotEquals(Option.builder(\"test\").build().hashCode(), Option.builder(\"test2\").build().hashCode());\r\n+    assertNotEquals(Option.builder(\"test\").build().hashCode(), Option.builder().longOpt(\"test\").build().hashCode());\r\n+    assertNotEquals(Option.builder(\"test\").build().hashCode(), Option.builder(\"test\").longOpt(\"long test\").build().hashCode());\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "@Test\r\npublic void testHashCode() {\r\n    assertNotEquals(Option.builder(\"test\").build().hashCode(), Option.builder(\"test2\").build().hashCode());\r\n    assertNotEquals(Option.builder(\"test\").build().hashCode(), Option.builder().longOpt(\"test\").build().hashCode());\r\n    assertNotEquals(Option.builder(\"test\").build().hashCode(), Option.builder(\"test\").longOpt(\"long test\").build().hashCode());\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/OptionTest.java",
+      "functionStartLine": 77,
+      "functionName": "testHashCode",
+      "functionAnnotation": "@Test",
+      "functionDoc": ""
+    }
+  }
+}

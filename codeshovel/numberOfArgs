@@ -1,0 +1,141 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "Option.java",
+  "functionName": "numberOfArgs",
+  "functionId": "$numberOfArgs___argCount-int(modifiers-final)",
+  "sourceFilePath": "src/main/java/org/apache/commons/cli/Option.java",
+  "functionAnnotation": "",
+  "functionDoc": "Sets the number of argument values the Option can take.\r\n\r\n@param argCount the number of argument values\r\n@return this builder, to allow method chaining\r\n",
+  "functionStartLine": 179,
+  "functionEndLine": 182,
+  "numCommitsSeen": 124,
+  "timeTaken": 179,
+  "changeHistory": [
+    "f0d54de5fceedd46331870f22c57d159e784218b",
+    "cfd100d631d2c960a2d109fdddb2bf8e9db44c27",
+    "df52eee396b1e8ce24fd1ec34752e1049618255a"
+  ],
+  "changeHistoryShort": {
+    "f0d54de5fceedd46331870f22c57d159e784218b": "Ymultichange(Yparameterchange,Ybodychange,Ydocchange)",
+    "cfd100d631d2c960a2d109fdddb2bf8e9db44c27": "Ybodychange",
+    "df52eee396b1e8ce24fd1ec34752e1049618255a": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "f0d54de5fceedd46331870f22c57d159e784218b": {
+      "type": "Ymultichange(Yparameterchange,Ybodychange,Ydocchange)",
+      "commitMessage": "Better parameter names\n",
+      "commitDate": "8/16/23 2:16 PM",
+      "commitName": "f0d54de5fceedd46331870f22c57d159e784218b",
+      "commitAuthor": "Gary Gregory",
+      "subchanges": [
+        {
+          "type": "Yparameterchange",
+          "commitMessage": "Better parameter names\n",
+          "commitDate": "8/16/23 2:16 PM",
+          "commitName": "f0d54de5fceedd46331870f22c57d159e784218b",
+          "commitAuthor": "Gary Gregory",
+          "commitDateOld": "7/6/23 10:35 PM",
+          "commitNameOld": "ab9a0f92ff10ad16af0045976f99692beea9081d",
+          "commitAuthorOld": "Gary Gregory",
+          "daysBetweenCommits": 40.65,
+          "commitsBetweenForRepo": 16,
+          "commitsBetweenForFile": 1,
+          "actualSource": "public Builder numberOfArgs(final int argCount) {\r\n    this.argCount \u003d argCount;\r\n    return this;\r\n}",
+          "path": "src/main/java/org/apache/commons/cli/Option.java",
+          "functionStartLine": 179,
+          "functionName": "numberOfArgs",
+          "functionAnnotation": "",
+          "functionDoc": "Sets the number of argument values the Option can take.\r\n\r\n@param argCount the number of argument values\r\n@return this builder, to allow method chaining\r\n",
+          "diff": "@@ -1,4 +1,4 @@\n-public Builder numberOfArgs(final int numberOfArgs) {\r\n-    this.argCount \u003d numberOfArgs;\r\n+public Builder numberOfArgs(final int argCount) {\r\n+    this.argCount \u003d argCount;\r\n     return this;\r\n }\n\\ No newline at end of file\n",
+          "extendedDetails": {
+            "oldValue": "[numberOfArgs-int(modifiers-final)]",
+            "newValue": "[argCount-int(modifiers-final)]"
+          }
+        },
+        {
+          "type": "Ybodychange",
+          "commitMessage": "Better parameter names\n",
+          "commitDate": "8/16/23 2:16 PM",
+          "commitName": "f0d54de5fceedd46331870f22c57d159e784218b",
+          "commitAuthor": "Gary Gregory",
+          "commitDateOld": "7/6/23 10:35 PM",
+          "commitNameOld": "ab9a0f92ff10ad16af0045976f99692beea9081d",
+          "commitAuthorOld": "Gary Gregory",
+          "daysBetweenCommits": 40.65,
+          "commitsBetweenForRepo": 16,
+          "commitsBetweenForFile": 1,
+          "actualSource": "public Builder numberOfArgs(final int argCount) {\r\n    this.argCount \u003d argCount;\r\n    return this;\r\n}",
+          "path": "src/main/java/org/apache/commons/cli/Option.java",
+          "functionStartLine": 179,
+          "functionName": "numberOfArgs",
+          "functionAnnotation": "",
+          "functionDoc": "Sets the number of argument values the Option can take.\r\n\r\n@param argCount the number of argument values\r\n@return this builder, to allow method chaining\r\n",
+          "diff": "@@ -1,4 +1,4 @@\n-public Builder numberOfArgs(final int numberOfArgs) {\r\n-    this.argCount \u003d numberOfArgs;\r\n+public Builder numberOfArgs(final int argCount) {\r\n+    this.argCount \u003d argCount;\r\n     return this;\r\n }\n\\ No newline at end of file\n",
+          "extendedDetails": {}
+        },
+        {
+          "type": "Ydocchange",
+          "commitMessage": "Better parameter names\n",
+          "commitDate": "8/16/23 2:16 PM",
+          "commitName": "f0d54de5fceedd46331870f22c57d159e784218b",
+          "commitAuthor": "Gary Gregory",
+          "commitDateOld": "7/6/23 10:35 PM",
+          "commitNameOld": "ab9a0f92ff10ad16af0045976f99692beea9081d",
+          "commitAuthorOld": "Gary Gregory",
+          "daysBetweenCommits": 40.65,
+          "commitsBetweenForRepo": 16,
+          "commitsBetweenForFile": 1,
+          "actualSource": "public Builder numberOfArgs(final int argCount) {\r\n    this.argCount \u003d argCount;\r\n    return this;\r\n}",
+          "path": "src/main/java/org/apache/commons/cli/Option.java",
+          "functionStartLine": 179,
+          "functionName": "numberOfArgs",
+          "functionAnnotation": "",
+          "functionDoc": "Sets the number of argument values the Option can take.\r\n\r\n@param argCount the number of argument values\r\n@return this builder, to allow method chaining\r\n",
+          "diff": "@@ -1,4 +1,4 @@\n-public Builder numberOfArgs(final int numberOfArgs) {\r\n-    this.argCount \u003d numberOfArgs;\r\n+public Builder numberOfArgs(final int argCount) {\r\n+    this.argCount \u003d argCount;\r\n     return this;\r\n }\n\\ No newline at end of file\n",
+          "extendedDetails": {
+            "oldValue": "Sets the number of argument values the Option can take.\r\n\r\n@param numberOfArgs the number of argument values\r\n@return this builder, to allow method chaining\r\n",
+            "newValue": "Sets the number of argument values the Option can take.\r\n\r\n@param argCount the number of argument values\r\n@return this builder, to allow method chaining\r\n"
+          }
+        }
+      ]
+    },
+    "cfd100d631d2c960a2d109fdddb2bf8e9db44c27": {
+      "type": "Ybodychange",
+      "commitMessage": "Better internal names.\n",
+      "commitDate": "10/4/21 9:53 PM",
+      "commitName": "cfd100d631d2c960a2d109fdddb2bf8e9db44c27",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "10/4/21 8:41 PM",
+      "commitNameOld": "47231757c0e1c5b201889e8f3607470321b60e48",
+      "commitAuthorOld": "Gary Gregory",
+      "daysBetweenCommits": 0.05,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public Builder numberOfArgs(final int numberOfArgs) {\r\n    this.argCount \u003d numberOfArgs;\r\n    return this;\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/Option.java",
+      "functionStartLine": 173,
+      "functionName": "numberOfArgs",
+      "functionAnnotation": "",
+      "functionDoc": "Sets the number of argument values the Option can take.\r\n\r\n@param numberOfArgs the number of argument values\r\n@return this builder, to allow method chaining\r\n",
+      "diff": "@@ -1,4 +1,4 @@\n public Builder numberOfArgs(final int numberOfArgs) {\r\n-    this.numberOfArgs \u003d numberOfArgs;\r\n+    this.argCount \u003d numberOfArgs;\r\n     return this;\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {}
+    },
+    "df52eee396b1e8ce24fd1ec34752e1049618255a": {
+      "type": "Yintroduced",
+      "commitMessage": "[CLI-224] Added new fluent builder API to Option, deprecating OptionBuilder, adapting the PatternOptionBuilder to use the new API, thanks to Duncan Jones.\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1444720 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "2/11/13 12:14 PM",
+      "commitName": "df52eee396b1e8ce24fd1ec34752e1049618255a",
+      "commitAuthor": "Thomas Neidhart",
+      "diff": "@@ -0,0 +1,4 @@\n+public Builder numberOfArgs(final int numberOfArgs) {\r\n+    this.numberOfArgs \u003d numberOfArgs;\r\n+    return this;\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "public Builder numberOfArgs(final int numberOfArgs) {\r\n    this.numberOfArgs \u003d numberOfArgs;\r\n    return this;\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/Option.java",
+      "functionStartLine": 839,
+      "functionName": "numberOfArgs",
+      "functionAnnotation": "",
+      "functionDoc": "Sets the number of argument values the Option can take.\r\n\r\n@param numberOfArgs the number of argument values\r\n@return this builder, to allow method chaining\r\n"
+    }
+  }
+}

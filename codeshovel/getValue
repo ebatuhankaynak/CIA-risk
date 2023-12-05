@@ -1,0 +1,113 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "OptionTest.java",
+  "functionName": "getValue",
+  "functionId": "$getValue",
+  "sourceFilePath": "src/test/java/org/apache/commons/cli/OptionTest.java",
+  "functionAnnotation": "@Override",
+  "functionDoc": "",
+  "functionStartLine": 43,
+  "functionEndLine": 45,
+  "numCommitsSeen": 28,
+  "timeTaken": 217,
+  "changeHistory": [
+    "445ddaaa89bdcd003645b02b600fde1d3730d715",
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0",
+    "10195f227a2285d8213eea422996aadda00ba7cd",
+    "1545ae48a67ad7f2c18942f4c2dfaf9ab8f7eccd"
+  ],
+  "changeHistoryShort": {
+    "445ddaaa89bdcd003645b02b600fde1d3730d715": "Yannotationchange",
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0": "Yfilerename",
+    "10195f227a2285d8213eea422996aadda00ba7cd": "Yformatchange",
+    "1545ae48a67ad7f2c18942f4c2dfaf9ab8f7eccd": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "445ddaaa89bdcd003645b02b600fde1d3730d715": {
+      "type": "Yannotationchange",
+      "commitMessage": "Missing @Override\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@1440517 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "1/30/13 6:51 PM",
+      "commitName": "445ddaaa89bdcd003645b02b600fde1d3730d715",
+      "commitAuthor": "Sebastian Bazley",
+      "commitDateOld": "6/16/10 12:41 PM",
+      "commitNameOld": "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 959.3,
+      "commitsBetweenForRepo": 96,
+      "commitsBetweenForFile": 1,
+      "actualSource": "@Override\r\npublic String getValue() {\r\n    return super.getValue() !\u003d null ? super.getValue() : defaultValue;\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/OptionTest.java",
+      "functionStartLine": 80,
+      "functionName": "getValue",
+      "functionAnnotation": "@Override",
+      "functionDoc": "",
+      "diff": "@@ -1,3 +1,4 @@\n+@Override\r\n public String getValue() {\r\n     return super.getValue() !\u003d null ? super.getValue() : defaultValue;\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {
+        "oldValue": "",
+        "newValue": "@Override"
+      }
+    },
+    "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0": {
+      "type": "Yfilerename",
+      "commitMessage": "Switched to the Maven 2 default directory layout (part 1)\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@955169 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/16/10 12:41 PM",
+      "commitName": "cd745ecf52fb2fe8fed1c67fc9149e4be11a73f0",
+      "commitAuthor": "Emmanuel Bourg",
+      "commitDateOld": "6/16/10 12:36 PM",
+      "commitNameOld": "106f3b8dd48d32cbfcba4a42e1161505c2e3cac6",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 0.0,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public String getValue() {\r\n    return super.getValue() !\u003d null ? super.getValue() : defaultValue;\r\n}",
+      "path": "src/test/java/org/apache/commons/cli/OptionTest.java",
+      "functionStartLine": 78,
+      "functionName": "getValue",
+      "functionAnnotation": "",
+      "functionDoc": "",
+      "diff": "",
+      "extendedDetails": {
+        "oldPath": "src/test/org/apache/commons/cli/OptionTest.java",
+        "newPath": "src/test/java/org/apache/commons/cli/OptionTest.java"
+      }
+    },
+    "10195f227a2285d8213eea422996aadda00ba7cd": {
+      "type": "Yformatchange",
+      "commitMessage": "set svn:eol-style to native\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/branches/cli-1.x@661513 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "5/30/08 1:38 AM",
+      "commitName": "10195f227a2285d8213eea422996aadda00ba7cd",
+      "commitAuthor": "Niall Kegan Pemberton",
+      "commitDateOld": "5/29/08 6:30 PM",
+      "commitNameOld": "2490250f9b3044e4cd946f11b46694f943f5814d",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 0.3,
+      "commitsBetweenForRepo": 6,
+      "commitsBetweenForFile": 1,
+      "actualSource": "public String getValue() {\r\n    return super.getValue() !\u003d null ? super.getValue() : defaultValue;\r\n}",
+      "path": "src/test/org/apache/commons/cli/OptionTest.java",
+      "functionStartLine": 71,
+      "functionName": "getValue",
+      "functionAnnotation": "",
+      "functionDoc": "",
+      "diff": "",
+      "extendedDetails": {}
+    },
+    "1545ae48a67ad7f2c18942f4c2dfaf9ab8f7eccd": {
+      "type": "Yintroduced",
+      "commitMessage": "Applying Brian Egge\u0027s patch to CLI-21 that resurrects the clone() method\n\ngit-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/cli/branches/cli-1.0.x@547721 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/15/07 6:51 PM",
+      "commitName": "1545ae48a67ad7f2c18942f4c2dfaf9ab8f7eccd",
+      "commitAuthor": "Henri Yandell",
+      "diff": "@@ -0,0 +1,3 @@\n+public String getValue() {\r\n+    return super.getValue() !\u003d null ? super.getValue() : defaultValue;\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "public String getValue() {\r\n    return super.getValue() !\u003d null ? super.getValue() : defaultValue;\r\n}",
+      "path": "src/test/org/apache/commons/cli/OptionTest.java",
+      "functionStartLine": 60,
+      "functionName": "getValue",
+      "functionAnnotation": "",
+      "functionDoc": ""
+    }
+  }
+}

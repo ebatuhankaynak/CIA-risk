@@ -1,0 +1,87 @@
+{
+  "origin": "codeshovel",
+  "repositoryName": "commons-cli",
+  "repositoryPath": "D:/_SELEN/_2022-2023/CS588/GitHub_Dataset/commons-cli/commons-cli/.git",
+  "startCommitName": "HEAD",
+  "sourceFileName": "Option.java",
+  "functionName": "acceptsArg",
+  "functionId": "acceptsArg",
+  "sourceFilePath": "src/main/java/org/apache/commons/cli/Option.java",
+  "functionAnnotation": "",
+  "functionDoc": "Tells if the option can accept more arguments.\r\n\r\n@return false if the maximum number of arguments is reached\r\n@since 1.3\r\n",
+  "functionStartLine": 410,
+  "functionEndLine": 412,
+  "numCommitsSeen": 102,
+  "timeTaken": 84,
+  "changeHistory": [
+    "f87f0b37881e927346af7aa732f4be05ef0c14a4",
+    "1596f3bbe57986361da4ac1a23634dd5b00d10df",
+    "f43698527ef2b5ba15fe85d46d2d505418f68243"
+  ],
+  "changeHistoryShort": {
+    "f87f0b37881e927346af7aa732f4be05ef0c14a4": "Ybodychange",
+    "1596f3bbe57986361da4ac1a23634dd5b00d10df": "Yfilerename",
+    "f43698527ef2b5ba15fe85d46d2d505418f68243": "Yintroduced"
+  },
+  "changeHistoryDetails": {
+    "f87f0b37881e927346af7aa732f4be05ef0c14a4": {
+      "type": "Ybodychange",
+      "commitMessage": "Rename some internals.\n",
+      "commitDate": "10/6/21 3:37 PM",
+      "commitName": "f87f0b37881e927346af7aa732f4be05ef0c14a4",
+      "commitAuthor": "Gary Gregory",
+      "commitDateOld": "10/6/21 3:24 PM",
+      "commitNameOld": "f2aa3089560eb00cc973b0cb12ead7c3424536bb",
+      "commitAuthorOld": "Gary Gregory",
+      "daysBetweenCommits": 0.01,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "boolean acceptsArg() {\r\n    return (hasArg() || hasArgs() || hasOptionalArg()) \u0026\u0026 (argCount \u003c\u003d 0 || values.size() \u003c argCount);\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/Option.java",
+      "functionStartLine": 385,
+      "functionName": "acceptsArg",
+      "functionAnnotation": "",
+      "functionDoc": "Tells if the option can accept more arguments.\r\n\r\n@return false if the maximum number of arguments is reached\r\n@since 1.3\r\n",
+      "diff": "@@ -1,3 +1,3 @@\n boolean acceptsArg() {\r\n-    return (hasArg() || hasArgs() || hasOptionalArg()) \u0026\u0026 (numberOfArgs \u003c\u003d 0 || values.size() \u003c numberOfArgs);\r\n+    return (hasArg() || hasArgs() || hasOptionalArg()) \u0026\u0026 (argCount \u003c\u003d 0 || values.size() \u003c argCount);\r\n }\n\\ No newline at end of file\n",
+      "extendedDetails": {}
+    },
+    "1596f3bbe57986361da4ac1a23634dd5b00d10df": {
+      "type": "Yfilerename",
+      "commitMessage": "Switched to the Maven 2 default directory layout (part 3)\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@955173 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "6/16/10 12:45 PM",
+      "commitName": "1596f3bbe57986361da4ac1a23634dd5b00d10df",
+      "commitAuthor": "Emmanuel Bourg",
+      "commitDateOld": "6/16/10 12:42 PM",
+      "commitNameOld": "406a35f1a128944b7c51dcbc4a1f04c3f8bec3e6",
+      "commitAuthorOld": "Emmanuel Bourg",
+      "daysBetweenCommits": 0.0,
+      "commitsBetweenForRepo": 1,
+      "commitsBetweenForFile": 1,
+      "actualSource": "boolean acceptsArg() {\r\n    return (hasArg() || hasArgs() || hasOptionalArg()) \u0026\u0026 (numberOfArgs \u003c\u003d 0 || values.size() \u003c numberOfArgs);\r\n}",
+      "path": "src/main/java/org/apache/commons/cli/Option.java",
+      "functionStartLine": 680,
+      "functionName": "acceptsArg",
+      "functionAnnotation": "",
+      "functionDoc": "Tells if the option can accept more arguments.\r\n\r\n@return false if the maximum number of arguments is reached\r\n@since 1.3\r\n",
+      "diff": "",
+      "extendedDetails": {
+        "oldPath": "src/java/org/apache/commons/cli/Option.java",
+        "newPath": "src/main/java/org/apache/commons/cli/Option.java"
+      }
+    },
+    "f43698527ef2b5ba15fe85d46d2d505418f68243": {
+      "type": "Yintroduced",
+      "commitMessage": "New unified parser (CLI-181, also fixes CLI-160, CLI-161, CLI-167, CLI-184)\n\ngit-svn-id: https://svn.apache.org/repos/asf/commons/proper/cli/trunk@780264 13f79535-47bb-0310-9956-ffa450edef68\n",
+      "commitDate": "5/30/09 4:43 PM",
+      "commitName": "f43698527ef2b5ba15fe85d46d2d505418f68243",
+      "commitAuthor": "Emmanuel Bourg",
+      "diff": "@@ -0,0 +1,3 @@\n+boolean acceptsArg() {\r\n+    return (hasArg() || hasArgs() || hasOptionalArg()) \u0026\u0026 (numberOfArgs \u003c\u003d 0 || values.size() \u003c numberOfArgs);\r\n+}\n\\ No newline at end of file\n",
+      "actualSource": "boolean acceptsArg() {\r\n    return (hasArg() || hasArgs() || hasOptionalArg()) \u0026\u0026 (numberOfArgs \u003c\u003d 0 || values.size() \u003c numberOfArgs);\r\n}",
+      "path": "src/java/org/apache/commons/cli/Option.java",
+      "functionStartLine": 680,
+      "functionName": "acceptsArg",
+      "functionAnnotation": "",
+      "functionDoc": "Tells if the option can accept more arguments.\r\n\r\n@return false if the maximum number of arguments is reached\r\n@since 1.3\r\n"
+    }
+  }
+}
