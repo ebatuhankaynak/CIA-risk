@@ -1,5 +1,5 @@
 import networkx as nx
-from utils import Utils
+from utils import MockUtils
 from tqdm import tqdm
 
 from graph_creator import MockGraphCreator
@@ -7,12 +7,12 @@ from graph_creator import MockGraphCreator
 graph_creator = MockGraphCreator()
 
 filename = "raw/Cli.json"
-commit_data = Utils.read_json(filename)
+commit_data = MockUtils.read_json(filename)
 
 commit_ids = list(commit_data.keys())
 pg_scores = {}
 for cid in tqdm(commit_ids, "Calculating Pagerank for commits"):
-    commit_files = Utils.get_project_files(commit_data, cid)
+    commit_files = MockUtils.get_project_files(commit_data, cid)
 
     if len(commit_files) > 1:
         G = graph_creator.create_graph(commit_files, edge_count=20)

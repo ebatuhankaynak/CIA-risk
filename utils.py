@@ -1,10 +1,10 @@
 import json
 
-class Utils:
+class MockUtils:
     def read_json(filename):
         with open(filename, 'r') as file:
             return json.load(file)
-
+        
     def get_total_authors_and_commits(commit_data):
         authors = set()
         for commit in commit_data.values():
@@ -33,15 +33,15 @@ class Utils:
 
 if __name__ == "__main__":
     filename = "raw/Cli.json"
-    commit_data = Utils.read_json(filename)
+    commit_data = MockUtils.read_json(filename)
 
     keys = list(commit_data.keys())
     sha = keys[len(keys) // 2]
-    changed_files = Utils.get_commit_info(commit_data, sha)
+    changed_files = MockUtils.get_commit_info(commit_data, sha)
     if changed_files is not None:
 
         # Print total list of project files up to that commit
-        project_files = Utils.get_project_files(commit_data, sha)
+        project_files = MockUtils.get_project_files(commit_data, sha)
         print(f"Total Project Files as of Commit {sha}:")
         for file in project_files:
             print(f" - {file}")
@@ -52,6 +52,6 @@ if __name__ == "__main__":
     else:
         print(f"No commit found for SHA {sha}")
 
-    total_authors, total_commits = Utils.get_total_authors_and_commits(commit_data)
+    total_authors, total_commits = MockUtils.get_total_authors_and_commits(commit_data)
     print(f"Total Authors: {total_authors}")
     print(f"Total Commits: {total_commits}")

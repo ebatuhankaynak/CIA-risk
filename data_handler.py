@@ -5,9 +5,9 @@ import pandas as pd
 import json
 
 from graph_creator import MockGraphCreator
-from utils import Utils
+from utils import MockUtils
 
-class DataHandler:
+class MockDataHandler:
     def calculate_graph_metrics(self, G):
         pagerank = nx.pagerank(G)
         centrality = nx.betweenness_centrality(G)
@@ -26,7 +26,7 @@ class DataHandler:
     
     def create_features(self, project_name, requested_features):
         filename = f"raw/{project_name}.json"
-        commit_data = Utils.read_json(filename)
+        commit_data = MockUtils.read_json(filename)
 
         graph_creator = MockGraphCreator()
 
@@ -36,8 +36,8 @@ class DataHandler:
         changed_graph_scores = {}
         bad_commits = []
         for cid in tqdm(commit_ids, "Calculating Metrics for commits"):
-            commit_files = Utils.get_project_files(commit_data, cid)
-            changed_files = Utils.get_commit_info(commit_data, cid)
+            commit_files = MockUtils.get_project_files(commit_data, cid)
+            changed_files = MockUtils.get_commit_info(commit_data, cid)
 
             if len(commit_files) > 1:
                 G = graph_creator.create_graph(commit_files, edge_count=0)
