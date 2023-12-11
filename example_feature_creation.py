@@ -1,6 +1,6 @@
-from data_handler import DataHandler
+from data_handler import MockDataHandler
 
-dh = DataHandler()
+dh = MockDataHandler()
 
 requested_features = [
     "global_graph_scores", 
