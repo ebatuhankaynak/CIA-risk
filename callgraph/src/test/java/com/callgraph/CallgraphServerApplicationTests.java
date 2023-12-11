@@ -14,6 +14,10 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.lib.ObjectId;
+import org.eclipse.jgit.lib.Repository;
+import org.eclipse.jgit.revwalk.RevCommit;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -27,15 +31,60 @@ import java.util.stream.Stream;
 
 @SpringBootTest
 class CallgraphServerApplicationTests {
-	String srcPath = "D:\\_SELEN\\_2022-2023\\CS588\\GitHub_Dataset\\commons-cli";
+	String srcPath = "D:\\_SELEN\\_2022-2023\\CS588\\GitHub_Dataset\\commons-cli\\commons-cli";
 
 	@Test
-	void getCallerandCalleeInProject() {
+	void getCallerandCalleeOfCommits(){
+
+		try (Git git = Git.open(new File(srcPath))) {
+			Repository repository = git.getRepository();
+			Iterable<RevCommit> commits = git.log().all().call();
+
+			for (RevCommit commit : commits) {
+				ObjectId commitId = commit.getId();
+				String commitHash = commitId.getName(); // Get the hash as a string
+
+				// Checkout to the specific commit
+				git.checkout().setName(commitHash).call();
+				System.out.println("Checked out to commit: " + commitHash);
+
+				// Create and write content to the CSV file for each commit
+				getCallerandCalleeInProject(commitHash);
+
+				try {
+					File directory = new File(srcPath);
+					if (!directory.exists() || !directory.isDirectory()) {
+						System.out.println("Directory doesn't exist or is not a directory.");
+						return;
+					}
+
+					ProcessBuilder processBuilder = new ProcessBuilder("git", "reset", "--hard", "HEAD");
+					processBuilder.directory(directory);
+					processBuilder.redirectErrorStream(true);
+
+					Process process = processBuilder.start();
+					int exitCode = process.waitFor();
+
+					if (exitCode == 0) {
+						System.out.println("All changes in the directory reverted successfully.");
+					} else {
+						System.out.println("Failed to revert changes in the directory. Exit code: " + exitCode);
+					}
+				} catch (IOException | InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	@Test
+	void getCallerandCalleeInProject(String commitHash) {
 		MethodCallExtractor extractor = new MethodCallExtractor();
 		CallGraph callGraph = extractor.getMethodCallRelation(true, srcPath, null);
 		ArrayList<CallGraphEdge> edgeList = callGraph.getEdgeList();
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(srcPath + "\\commons-cli-callgraph.csv"))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(srcPath + "\\CallGraphOutputs\\" + commitHash + ".csv"))) {
             // Write header
             writer.write("Caller,Callee\n");
 
