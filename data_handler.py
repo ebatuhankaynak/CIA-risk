@@ -6,7 +6,7 @@ import json
 import re
 import csv
 
-from graph_creator import MockGraphCreator
+from graph_creator import MockGraphCreator, GraphCreator
 from utils import MockUtils
 
 class MockDataHandler:
@@ -160,7 +160,7 @@ class MockDataHandler:
         filename = f"raw/{project_name}.json"
         commit_data = MockUtils.read_json(filename)
 
-        graph_creator = MockGraphCreator()
+        graph_creator = GraphCreator()
 
         commit_ids = list(commit_data.keys())
 
@@ -179,8 +179,11 @@ class MockDataHandler:
             next_cid = commit_ids[i + 1]
 
             #print(current_cid)
-            current_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/example/{current_cid}.csv')
-            next_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/example/{next_cid}.csv')
+            try:
+                current_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/{project_name}/{current_cid}.csv')
+                next_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/{project_name}/{next_cid}.csv')
+            except FileNotFoundError:
+                continue
             changed_files = extract_unique_methods(current_cc_pair_df, next_cc_pair_df)
 
             G = graph_creator.create_graph(current_cc_pair_df)
@@ -212,8 +215,11 @@ class MockDataHandler:
 
                 return score_differences
 
-            global_graph_diffs[next_cid] = calc_diff(global_graph_scores[current_cid], global_graph_scores[next_cid])
-            changed_graph_diffs[next_cid] = calc_diff(changed_graph_scores[current_cid], changed_graph_scores[next_cid])
+            try:
+                global_graph_diffs[next_cid] = calc_diff(global_graph_scores[current_cid], global_graph_scores[next_cid])
+                changed_graph_diffs[next_cid] = calc_diff(changed_graph_scores[current_cid], changed_graph_scores[next_cid])
+            except KeyError:
+                continue
   
         metrics_order = ['pagerank', 'centrality', 'closeness', 'clustering_coefficient']
         def linearize_metrics(metric_dict):

@@ -87,5 +87,14 @@ class MockGraphCreator:
         return scrambled_graph
     
 class GraphCreator:
-    def create_graph(self):
-        raise NotImplementedError
+    def create_graph(self, df, verbose=False):
+        G = nx.DiGraph()
+    
+        for index, row in df.iterrows():
+            G.add_edge(row['Caller'], row['Callee'])
+
+        if verbose:
+            call_graph = '\n'.join([f"{src} -> {tgt}" for src, tgt in G.edges])
+            print(call_graph)
+
+        return G
