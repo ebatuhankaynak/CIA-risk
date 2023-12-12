@@ -10,6 +10,7 @@ import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.symbolsolver.JavaSymbolSolver;
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -36,67 +37,92 @@ class CallgraphServerApplicationTests {
 	@Test
 	void getCallerandCalleeOfCommits(){
 
+        int i = 0;
+        String lastCommit = "";
 		try (Git git = Git.open(new File(srcPath))) {
 			Repository repository = git.getRepository();
 			Iterable<RevCommit> commits = git.log().all().call();
 
 			for (RevCommit commit : commits) {
-				ObjectId commitId = commit.getId();
-				String commitHash = commitId.getName(); // Get the hash as a string
+                i++;
+				if(i >= 1014) {
+					ObjectId commitId = commit.getId();
+					String commitHash = commitId.getName(); // Get the hash as a string
+					lastCommit = commitHash;
+					// Checkout to the specific commit
+					git.checkout().setName(commitHash).call();
+					//System.out.println("Checked out to commit: " + commitHash);
 
-				// Checkout to the specific commit
-				git.checkout().setName(commitHash).call();
-				System.out.println("Checked out to commit: " + commitHash);
+					// Create and write content to the CSV file for each commit
+					getCallerandCalleeInProject(commitHash);
 
-				// Create and write content to the CSV file for each commit
-				getCallerandCalleeInProject(commitHash);
+					try {
+						File directory = new File(srcPath);
+						if (!directory.exists() || !directory.isDirectory()) {
+							System.out.println("Directory doesn't exist or is not a directory.");
+							return;
+						}
 
-				try {
-					File directory = new File(srcPath);
-					if (!directory.exists() || !directory.isDirectory()) {
-						System.out.println("Directory doesn't exist or is not a directory.");
-						return;
+						ProcessBuilder processBuilder = new ProcessBuilder("git", "reset", "--hard", "HEAD");
+						processBuilder.directory(directory);
+						processBuilder.redirectErrorStream(true);
+
+						Process process = processBuilder.start();
+						int exitCode = process.waitFor();
+
+						if (exitCode == 0) {
+							//System.out.println("All changes in the directory reverted successfully.");
+						} else {
+							//System.out.println("Failed to revert changes in the directory. Exit code: " + exitCode);
+						}
+						System.out.println("Finished commit: " + commitHash);
+					} catch (IOException | InterruptedException e) {
+						System.out.println("****************IOException or InterruptedException");
+						System.out.println(i);
+						System.out.println(lastCommit);
+						e.printStackTrace();
 					}
-
-					ProcessBuilder processBuilder = new ProcessBuilder("git", "reset", "--hard", "HEAD");
-					processBuilder.directory(directory);
-					processBuilder.redirectErrorStream(true);
-
-					Process process = processBuilder.start();
-					int exitCode = process.waitFor();
-
-					if (exitCode == 0) {
-						System.out.println("All changes in the directory reverted successfully.");
-					} else {
-						System.out.println("Failed to revert changes in the directory. Exit code: " + exitCode);
-					}
-				} catch (IOException | InterruptedException e) {
-					e.printStackTrace();
 				}
 			}
 		} catch (Exception e) {
+            System.out.println("****************Exception");
+            System.out.println(i);
+            System.out.println(lastCommit);
 			e.printStackTrace();
 		}
+        System.out.println("****************Result");
+        System.out.println(i);
 	}
 	@Test
 	void getCallerandCalleeInProject(String commitHash) {
-		MethodCallExtractor extractor = new MethodCallExtractor();
-		CallGraph callGraph = extractor.getMethodCallRelation(true, srcPath, null);
-		ArrayList<CallGraphEdge> edgeList = callGraph.getEdgeList();
+		ArrayList<CallGraphEdge> edgeList = null;
+		try {
+			MethodCallExtractor extractor = new MethodCallExtractor();
+			CallGraph callGraph = extractor.getMethodCallRelation(true, srcPath, null);
+			edgeList = callGraph.getEdgeList();
+		}
+		catch(Exception e){
+			System.out.println("**************Call Graph Exception");
+			System.out.println(commitHash);
+		}
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(srcPath + "\\CallGraphOutputs\\" + commitHash + ".csv"))) {
-            // Write header
-            writer.write("Caller,Callee\n");
+		if(edgeList != null){
+			try (BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\_SELEN\\_2022-2023\\CS588\\commons-cli-callGraphOutput\\" + commitHash + ".csv"))) {
+				// Write header
+				writer.write("Caller,Callee\n");
 
-            // Write edges data
-            for (CallGraphEdge edge : edgeList) {
-                writer.write(edge.getStartNodeSignature() + "," + edge.getEndNodeSignature() + "\n");
-            }
+				// Write edges data
+				for (CallGraphEdge edge : edgeList) {
+					writer.write(edge.getStartNodeSignature() + "," + edge.getEndNodeSignature() + "\n");
+				}
 
-            System.out.println("CSV file has been created successfully!");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+				//System.out.println("CSV file has been created successfully!");
+			} catch (Exception e) {
+				System.out.println("****************Exception Call Graph");
+				System.out.println(commitHash);
+				e.printStackTrace();
+			}
+		}
 	}
 
 	static BufferedWriter bw;
