@@ -1,0 +1,21 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\bug\BugCLI18Test.java,Emmanuel Bourg <ebourg@apache.org>,27,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\GnuParserTest.java,Emmanuel Bourg <ebourg@apache.org>,355,98.61111111111111
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\BugsTest.java,Emmanuel Bourg <ebourg@apache.org>,353,74.0041928721174
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\ApplicationTest.java,Emmanuel Bourg <ebourg@apache.org>,58,41.726618705035975
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\ParserTestCase.java,Emmanuel Bourg <ebourg@apache.org>,73,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\ValueTest.java,Emmanuel Bourg <ebourg@apache.org>,279,59.871244635193136
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\BasicParserTest.java,Emmanuel Bourg <ebourg@apache.org>,71,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\OptionsTest.java,Emmanuel Bourg <ebourg@apache.org>,119,96.7479674796748
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\HelpFormatterTest.java,Emmanuel Bourg <ebourg@apache.org>,720,57.00712589073634
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\bug\BugCLI13Test.java,Emmanuel Bourg <ebourg@apache.org>,5,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\OptionGroupTest.java,Emmanuel Bourg <ebourg@apache.org>,249,60.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\bug\BugCLI71Test.java,Emmanuel Bourg <ebourg@apache.org>,6,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\OptionTest.java,Emmanuel Bourg <ebourg@apache.org>,54,6.6749072929542645
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\ArgumentIsOptionTest.java,Emmanuel Bourg <ebourg@apache.org>,83,87.36842105263159
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\OptionBuilderTest.java,Emmanuel Bourg <ebourg@apache.org>,36,54.54545454545454
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\PosixParserTest.java,Emmanuel Bourg <ebourg@apache.org>,52,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\bug\BugCLI148Test.java,Emmanuel Bourg <ebourg@apache.org>,39,90.69767441860465
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\PatternOptionBuilderTest.java,Emmanuel Bourg <ebourg@apache.org>,946,97.1252566735113
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\ValuesTest.java,Emmanuel Bourg <ebourg@apache.org>,248,50.40650406504065
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\java\org\apache\commons\cli\UtilTest.java,Emmanuel Bourg <ebourg@apache.org>,24,100.0

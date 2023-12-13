@@ -1,0 +1,6 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\java\org\apache\commons\cli2\validation\EnumValidator.java,John Keyes <jkeyes@apache.org>,4,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\java\org\apache\commons\cli2\validation\NumberValidator.java,John Keyes <jkeyes@apache.org>,14,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\org\apache\commons\cli2\validation\DateValidatorTest.java,John Keyes <jkeyes@apache.org>,17,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\org\apache\commons\cli2\validation\EnumValidatorTest.java,John Keyes <jkeyes@apache.org>,20,66.66666666666666
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\org\apache\commons\cli2\validation\NumberValidatorTest.java,John Keyes <jkeyes@apache.org>,51,92.72727272727272
