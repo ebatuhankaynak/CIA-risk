@@ -13,8 +13,8 @@ requested_features = [
 
 project_name = "Cli"
 
-y = dh.create_labels(project_name)
-if False:
+
+if True:
     y = dh.create_labels(project_name)
     features_per_cid = dh.create_features_from_cc(project_name, requested_features)
     
@@ -52,8 +52,7 @@ else:
     x = np.load(f"{project_name}_x.npy")
     y = np.load(f"{project_name}_y.npy")
 
-
-from sklearn.ensemble import IsolationForest
+"""from sklearn.ensemble import IsolationForest
 import numpy as np
 
 iso_forest = IsolationForest(contamination=sum(y)/len(y))
@@ -72,10 +71,11 @@ print(normalized_scores[y == 1])
 
 print(sum(y))
 
-print(normalized_scores[y == 0].mean(), normalized_scores[y == 0].std())
-print(normalized_scores[y == 1].mean(), normalized_scores[y == 1].std())
+print(normalized_scores[y == 0].mean(), normalized_scores[y == 0].std(), normalized_scores[y == 0].min(), normalized_scores[y == 0].max())
+print(normalized_scores[y == 1].mean(), normalized_scores[y == 1].std(), normalized_scores[y == 1].min(), normalized_scores[y == 1].max())
+"""
 
-"""import numpy as np
+import numpy as np
 from sklearn.svm import OneClassSVM
 from sklearn.metrics import classification_report, roc_auc_score
 from sklearn.model_selection import train_test_split
@@ -89,7 +89,7 @@ decision_function = ocsvm.decision_function(x_val)
 normalized_scores = 1 / (1 + np.exp(-decision_function))
 print(normalized_scores.min(), normalized_scores.max())
 normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
-print(normalized_scores)"""
+print(normalized_scores)
 
 
 sorted_scores = np.sort(normalized_scores)

@@ -425,6 +425,7 @@ org.apache.commons.cli.OptionBuilder.create(String),org.apache.commons.cli.Optio
 org.apache.commons.cli.Parser.parse(Options,String[],Properties,boolean),org.apache.commons.cli.Parser.flatten(Options,String[],boolean)
 org.apache.commons.cli.OptionsTest.testSimple(),org.apache.commons.cli.Options.hasOption(String)
 org.apache.commons.cli.bug.BugsTest.test14786(),org.apache.commons.cli.OptionBuilder.withDescription(String)
+org.apache.commons.cli.HelpFormatterTest.Anonymous-89ec05ae-700d-49af-bb1c-743aeadf1f37.compare(Option,Option),org.apache.commons.cli.Option.getKey()
 org.apache.commons.cli.ApplicationTest.testNLT(),org.apache.commons.cli.CommandLine.getOptionValue(String)
 org.apache.commons.cli.bug.BugsTest.test31148(),org.apache.commons.cli.Parser.parse(Options,String[],Properties)
 org.apache.commons.cli.CommandLineTest.testBuilder(),org.apache.commons.cli.Option.getOpt()
@@ -1457,4 +1458,3 @@ org.apache.commons.cli.DefaultParserTest.testLongOptionQuoteHandlingWithStrip(),
 org.apache.commons.cli.ParserTestCase.testPropertyOptionMultipleValues(),org.apache.commons.cli.ParserTestCase.parse(CommandLineParser,Options,String[],Properties)
 org.apache.commons.cli.DefaultParser.handleToken(String),org.apache.commons.cli.DefaultParser.handleLongOption(String)
 org.apache.commons.cli.DisablePartialMatchingTest.testRegularPartialMatching(),org.apache.commons.cli.Options.addOption(Option)
-org.apache.commons.cli.HelpFormatterTest.Anonymous-033bd78a-72ef-4225-881c-cb5435898f0d.compare(Option,Option),org.apache.commons.cli.Option.getKey()

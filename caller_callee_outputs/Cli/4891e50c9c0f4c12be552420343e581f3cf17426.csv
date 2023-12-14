@@ -1399,7 +1399,7 @@ org.apache.commons.cli.OptionTest.testBuilderInvalidOptionName2(),org.apache.com
 org.apache.commons.cli.AbstractParserTestCase.testDoubleDash2(),org.apache.commons.cli.OptionBuilder.hasArg()
 org.apache.commons.cli.ValueTest.testLongNoArg(),org.apache.commons.cli.CommandLine.hasOption(String)
 org.apache.commons.cli.OptionsTest.testGetOptionsGroups(),org.apache.commons.cli.OptionBuilder.create(char)
-org.apache.commons.cli.HelpFormatterTest.Anonymous-f3422071-f635-4eeb-a821-675bd5cf20b5.compare(Option,Option),org.apache.commons.cli.Option.getKey()
+org.apache.commons.cli.HelpFormatterTest.Anonymous-a4e60dc3-9228-497d-8c2a-e598ceb974ff.compare(Option,Option),org.apache.commons.cli.Option.getKey()
 org.apache.commons.cli.ApplicationTest.testAnt(),org.apache.commons.cli.OptionBuilder.create(char)
 org.apache.commons.cli.OptionGroupTest.testToString(),org.apache.commons.cli.OptionGroup.toString()
 org.apache.commons.cli.bug.BugsTest.test15648(),org.apache.commons.cli.CommandLineParser.parse(Options,String[])

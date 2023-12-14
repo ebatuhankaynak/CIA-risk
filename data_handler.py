@@ -5,6 +5,7 @@ import pandas as pd
 import json
 import re
 import csv
+import os
 
 from graph_creator import MockGraphCreator, GraphCreator
 from utils import MockUtils
@@ -19,11 +20,15 @@ class MockDataHandler:
         return pagerank, centrality, closeness, clustering_coefficient
 
     def calculate_aggregate_metrics(self, metrics):
-        values = list(metrics.values())
+        if not metrics:
+            return {'mean': 0, 'std': 0, 'median': 0}
+
+        values = np.array(list(metrics.values()))
+
         return {
-            'mean': np.mean(values),
-            'std': np.std(values),
-            'median': np.median(values),
+            'mean': np.nanmean(values),
+            'std': np.nanstd(values),
+            'median': np.nanmedian(values),
         }
     
     def create_features(self, project_name, requested_features):
@@ -111,22 +116,8 @@ class MockDataHandler:
         filtered_metrics_dicts = {name: metrics for name, metrics in metrics_dicts.items() if name in requested_features}
         return attach_cid_to_features(filtered_metrics_dicts)
     
+    
     def create_labels(self, project_name):
-        """fonte_dataset_path = "fonte_dataset.csv"
-        fonte_dataset = pd.read_csv(fonte_dataset_path)
-
-        raw_json_path = f"raw/{project_name}.json"
-        with open(raw_json_path, 'r') as file:
-            data = json.load(file)
-
-        commit_ids = [sha[:7] for sha in data.keys()]
-        fonte_dataset_for_pid = fonte_dataset[fonte_dataset['pid'] == project_name]
-
-        fonte_commit_ids = set(fonte_dataset_for_pid['commit'])
-        labels = [1 if commit_id in fonte_commit_ids else 0 for commit_id in commit_ids]
-
-        return labels"""
-
         project_name_to_dbname = {
             "Cli": "org.apache:commons-cli"
         }
@@ -134,17 +125,17 @@ class MockDataHandler:
         bic_dataset_path = f"fault_induce.txt"
         bic_dataset = pd.read_csv(bic_dataset_path, delimiter='|')
 
-        raw_json_path = f"raw/{project_name}.json"
-        with open(raw_json_path, 'r') as file:
-            data = json.load(file)
-
-        commit_ids = data.keys()
+        directory_path = f"caller_callee_outputs/{project_name}/"
+        commit_ids = [file_name.split('.')[0] for file_name in os.listdir(directory_path)]
         print(bic_dataset)
         bic_dataset_for_pid = bic_dataset[bic_dataset['PROJECT_ID'] == project_name_to_dbname[project_name]]
 
         bic_commit_ids = set(bic_dataset_for_pid['FAULT_INDUCING_COMMIT_HASH'])
-        print(len(bic_commit_ids))
-        labels = [1 if commit_id in bic_commit_ids else 0 for commit_id in commit_ids]
+        print(len(bic_commit_ids), len(commit_ids))
+        
+        # Assuming bic_commit_ids and commit_ids are both sets
+        common_commit_ids = bic_commit_ids.intersection(commit_ids)
+        labels = [1 if commit_id in common_commit_ids else 0 for commit_id in commit_ids]
 
         return labels
     
@@ -217,6 +208,9 @@ class MockDataHandler:
                 'closeness': self.calculate_aggregate_metrics(closeness),
                 'clustering_coefficient': self.calculate_aggregate_metrics(clustering_coeff)
             }
+
+            """print(global_graph_scores[current_cid])
+            input()"""
 
             changed_graph_scores[current_cid] = {
                 'pagerank': self.calculate_aggregate_metrics({file: pagerank[file] for file in changed_files if file in pagerank}),
