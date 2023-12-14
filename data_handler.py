@@ -112,7 +112,7 @@ class MockDataHandler:
         return attach_cid_to_features(filtered_metrics_dicts)
     
     def create_labels(self, project_name):
-        fonte_dataset_path = "fonte_dataset.csv"
+        """fonte_dataset_path = "fonte_dataset.csv"
         fonte_dataset = pd.read_csv(fonte_dataset_path)
 
         raw_json_path = f"raw/{project_name}.json"
@@ -124,6 +124,27 @@ class MockDataHandler:
 
         fonte_commit_ids = set(fonte_dataset_for_pid['commit'])
         labels = [1 if commit_id in fonte_commit_ids else 0 for commit_id in commit_ids]
+
+        return labels"""
+
+        project_name_to_dbname = {
+            "Cli": "org.apache:commons-cli"
+        }
+
+        bic_dataset_path = f"fault_induce.txt"
+        bic_dataset = pd.read_csv(bic_dataset_path, delimiter='|')
+
+        raw_json_path = f"raw/{project_name}.json"
+        with open(raw_json_path, 'r') as file:
+            data = json.load(file)
+
+        commit_ids = data.keys()
+        print(bic_dataset)
+        bic_dataset_for_pid = bic_dataset[bic_dataset['PROJECT_ID'] == project_name_to_dbname[project_name]]
+
+        bic_commit_ids = set(bic_dataset_for_pid['FAULT_INDUCING_COMMIT_HASH'])
+        print(len(bic_commit_ids))
+        labels = [1 if commit_id in bic_commit_ids else 0 for commit_id in commit_ids]
 
         return labels
     
