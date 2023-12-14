@@ -1,0 +1,5 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\java\org\apache\commons\cli\Parser.java,Emmanuel Bourg <ebourg@apache.org>,38,6.022187004754358
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\org\apache\commons\cli\PosixParserTest.java,Emmanuel Bourg <ebourg@apache.org>,275,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\org\apache\commons\cli\GnuParserTest.java,Emmanuel Bourg <ebourg@apache.org>,3,37.5
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\test\org\apache\commons\cli\bug\BugCLI71Test.java,Emmanuel Bourg <ebourg@apache.org>,6,100.0
