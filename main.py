@@ -12,6 +12,7 @@ from sklearn.model_selection import KFold
 from sklearn.mixture import GaussianMixture
 from sklearn.neighbors import LocalOutlierFactor
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
 
 dh = MockDataHandler()
 
@@ -52,10 +53,15 @@ def run_ml_kfold(model):
         y_train, y_val = y[train_index], y[val_index]
 
 
-        if isinstance(model, RandomForestClassifier):
+        if isinstance(model, RandomForestClassifier) or isinstance(model, SVC):
             model.fit(x_train, y_train)
 
-            normalized_scores = model.predict_proba(x_val)[:, 1]
+            if isinstance(model, RandomForestClassifier):
+                normalized_scores = model.predict_proba(x_val)[:, 1]
+            else:
+                anomaly_scores = model.decision_function(x_val)
+                normalized_scores = 1 / (1 + np.exp(-anomaly_scores))
+                normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
         else:
             model.fit(x_train)
 
@@ -125,6 +131,11 @@ def run_rf():
     print("="*10 + "RF" + "="*10)
     run_ml_kfold(model) 
 
+def run_svc():
+    model = SVC(kernel='rbf', probability=True)
+    print("="*10 + "SVC" + "="*10)
+    run_ml_kfold(model) 
+
 def print_results(val_results, val_labels):
     print(f"{val_results[val_labels == 0].mean():.2f}, {val_results[val_labels == 0].std():.2f}, {np.median(val_results[val_labels == 0]):.2f}")
     print(f"{val_results[val_labels == 1].mean():.2f}, {val_results[val_labels == 1].std():.2f}, {np.median(val_results[val_labels == 1]):.2f}")
@@ -142,6 +153,7 @@ elif MODEL == "all_ml":
     #run_lof()
     #run_gmm()
     run_rf()
+    run_svc()
 elif MODEL == "lin":
     val_results = []
     val_labels = []
