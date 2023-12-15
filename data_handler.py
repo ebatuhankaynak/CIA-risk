@@ -5,6 +5,7 @@ import pandas as pd
 import json
 import re
 import csv
+import os
 
 from graph_creator import MockGraphCreator, GraphCreator
 from utils import MockUtils
@@ -19,11 +20,15 @@ class MockDataHandler:
         return pagerank, centrality, closeness, clustering_coefficient
 
     def calculate_aggregate_metrics(self, metrics):
-        values = list(metrics.values())
+        if not metrics:
+            return {'mean': 0, 'std': 0, 'median': 0}
+
+        values = np.array(list(metrics.values()))
+
         return {
-            'mean': np.mean(values),
-            'std': np.std(values),
-            'median': np.median(values),
+            'mean': np.nanmean(values),
+            'std': np.nanstd(values),
+            'median': np.nanmedian(values),
         }
     
     def create_features(self, project_name, requested_features):
@@ -37,6 +42,7 @@ class MockDataHandler:
         global_graph_scores = {}
         changed_graph_scores = {}
         bad_commits = []
+
         for cid in tqdm(commit_ids, "Calculating Metrics for commits"):
             commit_files = MockUtils.get_project_files(commit_data, cid)
             changed_files = MockUtils.get_commit_info(commit_data, cid)
@@ -59,6 +65,7 @@ class MockDataHandler:
                     'closeness': self.calculate_aggregate_metrics({file: closeness[file] for file in changed_files if file in closeness}),
                     'clustering_coefficient': self.calculate_aggregate_metrics({file: clustering_coeff[file] for file in changed_files if file in clustering_coeff}),
                 }
+
             else:
                 bad_commits.append(cid)
 
@@ -105,25 +112,34 @@ class MockDataHandler:
             "global_graph_scores": global_graph_scores,
             "changed_graph_scores": changed_graph_scores,
             "global_graph_diffs": global_graph_diffs,
-            "changed_graph_diffs": changed_graph_diffs
+            "changed_graph_diffs": changed_graph_diffs,
         }
+
+        
 
         filtered_metrics_dicts = {name: metrics for name, metrics in metrics_dicts.items() if name in requested_features}
         return attach_cid_to_features(filtered_metrics_dicts)
     
+    
     def create_labels(self, project_name):
-        fonte_dataset_path = "fonte_dataset.csv"
-        fonte_dataset = pd.read_csv(fonte_dataset_path)
+        project_name_to_dbname = {
+            "Cli": "org.apache:commons-cli"
+        }
 
-        raw_json_path = f"raw/{project_name}.json"
-        with open(raw_json_path, 'r') as file:
-            data = json.load(file)
+        bic_dataset_path = f"fault_induce.txt"
+        bic_dataset = pd.read_csv(bic_dataset_path, delimiter='|')
 
-        commit_ids = [sha[:7] for sha in data.keys()]
-        fonte_dataset_for_pid = fonte_dataset[fonte_dataset['pid'] == project_name]
+        directory_path = f"caller_callee_outputs/{project_name}/"
+        commit_ids = [file_name.split('.')[0] for file_name in os.listdir(directory_path)]
+        print(bic_dataset)
+        bic_dataset_for_pid = bic_dataset[bic_dataset['PROJECT_ID'] == project_name_to_dbname[project_name]]
 
-        fonte_commit_ids = set(fonte_dataset_for_pid['commit'])
-        labels = [1 if commit_id in fonte_commit_ids else 0 for commit_id in commit_ids]
+        bic_commit_ids = set(bic_dataset_for_pid['FAULT_INDUCING_COMMIT_HASH'])
+        print(len(bic_commit_ids), len(commit_ids))
+        
+        # Assuming bic_commit_ids and commit_ids are both sets
+        common_commit_ids = bic_commit_ids.intersection(commit_ids)
+        labels = [1 if commit_id in common_commit_ids else 0 for commit_id in commit_ids]
 
         return labels
     
@@ -168,6 +184,10 @@ class MockDataHandler:
         changed_graph_scores = {}
         global_graph_diffs = {}
         changed_graph_diffs = {}
+        commit_summary = {}
+
+        with open(filename, 'r') as file:
+            commit_json = json.load(file)
 
         def extract_unique_methods(df1, df2):
             diff_df = pd.concat([df1, df2]).drop_duplicates(keep=False)
@@ -178,7 +198,6 @@ class MockDataHandler:
             current_cid = commit_ids[i]
             next_cid = commit_ids[i + 1]
 
-            #print(current_cid)
             try:
                 current_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/{project_name}/{current_cid}.csv')
                 next_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/{project_name}/{next_cid}.csv')
@@ -204,6 +223,21 @@ class MockDataHandler:
                 'clustering_coefficient': self.calculate_aggregate_metrics({file: clustering_coeff[file] for file in changed_files if file in clustering_coeff}),
             }
 
+            files_changed = len(commit_json[current_cid].get('files_changed', []))
+
+            additions = 0
+            deletions = 0
+
+            for file in commit_json[current_cid].get('files_changed', []):
+                additions += file.get('additions', 0)
+                deletions += file.get('deletions', 0)
+
+            commit_summary[current_cid] = {
+                'changed': files_changed,
+                'additions': additions,
+                'deletions': deletions
+            }
+
         for i in tqdm(range(len(commit_ids) - 2), "Calculating Change Metrics for commits"):
             current_cid = commit_ids[i]
             next_cid = commit_ids[i + 1]
@@ -221,8 +255,7 @@ class MockDataHandler:
             except KeyError:
                 continue
   
-        metrics_order = ['pagerank', 'centrality', 'closeness', 'clustering_coefficient']
-        def linearize_metrics(metric_dict):
+        def linearize_metrics(metric_dict, metrics_order):
             linear_vectors = {}
             for cid, metrics in metric_dict.items():
                 linear_vector = []
@@ -232,8 +265,20 @@ class MockDataHandler:
                 linear_vectors[cid] = linear_vector
             return linear_vectors
         
-        def attach_cid_to_features(metrics_dicts):
-            linearized_metrics = {name: linearize_metrics(metric_dict) for name, metric_dict in metrics_dicts.items()}
+        def linearize_commit_summary(commit_summary):
+            linearized_summary = {}
+            for cid, metrics in commit_summary.items():
+                linear_vector = [metrics['changed'], metrics['additions'], metrics['deletions']]
+                linearized_summary[cid] = linear_vector
+            return linearized_summary
+
+        def attach_cid_to_features(metrics_dicts, metrics_order1, commit_ids):
+            linearized_metrics = {}
+            for name, metric_dict in metrics_dicts.items():
+                if name != 'commit_summary':
+                    linearized_metrics[name] = linearize_metrics(metric_dict, metrics_order1)
+                else:
+                    linearized_metrics[name] = linearize_commit_summary(metric_dict)
 
             consolidated_features = {}
             for cid in commit_ids:
@@ -241,12 +286,40 @@ class MockDataHandler:
 
             return consolidated_features
 
+        # Example usage
         metrics_dicts = {
             "global_graph_scores": global_graph_scores,
             "changed_graph_scores": changed_graph_scores,
             "global_graph_diffs": global_graph_diffs,
-            "changed_graph_diffs": changed_graph_diffs
+            "changed_graph_diffs": changed_graph_diffs,
+            "commit_summary": commit_summary
         }
 
         filtered_metrics_dicts = {name: metrics for name, metrics in metrics_dicts.items() if name in requested_features}
-        return attach_cid_to_features(filtered_metrics_dicts)
+        return attach_cid_to_features(filtered_metrics_dicts, ['pagerank', 'centrality', 'closeness', 'clustering_coefficient'], commit_ids)
+
+    
+    def flatten_features(self, features_dict, y):
+        flattened_lists = []
+        for cid in features_dict:
+            flattened_lists.append([])
+            for feat_key in features_dict[cid]:
+                flattened_lists[-1].extend(features_dict[cid][feat_key])
+
+        
+        max_length = max(len(lst) for lst in flattened_lists)
+        filtered_flattened_lists = []
+        filtered_y = []
+
+        for i, lst in enumerate(flattened_lists):
+            if len(lst) == max_length:
+                filtered_flattened_lists.append(lst)
+                filtered_y.append(y[i])
+
+        x = np.array(filtered_flattened_lists)
+        y = np.array(filtered_y)
+
+        means = np.nanmean(x, axis=0)
+        x = np.where(np.isnan(x), means, x)
+
+        return x, y

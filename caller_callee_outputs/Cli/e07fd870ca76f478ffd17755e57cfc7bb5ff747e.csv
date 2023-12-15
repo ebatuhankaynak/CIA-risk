@@ -1,6 +1,5 @@
 Caller,Callee
 org.apache.commons.cli.Option.addValueForProcessing(String),org.apache.commons.cli.Option.processValue(String)
-org.apache.commons.cli.HelpFormatterTest.Anonymous-71410c85-fb5b-405d-9cd6-3b677361350f.compare(Object,Object),org.apache.commons.cli.Option.getKey()
 org.apache.commons.cli.CommandLine.hasOption(String),org.apache.commons.cli.CommandLine.resolveOption(String)
 org.apache.commons.cli.HelpFormatter.printUsage(PrintWriter,int,String),org.apache.commons.cli.HelpFormatter.printWrapped(PrintWriter,int,int,String)
 org.apache.commons.cli.ValueTest.testPropertyOptionFlags(),org.apache.commons.cli.Parser.parse(Options,String[],Properties)
@@ -111,6 +110,7 @@ org.apache.commons.cli.ValueTest.testShortOptionalArgValue(),org.apache.commons.
 org.apache.commons.cli.CommandLine.getOptionValue(String),org.apache.commons.cli.CommandLine.getOptionValues(String)
 org.apache.commons.cli.BugsTest.test15046(),org.apache.commons.cli.Options.addOption(Option)
 org.apache.commons.cli.OptionBuilderTest.testBaseOptionCharOpt(),org.apache.commons.cli.Option.hasArg()
+org.apache.commons.cli.HelpFormatterTest.Anonymous-0327ac09-d718-4a02-8447-0f5c7763ef27.compare(Object,Object),org.apache.commons.cli.Option.getKey()
 org.apache.commons.cli.OptionGroupTest.testSingleOption(),org.apache.commons.cli.CommandLine.hasOption(String)
 org.apache.commons.cli.ParseRequiredTest.testMissingRequiredOptions(),org.apache.commons.cli.OptionBuilder.create(char)
 org.apache.commons.cli.BugsTest.test11680(),org.apache.commons.cli.CommandLineParser.parse(Options,String[])
