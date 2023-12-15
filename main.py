@@ -20,7 +20,7 @@ requested_features = [
     "commit_summary",
 ]
 
-project_name = "Fileupload"
+project_name = "Cli"
 CREATE_FEATURES = False
 
 # One of if, svm, knn, lin, all_ml
@@ -40,7 +40,7 @@ else:
 n_splits = 5
 kf = KFold(n_splits=n_splits, shuffle=True, random_state=42)
 
-def run_ml_kfold(model, K=0):
+def run_ml_kfold(model):
     val_results = []
     val_labels = []
 
@@ -50,17 +50,19 @@ def run_ml_kfold(model, K=0):
 
         model.fit(x_train)
 
-        if K != 0:
+        if isinstance(model, NearestNeighbors):
             distances, indices = model.kneighbors(x_val)
-            anomaly_scores = distances[:, K-1]
-
+            anomaly_scores = np.sum(distances, axis=1)
+            
             normalized_scores = 1 / (1 + np.exp(-anomaly_scores))
-            normalized_scores = (anomaly_scores - anomaly_scores.min()) / (anomaly_scores.max() - anomaly_scores.min())
+            normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
         else:
             raw_scores = model.decision_function(x_val)
             normalized_scores = 1 / (1 + np.exp(-raw_scores))
             normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
-            normalized_scores = 1 - normalized_scores
+
+            if isinstance(model, IsolationForest):
+                normalized_scores = 1 - normalized_scores
 
         val_results.extend(normalized_scores)
         val_labels.extend(y_val)
@@ -83,11 +85,12 @@ def run_svm():
 def run_knn(K=10):
     model = NearestNeighbors(n_neighbors=K)
     print("="*10 + "KNN" + "="*10)
-    run_ml_kfold(model, K=K)
+    run_ml_kfold(model)
 
 def print_results(val_results, val_labels):
-    print(val_results[val_labels == 0].mean(), val_results[val_labels == 0].std(), val_results[val_labels == 0].min(), val_results[val_labels == 0].max(), np.median(val_results[val_labels == 0]))
-    print(val_results[val_labels == 1].mean(), val_results[val_labels == 1].std(), val_results[val_labels == 1].min(), val_results[val_labels == 1].max(), np.median(val_results[val_labels == 1]))
+    print(f"{val_results[val_labels == 0].mean():.2f}, {val_results[val_labels == 0].std():.2f}, {np.median(val_results[val_labels == 0]):.2f}")
+    print(f"{val_results[val_labels == 1].mean():.2f}, {val_results[val_labels == 1].std():.2f}, {np.median(val_results[val_labels == 1]):.2f}")
+
 
 if MODEL == "if":
     run_if()
@@ -98,7 +101,6 @@ elif MODEL == "knn":
 elif MODEL == "all_ml":
     run_if()
     run_svm()
-    #run_knn()
 elif MODEL == "lin":
     val_results = []
     val_labels = []
