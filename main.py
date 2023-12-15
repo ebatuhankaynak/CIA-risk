@@ -9,6 +9,9 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader, TensorDataset, SubsetRandomSampler
 from sklearn.model_selection import KFold
+from sklearn.mixture import GaussianMixture
+from sklearn.neighbors import LocalOutlierFactor
+from sklearn.ensemble import RandomForestClassifier
 
 dh = MockDataHandler()
 
@@ -20,7 +23,7 @@ requested_features = [
     "commit_summary",
 ]
 
-project_name = "Cli"
+project_name = "Fileupload"
 CREATE_FEATURES = False
 
 # One of if, svm, knn, lin, all_ml
@@ -48,21 +51,41 @@ def run_ml_kfold(model):
         x_train, x_val = x[train_index], x[val_index]
         y_train, y_val = y[train_index], y[val_index]
 
-        model.fit(x_train)
 
-        if isinstance(model, NearestNeighbors):
-            distances, indices = model.kneighbors(x_val)
-            anomaly_scores = np.sum(distances, axis=1)
-            
-            normalized_scores = 1 / (1 + np.exp(-anomaly_scores))
-            normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
+        if isinstance(model, RandomForestClassifier):
+            model.fit(x_train, y_train)
+
+            normalized_scores = model.predict_proba(x_val)[:, 1]
         else:
-            raw_scores = model.decision_function(x_val)
-            normalized_scores = 1 / (1 + np.exp(-raw_scores))
-            normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
+            model.fit(x_train)
 
-            if isinstance(model, IsolationForest):
+            if isinstance(model, NearestNeighbors):
+                distances, indices = model.kneighbors(x_val)
+                anomaly_scores = np.sum(distances, axis=1)
+                
+                normalized_scores = 1 / (1 + np.exp(-anomaly_scores))
+                normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
+            elif isinstance(model, LocalOutlierFactor):
+                kneighbors = model.kneighbors(x_val, return_distance=False)
+                lrd = 1. / np.mean(model._distances_fit_X_[kneighbors, model.n_neighbors - 1], axis=1)
+                lrd_ratios_array = lrd / model._lrd[kneighbors].mean(axis=1)
+                anomaly_scores = 1. / lrd_ratios_array
+                
+                normalized_scores = 1 / (1 + np.exp(-anomaly_scores))
+                normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
                 normalized_scores = 1 - normalized_scores
+            elif isinstance(model, GaussianMixture):
+                anomaly_scores = model.score_samples(x_val)
+                
+                #normalized_scores = 1 / (1 + np.exp(-anomaly_scores))
+                normalized_scores = (anomaly_scores - anomaly_scores.min()) / (anomaly_scores.max() - anomaly_scores.min())
+            else:
+                raw_scores = model.decision_function(x_val)
+                normalized_scores = 1 / (1 + np.exp(-raw_scores))
+                normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
+
+                if isinstance(model, IsolationForest):
+                    normalized_scores = 1 - normalized_scores
 
         val_results.extend(normalized_scores)
         val_labels.extend(y_val)
@@ -87,6 +110,21 @@ def run_knn(K=10):
     print("="*10 + "KNN" + "="*10)
     run_ml_kfold(model)
 
+def run_lof():
+    model = lof = LocalOutlierFactor(n_neighbors=10, contamination='auto')
+    print("="*10 + "LOF" + "="*10)
+    run_ml_kfold(model)
+
+def run_gmm():
+    model = GaussianMixture(n_components=2, random_state=42)
+    print("="*10 + "GMM" + "="*10)
+    run_ml_kfold(model) 
+
+def run_rf():
+    model = RandomForestClassifier(n_estimators=100, class_weight="balanced", random_state=42)
+    print("="*10 + "RF" + "="*10)
+    run_ml_kfold(model) 
+
 def print_results(val_results, val_labels):
     print(f"{val_results[val_labels == 0].mean():.2f}, {val_results[val_labels == 0].std():.2f}, {np.median(val_results[val_labels == 0]):.2f}")
     print(f"{val_results[val_labels == 1].mean():.2f}, {val_results[val_labels == 1].std():.2f}, {np.median(val_results[val_labels == 1]):.2f}")
@@ -101,6 +139,9 @@ elif MODEL == "knn":
 elif MODEL == "all_ml":
     run_if()
     run_svm()
+    #run_lof()
+    #run_gmm()
+    run_rf()
 elif MODEL == "lin":
     val_results = []
     val_labels = []
