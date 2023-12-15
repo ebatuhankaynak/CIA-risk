@@ -3,9 +3,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.ensemble import IsolationForest
 from sklearn.svm import OneClassSVM
-from sklearn.model_selection import train_test_split
 from sklearn.neighbors import NearestNeighbors
-import numpy as np
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from torch.utils.data import DataLoader, TensorDataset, SubsetRandomSampler
+from sklearn.model_selection import KFold
 
 dh = MockDataHandler()
 
@@ -17,11 +20,11 @@ requested_features = [
     "commit_summary",
 ]
 
-project_name = "Cli"
+project_name = "Fileupload"
 CREATE_FEATURES = False
 
-# One of if, svm, knn, lin
-MODEL = "lin" 
+# One of if, svm, knn, lin, all_ml
+MODEL = "all_ml" 
 
 if CREATE_FEATURES:
     y = dh.create_labels(project_name)
@@ -34,59 +37,71 @@ else:
     x = np.load(f"{project_name}_x.npy")
     y = np.load(f"{project_name}_y.npy")
 
-    def pick_equal_zeros_ones(x, y):
-        count_0 = np.sum(y == 0)
-        count_1 = np.sum(y == 1)
+n_splits = 5
+kf = KFold(n_splits=n_splits, shuffle=True, random_state=42)
 
-        min_count = min(count_0, count_1)
+def run_ml_kfold(model, K=0):
+    val_results = []
+    val_labels = []
 
-        selected_0s_x = x[y == 0][:min_count]
-        selected_0s_y = y[y == 0][:min_count]
+    for train_index, val_index in kf.split(x):
+        x_train, x_val = x[train_index], x[val_index]
+        y_train, y_val = y[train_index], y[val_index]
 
-        selected_1s_x = x[y == 1][:min_count]
-        selected_1s_y = y[y == 1][:min_count]
+        model.fit(x_train)
 
-        concatenated_x = np.concatenate([selected_0s_x, selected_1s_x])
-        concatenated_y = np.concatenate([selected_0s_y, selected_1s_y])
+        if K != 0:
+            distances, indices = model.kneighbors(x_val)
+            anomaly_scores = distances[:, K-1]
 
-        return concatenated_x, concatenated_y
+            normalized_scores = 1 / (1 + np.exp(-anomaly_scores))
+            normalized_scores = (anomaly_scores - anomaly_scores.min()) / (anomaly_scores.max() - anomaly_scores.min())
+        else:
+            raw_scores = model.decision_function(x_val)
+            normalized_scores = 1 / (1 + np.exp(-raw_scores))
+            normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
+            normalized_scores = 1 - normalized_scores
 
+        val_results.extend(normalized_scores)
+        val_labels.extend(y_val)
 
-    #x, y = pick_equal_zeros_ones(x, y)
+    val_results = np.array(val_results)
+    val_labels = np.array(val_labels)
+
+    print_results(val_results, val_labels)
+
+def run_if():
+    model = IsolationForest(contamination="auto")
+    print("="*10 + "IF" + "="*10)
+    run_ml_kfold(model)
+
+def run_svm():
+    model = OneClassSVM(gamma='auto')
+    print("="*10 + "SVM" + "="*10)
+    run_ml_kfold(model)
+
+def run_knn(K=10):
+    model = NearestNeighbors(n_neighbors=K)
+    print("="*10 + "KNN" + "="*10)
+    run_ml_kfold(model, K=K)
+
+def print_results(val_results, val_labels):
+    print(val_results[val_labels == 0].mean(), val_results[val_labels == 0].std(), val_results[val_labels == 0].min(), val_results[val_labels == 0].max(), np.median(val_results[val_labels == 0]))
+    print(val_results[val_labels == 1].mean(), val_results[val_labels == 1].std(), val_results[val_labels == 1].min(), val_results[val_labels == 1].max(), np.median(val_results[val_labels == 1]))
 
 if MODEL == "if":
-    iso_forest = IsolationForest(contamination=sum(y)/len(y))
-    iso_forest.fit(x)
-    raw_scores = iso_forest.decision_function(x)
-    print(raw_scores.mean(), raw_scores.std(), raw_scores.min(), raw_scores.max(), np.median(raw_scores))
-    normalized_scores = 1 / (1 + np.exp(-raw_scores))
-    normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
-    normalized_scores = 1 - normalized_scores
+    run_if()
 elif MODEL == "svm":
-    #x_train, x_val, y_train, y_val = train_test_split(x, y, test_size=0.2, random_state=42)
-
-    ocsvm = OneClassSVM(gamma='auto')
-    ocsvm.fit(x)
-
-    decision_function = ocsvm.decision_function(x)
-    normalized_scores = 1 / (1 + np.exp(-decision_function))
-    normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
+    run_svm()
 elif MODEL == "knn":
-    K = 10
-    knn = NearestNeighbors(n_neighbors=K)
-    knn.fit(x)
-
-    distances, indices = knn.kneighbors(x)
-    anomaly_scores = distances[:, K-1]
-    normalized_scores = 1 / (1 + np.exp(-anomaly_scores))
-    normalized_scores = (anomaly_scores - anomaly_scores.min()) / (anomaly_scores.max() - anomaly_scores.min())
+    run_knn()
+elif MODEL == "all_ml":
+    run_if()
+    run_svm()
+    #run_knn()
 elif MODEL == "lin":
-    import torch
-    import torch.nn as nn
-    import torch.optim as optim
-    from torch.utils.data import DataLoader, TensorDataset, SubsetRandomSampler
-    from sklearn.model_selection import KFold
-
+    val_results = []
+    val_labels = []
     input_dim = x.shape[-1]
 
     dataset = TensorDataset(torch.tensor(x).float(), torch.tensor(y).float())
@@ -112,22 +127,18 @@ elif MODEL == "lin":
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=1e-3)
 
-    num_epochs = 500
-    kfold = KFold(n_splits=5, shuffle=True)
+    num_epochs = 2000
 
     best_models = []
     normalized_scores = []
     y = []
-    for fold, (train_idx, val_idx) in enumerate(kfold.split(dataset)):
-        # Split data into training and validation sets
+    for fold, (train_idx, val_idx) in enumerate(kf.split(dataset)):
         train_subsampler = SubsetRandomSampler(train_idx)
         val_subsampler = SubsetRandomSampler(val_idx)
 
-        # Create data loaders for training and validation
         train_loader = DataLoader(dataset, batch_size=batch_size, sampler=train_subsampler)
         val_loader = DataLoader(dataset, batch_size=batch_size, sampler=val_subsampler)
 
-        # Initialize the neural network, loss function, and optimizer for each fold
         model = SimpleLinearNN(input_dim)
         criterion = nn.MSELoss()
         optimizer = optim.Adam(model.parameters(), lr=0.001)
@@ -135,7 +146,6 @@ elif MODEL == "lin":
         best_val_loss = float('inf')
         best_model_state = None
 
-        # Training loop for the current fold
         for epoch in range(num_epochs):
             model.train()
             for inputs, targets in train_loader:
@@ -159,7 +169,7 @@ elif MODEL == "lin":
                 best_val_loss = val_loss
                 best_model_state = model.state_dict()
 
-            if epoch % 10 == 0:
+            if epoch % 50 == 0:
                 print(f'Fold {fold+1}, Epoch {epoch+1}, Validation Loss: {val_loss:.4f}')
 
         best_models.append(best_model_state)
@@ -174,20 +184,16 @@ elif MODEL == "lin":
                 predictions.extend(outputs.tolist())
                 labels.extend(targets.tolist())
 
-        normalized_scores.extend(predictions)
-        y.extend(labels)
+        val_results.extend(predictions)
+        val_labels.extend(labels)
 
-    normalized_scores = np.array(normalized_scores)
-    y = np.array(y)
+    val_results = np.array(val_results)
+    val_labels = np.array(val_labels)
 
-print(normalized_scores.mean(), normalized_scores.std(), normalized_scores.min(), normalized_scores.max(), np.median(normalized_scores))
-print(normalized_scores[y == 0].mean(), normalized_scores[y == 0].std(), normalized_scores[y == 0].min(), normalized_scores[y == 0].max(), np.median(normalized_scores[y == 0]))
-print(normalized_scores[y == 1].mean(), normalized_scores[y == 1].std(), normalized_scores[y == 1].min(), normalized_scores[y == 1].max(), np.median(normalized_scores[y == 1]))
+    print_results(val_results, val_labels)
 
 
-sorted_scores = np.sort(normalized_scores)
-
-# Generating cumulative percentages
+"""sorted_scores = np.sort(normalized_scores)
 cumulative_percentages = np.arange(1, len(sorted_scores) + 1) / len(sorted_scores)
 
 plt.plot(sorted_scores, cumulative_percentages)
@@ -195,4 +201,4 @@ plt.title('Cumulative Distribution of Confidence Scores')
 plt.xlabel('Risk Score')
 plt.ylabel('Cumulative Percentage')
 plt.grid(True)
-plt.show()
+plt.show()"""

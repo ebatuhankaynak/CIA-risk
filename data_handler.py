@@ -123,7 +123,8 @@ class MockDataHandler:
     
     def create_labels(self, project_name):
         project_name_to_dbname = {
-            "Cli": "org.apache:commons-cli"
+            "Cli": "org.apache:commons-cli",
+            "Fileupload": "org.apache:commons-fileupload"
         }
 
         bic_dataset_path = f"fault_induce.txt"
@@ -143,23 +144,30 @@ class MockDataHandler:
 
         return labels
     
-    def read_and_parse_csv(self, file_path):
-        regex = r'(org\.apache\.[\w\.]+\([^)]*\)),(org\.apache\.[\w\.]+\([^)]*\))'
-        data = []
-        with open(file_path, 'r') as file:
-            next(file)
-            for line in file:
-                match = re.match(regex, line.strip())
-                if match:
-                    caller, callee = match.groups()
-                    data.append({'Caller': caller, 'Callee': callee})
-        return pd.DataFrame(data)
+    def read_and_parse_csv(self, file_path, project_name):
+        if project_name == "Cli":
+            regex = r'(org\.apache\.[\w\.]+\([^)]*\)),(org\.apache\.[\w\.]+\([^)]*\))'
+            data = []
+            with open(file_path, 'r') as file:
+                next(file)
+                for line in file:
+                    match = re.match(regex, line.strip())
+                    if match:
+                        caller, callee = match.groups()
+                        data.append({'Caller': caller, 'Callee': callee})
+            return pd.DataFrame(data)
+        else:
+            df = pd.read_csv(file_path, delimiter="\t")
+            return df
+
+        
+        
 
     def create_example_project(self):
         file_path = 'example_cc.csv'
         project_name = "Cli"
 
-        df = self.read_and_parse_csv(file_path)
+        df = self.read_and_parse_csv(file_path, project_name)
         filename = f"raw/{project_name}.json"
         commit_data = MockUtils.read_json(filename)
         commit_ids = list(commit_data.keys())
@@ -199,8 +207,8 @@ class MockDataHandler:
             next_cid = commit_ids[i + 1]
 
             try:
-                current_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/{project_name}/{current_cid}.csv')
-                next_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/{project_name}/{next_cid}.csv')
+                current_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/{project_name}/{current_cid}.csv', project_name)
+                next_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/{project_name}/{next_cid}.csv', project_name)
             except FileNotFoundError:
                 continue
             changed_files = extract_unique_methods(current_cc_pair_df, next_cc_pair_df)
