@@ -16,7 +16,8 @@ repo_names = {
     #"Lang": "apache/commons-lang",
     #"Math": "apache/commons-math",
     #"Mockito": "mockito/mockito",
-    "Time": "JodaOrg/joda-time"
+    "Time": "JodaOrg/joda-time",
+    "Fileupload": "apache/commons-fileupload"
 }
 
 def get_commits(owner, repo):
@@ -59,7 +60,7 @@ def save_to_json(data, filename):
         json.dump(data, file)
 
 
-project_name = "Compress"
+project_name = "Fileupload"
 repo_path = repo_names[project_name]
 
 commit_data = {}
