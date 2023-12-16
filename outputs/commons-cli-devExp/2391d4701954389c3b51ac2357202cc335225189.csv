@@ -1,0 +1,15 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\CommandLine.java,Oliver Heger <oheger@apache.org>,5,0.049048459878359825
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\test\org\apache\commons\cli2\commandline\DefaultingCommandLineTest.java,Oliver Heger <oheger@apache.org>,2,0.06176652254478073
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\commandline\WriteableCommandLineImpl.java,Oliver Heger <oheger@apache.org>,32,0.2631146193060352
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\test\org\apache\commons\cli2\bug\BugCLI12Test.java,Oliver Heger <oheger@apache.org>,6,3.870967741935484
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\option\PropertyOption.java,Oliver Heger <oheger@apache.org>,2,0.04982561036372695
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\test\org\apache\commons\cli2\WriteableCommandLineTestCase.java,Oliver Heger <oheger@apache.org>,8,0.4329004329004329
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\test\org\apache\commons\cli2\CommandLineTestCase.java,Oliver Heger <oheger@apache.org>,26,0.04293050212175751
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\test\org\apache\commons\cli2\bug\BugCLI126Test.java,Oliver Heger <oheger@apache.org>,17,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\commandline\PropertiesCommandLine.java,Oliver Heger <oheger@apache.org>,11,0.24006983849847227
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\commandline\CommandLineImpl.java,Oliver Heger <oheger@apache.org>,4,0.09866798223976321
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\test\org\apache\commons\cli2\option\PropertyOptionTest.java,Oliver Heger <oheger@apache.org>,16,0.18801410105757932
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\WriteableCommandLine.java,Oliver Heger <oheger@apache.org>,1,0.08643042350907519
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\commandline\DefaultingCommandLine.java,Oliver Heger <oheger@apache.org>,15,0.3416856492027335
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\commandline\PreferencesCommandLine.java,Oliver Heger <oheger@apache.org>,11,0.2173054128802845

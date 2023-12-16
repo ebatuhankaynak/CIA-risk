@@ -1,0 +1,7 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\Option.java,Oliver Heger <oheger@apache.org>,2,0.03346720214190094
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\option\GroupImpl.java,Oliver Heger <oheger@apache.org>,13,0.04987531172069825
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\option\OptionImpl.java,Oliver Heger <oheger@apache.org>,10,0.19338619222587508
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\test\org\apache\commons\cli2\bug\BugCLI123Test.java,Oliver Heger <oheger@apache.org>,53,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\commandline\WriteableCommandLineImpl.java,Oliver Heger <oheger@apache.org>,76,0.6226446010158938
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\test\org\apache\commons\cli2\CommandLineTestCase.java,Oliver Heger <oheger@apache.org>,27,0.04458093917178522

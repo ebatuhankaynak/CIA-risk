@@ -1,0 +1,17 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\PathConverterTestCase.java,Gary Gregory <garydgregory@gmail.com>,31,32.29166666666667
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\ZoneOffsetConverterTestCase.java,Gary Gregory <garydgregory@gmail.com>,39,36.44859813084112
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\UUIDConverterTestCase.java,Gary Gregory <garydgregory@gmail.com>,37,38.94736842105263
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\OffsetTimeConverterTestCase.java,Gary Gregory <garydgregory@gmail.com>,37,37.37373737373738
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\PeriodConverterTestCase.java,Gary Gregory <garydgregory@gmail.com>,39,41.05263157894737
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\BigDecimalConverterTestCase.java,Gary Gregory <garydgregory@gmail.com>,86,40.95238095238095
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\ByteConverterTestCase.java,Gary Gregory <garydgregory@gmail.com>,140,45.45454545454545
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\URIConverterTestCase.java,Gary Gregory <garydgregory@gmail.com>,52,44.06779661016949
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\BeanUtilsBenchCase.java,Gary Gregory <garydgregory@gmail.com>,163,36.38392857142857
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\TestBean.java,Gary Gregory <garydgregory@gmail.com>,440,53.52798053527981
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\YearConverterTestCase.java,Gary Gregory <garydgregory@gmail.com>,39,36.44859813084112
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\DoubleConverterTestCase.java,Gary Gregory <garydgregory@gmail.com>,140,45.90163934426229
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\BigIntegerConverterTestCase.java,Gary Gregory <garydgregory@gmail.com>,80,37.38317757009346
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\PropertyUtilsBenchCase.java,Gary Gregory <garydgregory@gmail.com>,101,35.43859649122807
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\FloatConverterTestCase.java,Gary Gregory <garydgregory@gmail.com>,146,45.20123839009288
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\LongConverterTestCase.java,Gary Gregory <garydgregory@gmail.com>,117,45.703125

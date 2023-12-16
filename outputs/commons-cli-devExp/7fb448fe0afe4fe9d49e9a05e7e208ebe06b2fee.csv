@@ -1,0 +1,14 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\option\OptionImpl.java,Robert James Oxspring <roxspring@apache.org>,57,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\Argument.java,Robert James Oxspring <roxspring@apache.org>,12,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\WriteableCommandLine.java,Robert James Oxspring <roxspring@apache.org>,7,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\option\ArgumentImpl.java,Robert James Oxspring <roxspring@apache.org>,213,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\commandline\Parser.java,Robert James Oxspring <roxspring@apache.org>,61,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\test\org\apache\commons\cli2\option\SwitchTest.java,Robert James Oxspring <roxspring@apache.org>,140,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\commandline\WriteableCommandLineImpl.java,Robert James Oxspring <roxspring@apache.org>,197,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\builder\SwitchBuilder.java,Robert James Oxspring <roxspring@apache.org>,64,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\Option.java,Robert James Oxspring <roxspring@apache.org>,24,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\option\ParentImpl.java,Robert James Oxspring <roxspring@apache.org>,147,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\test\org\apache\commons\cli2\CommandLineDefaultsTest.java,Robert James Oxspring <roxspring@apache.org>,162,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\option\Switch.java,Robert James Oxspring <roxspring@apache.org>,104,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli2\option\GroupImpl.java,Robert James Oxspring <roxspring@apache.org>,329,100.0

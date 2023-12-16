@@ -1,0 +1,22 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\LocaleBeanUtilsBean.java,Henri Yandell <bayard@apache.org>,18,2.5174825174825175
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\MappedPropertyDescriptor.java,Henri Yandell <bayard@apache.org>,6,0.436046511627907
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\ByteArrayConverter.java,Henri Yandell <bayard@apache.org>,6,10.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\LocaleConvertUtilsBean.java,Henri Yandell <bayard@apache.org>,8,4.123711340206185
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\ShortArrayConverter.java,Henri Yandell <bayard@apache.org>,6,10.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\BasicDynaClass.java,Henri Yandell <bayard@apache.org>,2,1.7241379310344827
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\LocaleConvertUtils.java,Henri Yandell <bayard@apache.org>,6,0.03329818524890393
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\CharacterArrayConverter.java,Henri Yandell <bayard@apache.org>,6,10.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\PropertyUtilsBean.java,Henri Yandell <bayard@apache.org>,155,8.419337316675719
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\LongArrayConverter.java,Henri Yandell <bayard@apache.org>,6,10.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\FloatArrayConverter.java,Henri Yandell <bayard@apache.org>,6,10.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\DoubleArrayConverter.java,Henri Yandell <bayard@apache.org>,6,10.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\BeanUtilsBean.java,Henri Yandell <bayard@apache.org>,37,3.148936170212766
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\ConvertUtilsBean.java,Henri Yandell <bayard@apache.org>,2,0.26455026455026454
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\ConvertUtils.java,Henri Yandell <bayard@apache.org>,2,0.18001800180018002
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\StringArrayConverter.java,Henri Yandell <bayard@apache.org>,2,3.7037037037037033
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\WrapDynaClass.java,Henri Yandell <bayard@apache.org>,2,0.9433962264150944
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\BooleanArrayConverter.java,Henri Yandell <bayard@apache.org>,6,4.026845637583892
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\IntegerArrayConverter.java,Henri Yandell <bayard@apache.org>,6,10.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\TestBean.java,Henri Yandell <bayard@apache.org>,9,3.3962264150943398
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\MethodUtils.java,Henri Yandell <bayard@apache.org>,137,13.672654690618764

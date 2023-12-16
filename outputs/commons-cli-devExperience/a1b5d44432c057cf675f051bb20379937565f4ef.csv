@@ -1,9 +1,0 @@
-File Directory,Author,Contribution, Percentage of Contribution
-D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\main\java\org\apache\commons\cli\DefaultParser.java,Emmanuel Bourg <ebourg@apache.org>,78,100.0
-D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\main\java\org\apache\commons\cli\OptionGroup.java,Emmanuel Bourg <ebourg@apache.org>,73,37.244897959183675
-D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\main\java\org\apache\commons\cli\OptionValidator.java,Emmanuel Bourg <ebourg@apache.org>,40,43.47826086956522
-D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\main\java\org\apache\commons\cli\HelpFormatter.java,Emmanuel Bourg <ebourg@apache.org>,340,1.2277470841006752
-D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\main\java\org\apache\commons\cli\AmbiguousOptionException.java,Emmanuel Bourg <ebourg@apache.org>,8,100.0
-D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\main\java\org\apache\commons\cli\Option.java,Emmanuel Bourg <ebourg@apache.org>,214,6.119531026594224
-D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\main\java\org\apache\commons\cli\Options.java,Emmanuel Bourg <ebourg@apache.org>,86,15.167548500881834
-D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\src\main\java\org\apache\commons\cli\CommandLine.java,Emmanuel Bourg <ebourg@apache.org>,115,16.76384839650146

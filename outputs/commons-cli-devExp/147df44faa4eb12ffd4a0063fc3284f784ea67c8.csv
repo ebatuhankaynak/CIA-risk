@@ -1,0 +1,22 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\Parser.java,Emmanuel Bourg <ebourg@apache.org>,90,11.734028683181226
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\CommandLineParser.java,Emmanuel Bourg <ebourg@apache.org>,7,26.923076923076923
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\UnrecognizedOptionException.java,Emmanuel Bourg <ebourg@apache.org>,4,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\MissingOptionException.java,Emmanuel Bourg <ebourg@apache.org>,22,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\GnuParser.java,Emmanuel Bourg <ebourg@apache.org>,122,20.74829931972789
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\CommandLine.java,Emmanuel Bourg <ebourg@apache.org>,57,10.836501901140684
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\OptionValidator.java,Emmanuel Bourg <ebourg@apache.org>,12,13.48314606741573
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\Option.java,Emmanuel Bourg <ebourg@apache.org>,120,3.1779661016949152
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\MissingArgumentException.java,Emmanuel Bourg <ebourg@apache.org>,4,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\BasicParser.java,Emmanuel Bourg <ebourg@apache.org>,3,20.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\test\org\apache\commons\cli\UtilTest.java,Emmanuel Bourg <ebourg@apache.org>,13,68.42105263157895
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\Options.java,Emmanuel Bourg <ebourg@apache.org>,34,6.4030131826742
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\PatternOptionBuilder.java,Emmanuel Bourg <ebourg@apache.org>,84,27.631578947368425
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\AlreadySelectedException.java,Emmanuel Bourg <ebourg@apache.org>,8,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\PosixParser.java,Emmanuel Bourg <ebourg@apache.org>,110,10.027347310847768
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\Util.java,Emmanuel Bourg <ebourg@apache.org>,11,23.404255319148938
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\OptionGroup.java,Emmanuel Bourg <ebourg@apache.org>,21,11.931818181818182
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\TypeHandler.java,Emmanuel Bourg <ebourg@apache.org>,37,10.979228486646884
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\test\org\apache\commons\cli\ArgumentIsOptionTest.java,Emmanuel Bourg <ebourg@apache.org>,73,52.51798561151079
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\HelpFormatter.java,Emmanuel Bourg <ebourg@apache.org>,120,0.35240220838717257
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\OptionBuilder.java,Emmanuel Bourg <ebourg@apache.org>,12,4.013377926421405

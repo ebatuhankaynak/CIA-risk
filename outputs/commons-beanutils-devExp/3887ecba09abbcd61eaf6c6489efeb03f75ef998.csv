@@ -1,0 +1,9 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\IntrospectionContext.java,Oliver Heger <oheger@apache.org>,7,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\DefaultIntrospectionContextTestCase.java,Oliver Heger <oheger@apache.org>,92,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\DefaultIntrospectionContext.java,Oliver Heger <oheger@apache.org>,35,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\FluentIntrospectionTestBean.java,Oliver Heger <oheger@apache.org>,18,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\BeanIntrospector.java,Oliver Heger <oheger@apache.org>,2,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\FluentPropertyBeanIntrospectorTestCase.java,Oliver Heger <oheger@apache.org>,40,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\DefaultBeanIntrospector.java,Oliver Heger <oheger@apache.org>,80,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\FluentPropertyBeanIntrospector.java,Oliver Heger <oheger@apache.org>,35,100.0

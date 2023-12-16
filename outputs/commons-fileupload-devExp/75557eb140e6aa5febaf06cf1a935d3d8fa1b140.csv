@@ -1,3 +1,7 @@
 File Directory,Author,Contribution, Percentage of Contribution
-D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\MultipartStream.java,Jochen Wiedmann <jochen@apache.org>,129,13.271604938271606
-D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\FileUploadBase.java,Jochen Wiedmann <jochen@apache.org>,139,24.3006993006993
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\MultipartStream.java,Jochen Wiedmann <jochen@apache.org>,236,18.480814408770556
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\StreamUtil.java,Jochen Wiedmann <jochen@apache.org>,51,100.0
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\FileItemIterator.java,Jochen Wiedmann <jochen@apache.org>,2,100.0
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\FileUploadBase.java,Jochen Wiedmann <jochen@apache.org>,268,28.32980972515856
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\FileItemStream.java,Jochen Wiedmann <jochen@apache.org>,5,100.0
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\test\org\apache\commons\fileupload\SizesTest.java,Jochen Wiedmann <jochen@apache.org>,48,100.0

@@ -1,6 +1,7 @@
 File Directory,Author,Contribution, Percentage of Contribution
-D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\commons-fileupload2-core\src\main\java\org\apache\commons\fileupload2\ParameterParser.java,Gary Gregory <garydgregory@gmail.com>,171,41.105769230769226
-D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\commons-fileupload2-core\src\main\java\org\apache\commons\fileupload2\FileItemInputImpl.java,Gary Gregory <garydgregory@gmail.com>,3624,87.96116504854369
-D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\commons-fileupload2-core\src\main\java\org\apache\commons\fileupload2\MultipartInput.java,Gary Gregory <garydgregory@gmail.com>,705,33.459895586141435
-D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\commons-fileupload2-core\src\main\java\org\apache\commons\fileupload2\AbstractFileUpload.java,Gary Gregory <garydgregory@gmail.com>,570,52.875695732838594
-D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\commons-fileupload2-core\src\main\java\org\apache\commons\fileupload2\FileItemInputIteratorImpl.java,Gary Gregory <garydgregory@gmail.com>,10057,86.7506253773829
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\commons-fileupload2-core\src\main\java\org\apache\commons\fileupload2\MultipartInput.java,Gary Gregory <garydgregory@gmail.com>,573,28.157248157248155
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\commons-fileupload2-core\src\main\java\org\apache\commons\fileupload2\ParameterParser.java,Gary Gregory <garydgregory@gmail.com>,198,37.28813559322034
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\commons-fileupload2-core\src\main\java\org\apache\commons\fileupload2\FileItemInputIteratorImpl.java,Gary Gregory <garydgregory@gmail.com>,9617,63.48273813453034
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\commons-fileupload2-core\src\main\java\org\apache\commons\fileupload2\AbstractFileUpload.java,Gary Gregory <garydgregory@gmail.com>,466,43.75586854460094
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\commons-fileupload2-core\src\main\java\org\apache\commons\fileupload2\FileItemInputImpl.java,Gary Gregory <garydgregory@gmail.com>,3464,61.41843971631206
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\commons-fileupload2-core\src\main\java\org\apache\commons\fileupload2\RequestContext.java,Gary Gregory <garydgregory@gmail.com>,5,71.42857142857143

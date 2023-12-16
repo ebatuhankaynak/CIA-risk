@@ -1,0 +1,22 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\digest\Md5Crypt.java,Marc Wrobel <marc.wrobel@gmail.com>,4,1.6528925619834711
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\digest\Sha2Crypt.java,Marc Wrobel <marc.wrobel@gmail.com>,6,1.160541586073501
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\PureJavaCrc32Test.java,Marc Wrobel <marc.wrobel@gmail.com>,4,0.032224280995730284
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base32InputStreamTest.java,Marc Wrobel <marc.wrobel@gmail.com>,12,1.440576230492197
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\net\RFC1522CodecTest.java,Marc Wrobel <marc.wrobel@gmail.com>,6,3.6363636363636362
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\HmacUtilsTest.java,Marc Wrobel <marc.wrobel@gmail.com>,4,0.8403361344537815
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\XXHash32Test.java,Marc Wrobel <marc.wrobel@gmail.com>,4,3.278688524590164
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base64Test.java,Marc Wrobel <marc.wrobel@gmail.com>,4,7.211144102095378E-4
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\language\bm\LanguageGuessingTest.java,Marc Wrobel <marc.wrobel@gmail.com>,2,1.0638297872340425
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\HmacAlgorithmsTest.java,Marc Wrobel <marc.wrobel@gmail.com>,2,0.019331142470520007
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base64OutputStreamTest.java,Marc Wrobel <marc.wrobel@gmail.com>,14,0.17399950285856325
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base16OutputStreamTest.java,Marc Wrobel <marc.wrobel@gmail.com>,10,2.638522427440633
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base32OutputStreamTest.java,Marc Wrobel <marc.wrobel@gmail.com>,14,2.75049115913556
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base16InputStreamTest.java,Marc Wrobel <marc.wrobel@gmail.com>,8,1.6064257028112447
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\UnixCryptTest.java,Marc Wrobel <marc.wrobel@gmail.com>,2,2.5316455696202533
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\BaseNCodecTest.java,Marc Wrobel <marc.wrobel@gmail.com>,2,0.5899705014749262
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\language\MatchRatingApproachEncoder.java,Marc Wrobel <marc.wrobel@gmail.com>,8,2.1505376344086025
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\language\MetaphoneTest.java,Marc Wrobel <marc.wrobel@gmail.com>,2,0.11402508551881414
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\language\MatchRatingApproachEncoderTest.java,Marc Wrobel <marc.wrobel@gmail.com>,28,5.447470817120623
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base64InputStreamTest.java,Marc Wrobel <marc.wrobel@gmail.com>,12,0.11400342010260307
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\Sha256CryptTest.java,Marc Wrobel <marc.wrobel@gmail.com>,2,2.0618556701030926
