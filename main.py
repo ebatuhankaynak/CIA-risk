@@ -13,6 +13,12 @@ from sklearn.mixture import GaussianMixture
 from sklearn.neighbors import LocalOutlierFactor
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
+import xgboost as xgb
+from sklearn.tree import DecisionTreeClassifier
+
+project_name = "Fileupload"
+CREATE_FEATURES = False
+MODEL = "all" 
 
 dh = MockDataHandler()
 
@@ -24,25 +30,22 @@ requested_features = [
     "commit_summary",
 ]
 
-project_name = "Fileupload"
-CREATE_FEATURES = False
-
-# One of if, svm, knn, lin, all_ml
-MODEL = "all_ml" 
-
-if CREATE_FEATURES:
-    y = dh.create_labels(project_name)
-    features_per_cid = dh.create_features_from_cc(project_name, requested_features)
-    x, y = dh.flatten_features(features_per_cid, y)
-
-    np.save(f"{project_name}_x", x)
-    np.save(f"{project_name}_y", y)
-else:
-    x = np.load(f"{project_name}_x.npy")
-    y = np.load(f"{project_name}_y.npy")
-
 n_splits = 5
 kf = KFold(n_splits=n_splits, shuffle=True, random_state=42)
+
+def get_feats(project_name):
+    if CREATE_FEATURES:
+        y = dh.create_labels(project_name)
+        features_per_cid = dh.create_features_from_cc(project_name, requested_features)
+        x, y = dh.flatten_features(features_per_cid, y)
+
+        np.save(f"{project_name}_x", x)
+        np.save(f"{project_name}_y", y)
+    else:
+        x = np.load(f"{project_name}_x.npy")
+        y = np.load(f"{project_name}_y.npy")
+        
+    return x, y
 
 def run_ml_kfold(model):
     val_results = []
@@ -53,15 +56,15 @@ def run_ml_kfold(model):
         y_train, y_val = y[train_index], y[val_index]
 
 
-        if isinstance(model, RandomForestClassifier) or isinstance(model, SVC):
+        if isinstance(model, RandomForestClassifier) or isinstance(model, SVC) or isinstance(model, xgb.XGBClassifier) or isinstance(model, DecisionTreeClassifier):
             model.fit(x_train, y_train)
 
-            if isinstance(model, RandomForestClassifier):
-                normalized_scores = model.predict_proba(x_val)[:, 1]
-            else:
+            if isinstance(model, SVC):
                 anomaly_scores = model.decision_function(x_val)
                 normalized_scores = 1 / (1 + np.exp(-anomaly_scores))
                 normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
+            else:
+                normalized_scores = model.predict_proba(x_val)[:, 1]
         else:
             model.fit(x_train)
 
@@ -136,10 +139,21 @@ def run_svc():
     print("="*10 + "SVC" + "="*10)
     run_ml_kfold(model) 
 
+def run_xgb():
+    model  = xgb.XGBClassifier(use_label_encoder=False, eval_metric='logloss')
+    print("="*10 + "XGB" + "="*10)
+    run_ml_kfold(model) 
+
+def run_dt():
+    model  = DecisionTreeClassifier(class_weight="balanced", random_state=42)
+    print("="*10 + "DT" + "="*10)
+    run_ml_kfold(model) 
+
 def print_results(val_results, val_labels):
     print(f"{val_results[val_labels == 0].mean():.2f}, {val_results[val_labels == 0].std():.2f}, {np.median(val_results[val_labels == 0]):.2f}")
     print(f"{val_results[val_labels == 1].mean():.2f}, {val_results[val_labels == 1].std():.2f}, {np.median(val_results[val_labels == 1]):.2f}")
 
+x, y = get_feats(project_name)
 
 if MODEL == "if":
     run_if()
@@ -150,10 +164,22 @@ elif MODEL == "knn":
 elif MODEL == "all_ml":
     run_if()
     run_svm()
-    #run_lof()
-    #run_gmm()
     run_rf()
     run_svc()
+    run_xgb()
+    run_dt()
+elif MODEL == "all":
+    for pn in ["Cli", "Fileupload"]:
+        print("="*30)
+        print("= " + pn)
+        print("="*30)
+        x, y = get_feats(pn)
+        run_if()
+        run_svm()
+        run_rf()
+        run_svc()
+        run_xgb()
+        run_dt()
 elif MODEL == "lin":
     val_results = []
     val_labels = []
