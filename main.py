@@ -8,7 +8,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader, TensorDataset, SubsetRandomSampler
-from sklearn.model_selection import KFold
+from sklearn.model_selection import KFold, StratifiedKFold
 from sklearn.mixture import GaussianMixture
 from sklearn.neighbors import LocalOutlierFactor
 from sklearn.ensemble import RandomForestClassifier
@@ -16,23 +16,28 @@ from sklearn.svm import SVC
 import xgboost as xgb
 from sklearn.tree import DecisionTreeClassifier
 import os
+from sklearn.preprocessing import StandardScaler
+from scipy.stats import norm
+from imblearn.over_sampling import SMOTE
+
 
 project_name = "Fileupload"
 CREATE_FEATURES = False
 MODEL = "all" 
+global_results = {}
 
 dh = MockDataHandler()
 
 requested_features = [
     "global_graph_scores", 
-    "changed_graph_scores", 
+    #"changed_graph_scores", 
     "global_graph_diffs", 
-    "changed_graph_diffs",
-    #"commit_summary",
+    #"changed_graph_diffs",
+    "commit_summary",
 ]
 
 n_splits = 5
-kf = KFold(n_splits=n_splits, shuffle=True, random_state=42)
+kf = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=42)
 
 def get_feats(project_name):
     if CREATE_FEATURES or not os.path.exists(f"{project_name}_x.npy"):
@@ -43,16 +48,17 @@ def get_feats(project_name):
         np.save(f"{project_name}_x", x)
         np.save(f"{project_name}_y", y)
     else:
+        y = dh.create_labels(project_name)
         x = np.load(f"{project_name}_x.npy")
         y = np.load(f"{project_name}_y.npy")
 
     def filter_features(x, requested_features):
         feature_map = {
-            "global_graph_scores": slice(0, 12),
-            "changed_graph_scores": slice(12, 24),
-            "global_graph_diffs": slice(24, 36),
-            "changed_graph_diffs": slice(36, 48),
-            "commit_summary": slice(48, 51)
+            "global_graph_scores": slice(0, 4), #12
+            "changed_graph_scores": slice(12, 16), #24
+            "global_graph_diffs": slice(24, 28), #36
+            "changed_graph_diffs": slice(36, 40), #48
+            "commit_summary": slice(48, 52)
         }
 
         columns_to_keep = []
@@ -63,67 +69,64 @@ def get_feats(project_name):
         return filtered_x
         
     filtered_x = filter_features(x, requested_features)
+    """for i in filtered_x :
+        print(i)"""
     return filtered_x, y
 
 def run_ml_kfold(model):
     val_results = []
     val_labels = []
 
-    for train_index, val_index in kf.split(x):
+    for train_index, val_index in kf.split(x, y):
         x_train, x_val = x[train_index], x[val_index]
         y_train, y_val = y[train_index], y[val_index]
 
+        smote = SMOTE(random_state=42)
+        x_train, y_train = smote.fit_resample(x_train, y_train)
+
+        scaler = StandardScaler()
+        scaler.fit(x_train)
+        x_train = scaler.transform(x_train)
+        x_val = scaler.transform(x_val)
 
         if isinstance(model, RandomForestClassifier) or isinstance(model, SVC) or isinstance(model, xgb.XGBClassifier) or isinstance(model, DecisionTreeClassifier):
             model.fit(x_train, y_train)
 
             if isinstance(model, SVC):
-                anomaly_scores = model.decision_function(x_val)
-                normalized_scores = 1 / (1 + np.exp(-anomaly_scores))
-                normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
+                raw_scores = model.decision_function(x_val)
             else:
-                normalized_scores = model.predict_proba(x_val)[:, 1]
+                raw_scores = model.predict_proba(x_val)[:, 1]
         else:
             model.fit(x_train)
 
             if isinstance(model, NearestNeighbors):
                 distances, indices = model.kneighbors(x_val)
-                anomaly_scores = np.sum(distances, axis=1)
-                
-                normalized_scores = 1 / (1 + np.exp(-anomaly_scores))
-                normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
+                raw_scores = np.sum(distances, axis=1)
             elif isinstance(model, LocalOutlierFactor):
                 kneighbors = model.kneighbors(x_val, return_distance=False)
                 lrd = 1. / np.mean(model._distances_fit_X_[kneighbors, model.n_neighbors - 1], axis=1)
                 lrd_ratios_array = lrd / model._lrd[kneighbors].mean(axis=1)
-                anomaly_scores = 1. / lrd_ratios_array
-                
-                normalized_scores = 1 / (1 + np.exp(-anomaly_scores))
-                normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
-                normalized_scores = 1 - normalized_scores
+
+                raw_scores = 1. / lrd_ratios_array
             elif isinstance(model, GaussianMixture):
-                anomaly_scores = model.score_samples(x_val)
-                
-                #normalized_scores = 1 / (1 + np.exp(-anomaly_scores))
-                normalized_scores = (anomaly_scores - anomaly_scores.min()) / (anomaly_scores.max() - anomaly_scores.min())
+                raw_scores = model.score_samples(x_val)
             else:
                 raw_scores = model.decision_function(x_val)
-                normalized_scores = 1 / (1 + np.exp(-raw_scores))
-                normalized_scores = (normalized_scores - normalized_scores.min()) / (normalized_scores.max() - normalized_scores.min())
+                raw_scores = -1 * raw_scores
+                    
 
-                if isinstance(model, IsolationForest):
-                    normalized_scores = 1 - normalized_scores
-
-        val_results.extend(normalized_scores)
+        val_results.extend(raw_scores)
         val_labels.extend(y_val)
 
     val_results = np.array(val_results)
     val_labels = np.array(val_labels)
 
-    print_results(val_results, val_labels)
+    val_results = 1 / (1 + np.exp(-val_results))
+
+    print_results(val_results, val_labels, model)
 
 def run_if():
-    model = IsolationForest(contamination="auto")
+    model = IsolationForest(contamination="auto", max_features=1)
     print("="*10 + "IF" + "="*10)
     run_ml_kfold(model)
 
@@ -138,7 +141,7 @@ def run_knn(K=10):
     run_ml_kfold(model)
 
 def run_lof():
-    model = lof = LocalOutlierFactor(n_neighbors=10, contamination='auto')
+    model = LocalOutlierFactor(n_neighbors=10, contamination='auto')
     print("="*10 + "LOF" + "="*10)
     run_ml_kfold(model)
 
@@ -167,9 +170,41 @@ def run_dt():
     print("="*10 + "DT" + "="*10)
     run_ml_kfold(model) 
 
-def print_results(val_results, val_labels):
-    print(f"{val_results[val_labels == 0].mean():.2f}, {val_results[val_labels == 0].std():.2f}, {np.median(val_results[val_labels == 0]):.2f}")
-    print(f"{val_results[val_labels == 1].mean():.2f}, {val_results[val_labels == 1].std():.2f}, {np.median(val_results[val_labels == 1]):.2f}")
+def print_results(val_results, val_labels, model):
+    nonbic_mean = val_results[val_labels == 0].mean()
+    bic_mean = val_results[val_labels == 1].mean()
+    nonbic_std = val_results[val_labels == 0].std()
+    bic_std = val_results[val_labels == 1].std()
+    nonbic_median = np.median(val_results[val_labels == 0])
+    bic_median = np.median(val_results[val_labels == 1])
+    nonbic_var, bic_var = np.var(val_results[val_labels == 0], ddof=1), np.var(val_results[val_labels == 1], ddof=1)
+
+    n_bic = sum(val_labels)
+    n_nonbic = len(val_labels) - n_bic
+    
+    z_score = (nonbic_mean - bic_mean) / ((nonbic_std**2 / n_nonbic) + (bic_std**2 / n_bic))**0.5
+    p_value = norm.sf(abs(z_score)) * 2
+
+    pooled_std = np.sqrt(((n_nonbic - 1) * nonbic_var + (n_bic - 1) * bic_var) / (n_nonbic + n_bic - 2))
+    cohensd = (nonbic_mean - bic_mean) / pooled_std
+
+    print(f"{nonbic_mean:.3f}, {nonbic_std:.3f}, {nonbic_median:.3f}")
+    print(f"{bic_mean.mean():.3f}, {bic_std:.3f}, {bic_median:.3f}")
+    print(f"{abs(z_score):.3f}, {p_value:.3f}, {abs(cohensd):.3f}")
+
+    if project_name not in global_results:
+        global_results[project_name] = {}
+        global_results[project_name][model.__class__] = {
+            "nonbic_mean": nonbic_mean,
+            "bic_mean": bic_mean,
+            "nonbic_std": nonbic_std,
+            "bic_std": bic_std,
+            "nonbic_median": nonbic_median,
+            "bic_median": bic_median,
+            "z_score": z_score,
+            "p_value": p_value,
+            "cohensd": cohensd
+        }
 
 x, y = get_feats(project_name)
 
@@ -287,7 +322,7 @@ elif MODEL == "lin":
     val_results = np.array(val_results)
     val_labels = np.array(val_labels)
 
-    print_results(val_results, val_labels)
+    print_results(val_results, val_labels, model)
 
 
 """sorted_scores = np.sort(normalized_scores)

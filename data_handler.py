@@ -115,8 +115,6 @@ class MockDataHandler:
             "changed_graph_diffs": changed_graph_diffs,
         }
 
-        
-
         filtered_metrics_dicts = {name: metrics for name, metrics in metrics_dicts.items() if name in requested_features}
         return attach_cid_to_features(filtered_metrics_dicts)
     
@@ -134,13 +132,11 @@ class MockDataHandler:
 
         directory_path = f"caller_callee_outputs/{project_name}/"
         commit_ids = [file_name.split('.')[0] for file_name in os.listdir(directory_path)]
-        print(bic_dataset)
         bic_dataset_for_pid = bic_dataset[bic_dataset['PROJECT_ID'] == project_name_to_dbname[project_name]]
 
         bic_commit_ids = set(bic_dataset_for_pid['FAULT_INDUCING_COMMIT_HASH'])
-        print(len(bic_commit_ids), len(commit_ids))
+        print(len(bic_dataset_for_pid), len(bic_commit_ids), len(commit_ids))
         
-        # Assuming bic_commit_ids and commit_ids are both sets
         common_commit_ids = bic_commit_ids.intersection(commit_ids)
         labels = [1 if commit_id in common_commit_ids else 0 for commit_id in commit_ids]
 
@@ -201,6 +197,9 @@ class MockDataHandler:
             unique_methods = pd.unique(diff_df[['Caller', 'Callee']].values.ravel('K'))
             return list(unique_methods)
         
+        vertex_change = []
+        edge_change = []
+        prev_G = None
         for i in tqdm(range(len(commit_ids) - 1), "Calculating Global Metrics for commits"):
             current_cid = commit_ids[i]
             next_cid = commit_ids[i + 1]
@@ -242,8 +241,24 @@ class MockDataHandler:
             commit_summary[current_cid] = {
                 'changed': files_changed,
                 'additions': additions,
-                'deletions': deletions
+                'deletions': deletions,
+                'count': len(current_cc_pair_df),
             }
+
+            if prev_G is not None:
+                added_vertices = set(G.nodes()) - set(prev_G.nodes())
+                removed_vertices = set(prev_G.nodes()) - set(G.nodes())
+
+                added_edges = set(G.edges()) - set(prev_G.edges())
+                removed_edges = set(prev_G.edges()) - set(G.edges())
+
+                vertex_change.append(added_vertices + removed_vertices)
+                edge_change.append(added_edges + removed_edges)
+
+            prev_G = G
+
+        graph_stats = [vertex_change, edge_change]
+        np.save(f"{project_name}_graph_stats", np.array(graph_stats))
 
         for i in tqdm(range(len(commit_ids) - 2), "Calculating Change Metrics for commits"):
             current_cid = commit_ids[i]
@@ -275,7 +290,7 @@ class MockDataHandler:
         def linearize_commit_summary(commit_summary):
             linearized_summary = {}
             for cid, metrics in commit_summary.items():
-                linear_vector = [metrics['changed'], metrics['additions'], metrics['deletions']]
+                linear_vector = [metrics['changed'], metrics['additions'], metrics['deletions'],  metrics['count']]
                 linearized_summary[cid] = linear_vector
             return linearized_summary
 
