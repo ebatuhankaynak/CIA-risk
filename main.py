@@ -15,6 +15,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 import xgboost as xgb
 from sklearn.tree import DecisionTreeClassifier
+import os
 
 project_name = "Fileupload"
 CREATE_FEATURES = False
@@ -34,7 +35,7 @@ n_splits = 5
 kf = KFold(n_splits=n_splits, shuffle=True, random_state=42)
 
 def get_feats(project_name):
-    if CREATE_FEATURES:
+    if CREATE_FEATURES or not os.path.exists(f"{project_name}_x.npy"):
         y = dh.create_labels(project_name)
         features_per_cid = dh.create_features_from_cc(project_name, requested_features)
         x, y = dh.flatten_features(features_per_cid, y)
@@ -166,10 +167,9 @@ elif MODEL == "all_ml":
     run_svm()
     run_rf()
     run_svc()
-    run_xgb()
     run_dt()
 elif MODEL == "all":
-    for pn in ["Cli", "Fileupload"]:
+    for pn in ["Cli", "Fileupload", "Beanutils", "Codec"]:
         print("="*30)
         print("= " + pn)
         print("="*30)
@@ -178,7 +178,6 @@ elif MODEL == "all":
         run_svm()
         run_rf()
         run_svc()
-        run_xgb()
         run_dt()
 elif MODEL == "lin":
     val_results = []

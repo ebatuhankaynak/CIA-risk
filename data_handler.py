@@ -124,7 +124,9 @@ class MockDataHandler:
     def create_labels(self, project_name):
         project_name_to_dbname = {
             "Cli": "org.apache:commons-cli",
-            "Fileupload": "org.apache:commons-fileupload"
+            "Fileupload": "org.apache:commons-fileupload",
+            "Beanutils": "org.apache:beanutils",
+            "Codec": "org.apache:codec"
         }
 
         bic_dataset_path = f"fault_induce.txt"
