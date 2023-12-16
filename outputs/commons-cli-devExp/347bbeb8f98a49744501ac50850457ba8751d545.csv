@@ -1,0 +1,12 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\Util.java,John Keyes <jkeyes@apache.org>,9,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\OptionBuilder.java,John Keyes <jkeyes@apache.org>,133,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\CommandLine.java,John Keyes <jkeyes@apache.org>,194,81.85654008438819
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\test\org\apache\commons\cli\BugsTest.java,John Keyes <jkeyes@apache.org>,332,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\CommandLineParser.java,John Keyes <jkeyes@apache.org>,14,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\test\org\apache\commons\cli\ValueTest.java,John Keyes <jkeyes@apache.org>,298,75.25252525252525
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\Parser.java,John Keyes <jkeyes@apache.org>,288,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\Option.java,John Keyes <jkeyes@apache.org>,191,74.90196078431373
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\Options.java,John Keyes <jkeyes@apache.org>,253,73.121387283237
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\OptionValidator.java,John Keyes <jkeyes@apache.org>,31,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\test\org\apache\commons\cli\OptionBuilderTest.java,John Keyes <jkeyes@apache.org>,154,100.0

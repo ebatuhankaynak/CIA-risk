@@ -1,0 +1,17 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\OptionBuilder.java,John Keyes <jkeyes@apache.org>,241,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\Util.java,John Keyes <jkeyes@apache.org>,23,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\Option.java,John Keyes <jkeyes@apache.org>,3072,85.07338687344226
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\PosixParser.java,John Keyes <jkeyes@apache.org>,998,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\CommandLine.java,John Keyes <jkeyes@apache.org>,322,88.21917808219179
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\GnuParser.java,John Keyes <jkeyes@apache.org>,494,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\OptionValidator.java,John Keyes <jkeyes@apache.org>,77,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\OptionGroup.java,John Keyes <jkeyes@apache.org>,103,66.45161290322581
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\BasicParser.java,John Keyes <jkeyes@apache.org>,12,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\CommandLineParser.java,John Keyes <jkeyes@apache.org>,33,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\PatternOptionBuilder.java,John Keyes <jkeyes@apache.org>,123,61.19402985074627
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\test\org\apache\commons\cli\TestHelpFormatter.java,John Keyes <jkeyes@apache.org>,159,55.59440559440559
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\Parser.java,John Keyes <jkeyes@apache.org>,564,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\TypeHandler.java,John Keyes <jkeyes@apache.org>,166,60.8058608058608
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\HelpFormatter.java,John Keyes <jkeyes@apache.org>,26581,78.53512970513502
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-cli\commons-cli\src\java\org\apache\commons\cli\Options.java,John Keyes <jkeyes@apache.org>,396,80.98159509202453
