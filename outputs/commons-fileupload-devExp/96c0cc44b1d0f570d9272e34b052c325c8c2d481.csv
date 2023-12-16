@@ -1,0 +1,18 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload\ServletFileUploadTest.java,Simone Tripodi <simonetripodi@apache.org>,166,76.14678899082568
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload\StreamingTest.java,Simone Tripodi <simonetripodi@apache.org>,40,33.057851239669425
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload\MockHttpServletRequest.java,Simone Tripodi <simonetripodi@apache.org>,28,73.68421052631578
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\FileItemHeaders.java,Simone Tripodi <simonetripodi@apache.org>,8,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\servlet\ServletFileUpload.java,Simone Tripodi <simonetripodi@apache.org>,4,8.51063829787234
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\FileUploadBase.java,Simone Tripodi <simonetripodi@apache.org>,53,4.061302681992337
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\DiskFileUpload.java,Simone Tripodi <simonetripodi@apache.org>,4,10.256410256410255
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\ParameterParser.java,Simone Tripodi <simonetripodi@apache.org>,26,16.25
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\disk\DiskFileItem.java,Simone Tripodi <simonetripodi@apache.org>,4,2.5974025974025974
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload\FileUploadTestCase.java,Simone Tripodi <simonetripodi@apache.org>,14,56.00000000000001
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\portlet\PortletFileUpload.java,Simone Tripodi <simonetripodi@apache.org>,4,30.76923076923077
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\util\FileItemHeadersImpl.java,Simone Tripodi <simonetripodi@apache.org>,20,3.898635477582846
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload\MockPortletSession.java,Simone Tripodi <simonetripodi@apache.org>,12,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload\FileItemHeadersTest.java,Simone Tripodi <simonetripodi@apache.org>,6,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload\MockPortletRequest.java,Simone Tripodi <simonetripodi@apache.org>,29,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload\ParameterParserTest.java,Simone Tripodi <simonetripodi@apache.org>,18,69.23076923076923
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload\SizesTest.java,Simone Tripodi <simonetripodi@apache.org>,12,75.0

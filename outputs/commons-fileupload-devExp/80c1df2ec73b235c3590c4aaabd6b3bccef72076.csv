@@ -1,0 +1,12 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\portlet\PortletFileUpload.java,Mark Thomas <markt@apache.org>,16,55.172413793103445
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\util\mime\QuotedPrintableDecoder.java,Mark Thomas <markt@apache.org>,18,30.508474576271187
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\servlet\ServletFileUpload.java,Mark Thomas <markt@apache.org>,16,18.6046511627907
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\disk\DiskFileItem.java,Mark Thomas <markt@apache.org>,150,33.557046979865774
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\util\FileItemHeadersImpl.java,Mark Thomas <markt@apache.org>,20,3.571428571428571
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\MultipartStream.java,Mark Thomas <markt@apache.org>,162,9.712230215827338
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\util\mime\RFC2231Utility.java,Mark Thomas <markt@apache.org>,45,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\ParameterParser.java,Mark Thomas <markt@apache.org>,52,16.938110749185668
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\FileUpload.java,Mark Thomas <markt@apache.org>,4,8.695652173913043
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\disk\DiskFileItemFactory.java,Mark Thomas <markt@apache.org>,26,33.33333333333333
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload\util\mime\MimeUtility.java,Mark Thomas <markt@apache.org>,62,43.35664335664335
