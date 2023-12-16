@@ -1,0 +1,9 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\jaksrvlt\JakSrvltFileUpload.java,Gary Gregory <garydgregory@gmail.com>,30,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\impl\FileItemIteratorImpl.java,Gary Gregory <garydgregory@gmail.com>,144,72.36180904522614
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload2\jaksrvlt\MockJakSrvltHttpRequest.java,Gary Gregory <garydgregory@gmail.com>,675,41.64096236890808
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload2\SizesTest.java,Gary Gregory <garydgregory@gmail.com>,66,2.0171149144254277
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\jaksrvlt\JakSrvltRequestContext.java,Gary Gregory <garydgregory@gmail.com>,743,97.37876802096986
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload2\util\mime\QuotedPrintableDecoderTestCase.java,Gary Gregory <garydgregory@gmail.com>,104,66.66666666666666
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\servlet\FileCleanerCleanup.java,Gary Gregory <garydgregory@gmail.com>,32,55.172413793103445
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload2\jaksrvlt\JakSrvltFileUploadTest.java,Gary Gregory <garydgregory@gmail.com>,12,75.0
