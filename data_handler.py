@@ -162,9 +162,6 @@ class MockDataHandler:
             df = pd.read_csv(file_path, delimiter="\t")
             return df
 
-        
-        
-
     def create_example_project(self):
         file_path = 'example_cc.csv'
         project_name = "Cli"
@@ -182,7 +179,7 @@ class MockDataHandler:
                     f.write(f"{row['Caller']},{row['Callee']}\n")
             
 
-    def create_features_from_cc(self, project_name, requested_features):
+    def create_features_from_cc(self, project_name):
         filename = f"raw/{project_name}.json"
         commit_data = MockUtils.read_json(filename)
 
@@ -296,7 +293,6 @@ class MockDataHandler:
 
             return consolidated_features
 
-        # Example usage
         metrics_dicts = {
             "global_graph_scores": global_graph_scores,
             "changed_graph_scores": changed_graph_scores,
@@ -305,8 +301,7 @@ class MockDataHandler:
             "commit_summary": commit_summary
         }
 
-        filtered_metrics_dicts = {name: metrics for name, metrics in metrics_dicts.items() if name in requested_features}
-        return attach_cid_to_features(filtered_metrics_dicts, ['pagerank', 'centrality', 'closeness', 'clustering_coefficient'], commit_ids)
+        return attach_cid_to_features(metrics_dicts, ['pagerank', 'centrality', 'closeness', 'clustering_coefficient'], commit_ids)
 
     
     def flatten_features(self, features_dict, y):

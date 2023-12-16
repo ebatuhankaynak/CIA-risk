@@ -28,7 +28,7 @@ requested_features = [
     "changed_graph_scores", 
     "global_graph_diffs", 
     "changed_graph_diffs",
-    "commit_summary",
+    #"commit_summary",
 ]
 
 n_splits = 5
@@ -37,7 +37,7 @@ kf = KFold(n_splits=n_splits, shuffle=True, random_state=42)
 def get_feats(project_name):
     if CREATE_FEATURES or not os.path.exists(f"{project_name}_x.npy"):
         y = dh.create_labels(project_name)
-        features_per_cid = dh.create_features_from_cc(project_name, requested_features)
+        features_per_cid = dh.create_features_from_cc(project_name)
         x, y = dh.flatten_features(features_per_cid, y)
 
         np.save(f"{project_name}_x", x)
@@ -45,8 +45,25 @@ def get_feats(project_name):
     else:
         x = np.load(f"{project_name}_x.npy")
         y = np.load(f"{project_name}_y.npy")
+
+    def filter_features(x, requested_features):
+        feature_map = {
+            "global_graph_scores": slice(0, 12),
+            "changed_graph_scores": slice(12, 24),
+            "global_graph_diffs": slice(24, 36),
+            "changed_graph_diffs": slice(36, 48),
+            "commit_summary": slice(48, 51)
+        }
+
+        columns_to_keep = []
+        for feature in requested_features:
+            columns_to_keep.extend(range(*feature_map[feature].indices(x.shape[1])))
+        filtered_x = x[:, columns_to_keep]
+
+        return filtered_x
         
-    return x, y
+    filtered_x = filter_features(x, requested_features)
+    return filtered_x, y
 
 def run_ml_kfold(model):
     val_results = []
