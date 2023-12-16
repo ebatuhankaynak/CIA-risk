@@ -1,0 +1,8 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\MultipartStream.java,Jochen Wiedmann <jochen@apache.org>,575,34.76420798065296
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\disk\DiskFileItemFactory.java,Jochen Wiedmann <jochen@apache.org>,35,58.333333333333336
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\FileUploadBase.java,Jochen Wiedmann <jochen@apache.org>,878,56.71834625322998
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\ParameterParser.java,Jochen Wiedmann <jochen@apache.org>,2,0.6666666666666667
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\util\FileItemHeadersImpl.java,Jochen Wiedmann <jochen@apache.org>,869,100.0
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\disk\DiskFileItem.java,Jochen Wiedmann <jochen@apache.org>,54,15.211267605633802
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\servlet\FileCleanerCleanup.java,Jochen Wiedmann <jochen@apache.org>,28,100.0

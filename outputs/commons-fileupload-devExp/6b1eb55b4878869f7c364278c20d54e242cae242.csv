@@ -1,0 +1,7 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\FileUploadBase.java,Arturo Bernal <arturobernalg@gmail.com>,25,1.616031027795734
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload2\ParameterParserTest.java,Arturo Bernal <arturobernalg@gmail.com>,48,23.645320197044335
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\util\mime\MimeUtility.java,Arturo Bernal <arturobernalg@gmail.com>,8,2.867383512544803
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload2\util\mime\RFC2231UtilityTestCase.java,Arturo Bernal <arturobernalg@gmail.com>,7,11.11111111111111
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload2\jaksrvlt\MockJakSrvltHttpRequest.java,Arturo Bernal <arturobernalg@gmail.com>,1300,44.06779661016949
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\test\java\org\apache\commons\fileupload2\jaksrvlt\JakSrvltFileUploadTest.java,Arturo Bernal <arturobernalg@gmail.com>,10,11.235955056179774

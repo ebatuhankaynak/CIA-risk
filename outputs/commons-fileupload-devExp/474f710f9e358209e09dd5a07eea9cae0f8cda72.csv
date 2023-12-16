@@ -1,0 +1,7 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\StreamUtil.java,Jochen Wiedmann <jochen@apache.org>,62,100.0
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\FileItemIterator.java,Jochen Wiedmann <jochen@apache.org>,2,100.0
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\servlet\ServletFileUpload.java,Jochen Wiedmann <jochen@apache.org>,3,42.857142857142854
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\FileUploadBase.java,Jochen Wiedmann <jochen@apache.org>,272,28.631578947368418
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\FileItemStream.java,Jochen Wiedmann <jochen@apache.org>,5,100.0
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\java\org\apache\commons\fileupload\portlet\PortletFileUpload.java,Jochen Wiedmann <jochen@apache.org>,3,27.27272727272727

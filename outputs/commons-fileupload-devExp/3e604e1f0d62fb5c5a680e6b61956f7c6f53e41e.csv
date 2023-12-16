@@ -1,0 +1,6 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\commons-fileupload2-core\src\main\java\org\apache\commons\fileupload2\core\disk\DiskFileItem.java,Gary Gregory <garydgregory@gmail.com>,36427,34.43428776692789
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\commons-fileupload2-core\src\main\java\org\apache\commons\fileupload2\core\AbstractFileUpload.java,Gary Gregory <garydgregory@gmail.com>,551,47.91304347826087
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\commons-fileupload2-core\src\test\java\org\apache\commons\fileupload2\core\disk\DiskFileItemTest.java,Gary Gregory <garydgregory@gmail.com>,14,100.0
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\commons-fileupload2-core\src\test\java\org\apache\commons\fileupload2\core\disk\DiskFileItemFactoryTest.java,Gary Gregory <garydgregory@gmail.com>,14,100.0
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\commons-fileupload2-core\src\main\java\org\apache\commons\fileupload2\core\FileItemFactory.java,Gary Gregory <garydgregory@gmail.com>,210,72.91666666666666
