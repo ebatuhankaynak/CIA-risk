@@ -1,0 +1,5 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\memoryleaktests\MemoryLeakTestCase.java,Niall Pemberton <niallp@apache.org>,336,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\memoryleaktests\pojotests\SomePojo.java,Niall Pemberton <niallp@apache.org>,6,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\memoryleaktests\pojotests\CustomInteger.java,Niall Pemberton <niallp@apache.org>,15,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\memoryleaktests\pojotests\SomeMappedPojo.java,Niall Pemberton <niallp@apache.org>,18,100.0

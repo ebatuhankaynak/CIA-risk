@@ -1,0 +1,14 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\MethodUtils.java,Gary Gregory <garydgregory@gmail.com>,5,0.2963841138114997
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\BasicDynaBean.java,Gary Gregory <garydgregory@gmail.com>,14,2.5179856115107913
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\BeanUtilsBean.java,Gary Gregory <garydgregory@gmail.com>,4,0.25806451612903225
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\converters\AbstractConverter.java,Gary Gregory <garydgregory@gmail.com>,73,14.717741935483872
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\DateConverterTestBase.java,Gary Gregory <garydgregory@gmail.com>,6,0.6349206349206349
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\DynaProperty.java,Gary Gregory <garydgregory@gmail.com>,6,1.5384615384615385
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\expression\DefaultResolver.java,Gary Gregory <garydgregory@gmail.com>,15,7.653061224489796
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\converters\NumberConverter.java,Gary Gregory <garydgregory@gmail.com>,2,0.36101083032490977
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\LazyDynaBean.java,Gary Gregory <garydgregory@gmail.com>,6,0.6600660066006601
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\converters\DateTimeConverter.java,Gary Gregory <garydgregory@gmail.com>,15,2.358490566037736
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\LazyDynaList.java,Gary Gregory <garydgregory@gmail.com>,2,0.3929273084479371
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\PropertyUtilsBean.java,Gary Gregory <garydgregory@gmail.com>,4,0.13136288998357964
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\converters\ArrayConverter.java,Gary Gregory <garydgregory@gmail.com>,2,0.5102040816326531

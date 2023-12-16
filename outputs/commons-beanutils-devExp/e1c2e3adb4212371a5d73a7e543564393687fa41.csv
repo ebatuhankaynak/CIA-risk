@@ -1,0 +1,19 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\ShortConverterTestCase.java,Oliver Heger <oheger@apache.org>,8,5.970149253731343
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\BigIntegerConverterTestCase.java,Oliver Heger <oheger@apache.org>,6,6.382978723404255
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\IntegerConverterTestCase.java,Oliver Heger <oheger@apache.org>,17,11.888111888111888
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\NumberConverterTestBase.java,Oliver Heger <oheger@apache.org>,57,13.970588235294118
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\FloatConverterTestCase.java,Oliver Heger <oheger@apache.org>,12,8.633093525179856
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\ShortConverter.java,Oliver Heger <oheger@apache.org>,2,1.4814814814814816
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\LongConverterTestCase.java,Oliver Heger <oheger@apache.org>,6,6.0606060606060606
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\IntegerConverter.java,Oliver Heger <oheger@apache.org>,2,1.4814814814814816
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\DoubleConverterTestCase.java,Oliver Heger <oheger@apache.org>,10,8.695652173913043
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\FloatConverter.java,Oliver Heger <oheger@apache.org>,2,1.4814814814814816
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\ByteConverterTestCase.java,Oliver Heger <oheger@apache.org>,8,6.0606060606060606
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\DoubleConverter.java,Oliver Heger <oheger@apache.org>,2,1.4598540145985401
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\BigDecimalConverterTestCase.java,Oliver Heger <oheger@apache.org>,6,6.25
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\ByteConverter.java,Oliver Heger <oheger@apache.org>,2,13.333333333333334
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\BigDecimalConverter.java,Oliver Heger <oheger@apache.org>,2,13.333333333333334
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\BigIntegerConverter.java,Oliver Heger <oheger@apache.org>,2,13.333333333333334
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\LongConverter.java,Oliver Heger <oheger@apache.org>,2,1.4814814814814816
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\NumberConverter.java,Oliver Heger <oheger@apache.org>,38,8.050847457627118

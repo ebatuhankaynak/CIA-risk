@@ -1,0 +1,14 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\BeanMap.java,Oliver Heger <oheger@apache.org>,59,8.149171270718233
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\BooleanConverter.java,Oliver Heger <oheger@apache.org>,38,21.11111111111111
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\StringConverter.java,Oliver Heger <oheger@apache.org>,11,28.205128205128204
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\URLConverter.java,Oliver Heger <oheger@apache.org>,10,13.157894736842104
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\ClassConverter.java,Oliver Heger <oheger@apache.org>,32,22.22222222222222
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\ArrayConverter.java,Oliver Heger <oheger@apache.org>,46,14.02439024390244
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\DynaBeanPropertyMapDecorator.java,Oliver Heger <oheger@apache.org>,3,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\ConvertUtils.java,Oliver Heger <oheger@apache.org>,39,3.3333333333333335
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\ConstructorUtils.java,Oliver Heger <oheger@apache.org>,66,19.469026548672566
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\AbstractConverter.java,Oliver Heger <oheger@apache.org>,58,13.679245283018867
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\CharacterConverter.java,Oliver Heger <oheger@apache.org>,14,13.725490196078432
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\NumberConverter.java,Oliver Heger <oheger@apache.org>,38,8.050847457627118
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\ConvertUtilsBean.java,Oliver Heger <oheger@apache.org>,32,3.950617283950617

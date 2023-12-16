@@ -1,0 +1,12 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\BeanUtilsBean.java,Niall Pemberton <niallp@apache.org>,20,2.1030494216614093
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\BigIntegerConverterTestCase.java,Niall Pemberton <niallp@apache.org>,76,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\IntegerConverterTestCase.java,Niall Pemberton <niallp@apache.org>,41,36.607142857142854
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\FloatConverterTestCase.java,Niall Pemberton <niallp@apache.org>,30,26.548672566371685
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\BigDecimalConverterTestCase.java,Niall Pemberton <niallp@apache.org>,76,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\ByteConverterTestCase.java,Niall Pemberton <niallp@apache.org>,40,36.36363636363637
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\DoubleConverterTestCase.java,Niall Pemberton <niallp@apache.org>,9,9.89010989010989
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\ShortConverterTestCase.java,Niall Pemberton <niallp@apache.org>,41,36.607142857142854
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\NumberConverter.java,Niall Pemberton <niallp@apache.org>,250,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\LongConverterTestCase.java,Niall Pemberton <niallp@apache.org>,9,11.39240506329114
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\NumberConverterTestBase.java,Niall Pemberton <niallp@apache.org>,212,84.8

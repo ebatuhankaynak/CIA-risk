@@ -1,0 +1,7 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\BeanUtilsTestCase.java,Gary D. Gregory <ggregory@apache.org>,16,0.8611410118406888
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\memoryleaktests\MemoryLeakTestCase.java,Gary D. Gregory <ggregory@apache.org>,20,3.6231884057971016
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\ClassReloader.java,Gary D. Gregory <ggregory@apache.org>,3,7.317073170731707
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\PropertyUtilsTestCase.java,Gary D. Gregory <ggregory@apache.org>,34,0.6513409961685823
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\TestBean.java,Gary D. Gregory <ggregory@apache.org>,3,0.9316770186335404
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\BasicDynaBeanTestCase.java,Gary D. Gregory <ggregory@apache.org>,8,0.8368200836820083

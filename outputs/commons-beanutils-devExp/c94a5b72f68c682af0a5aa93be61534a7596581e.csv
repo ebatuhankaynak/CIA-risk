@@ -1,0 +1,21 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\BeanUtilsBeanTestCase.java,Gary Gregory <garydgregory@gmail.com>,1857,49.758842443729904
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\BeanificationTestCase.java,Gary Gregory <garydgregory@gmail.com>,663,1.8256415904835332
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\LazyDynaClassTestCase.java,Gary Gregory <garydgregory@gmail.com>,15,9.316770186335404
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\BeanUtilsBenchCase.java,Gary Gregory <garydgregory@gmail.com>,163,36.38392857142857
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\PropertyUtilsTestCase.java,Gary Gregory <garydgregory@gmail.com>,2729,29.299978526948678
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\LazyDynaBeanTestCase.java,Gary Gregory <garydgregory@gmail.com>,446,54.65686274509803
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\DynaBeanUtilsTestCase.java,Gary Gregory <garydgregory@gmail.com>,831,37.19785138764548
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\IndexedPropertyTestCase.java,Gary Gregory <garydgregory@gmail.com>,147,17.62589928057554
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\NestedTestBean.java,Gary Gregory <garydgregory@gmail.com>,35,31.53153153153153
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\DynaPropertyUtilsTestCase.java,Gary Gregory <garydgregory@gmail.com>,958,19.66338259441708
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\sql\DynaRowSetTestCase.java,Gary Gregory <garydgregory@gmail.com>,328,42.21364221364222
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\sql\TestResultSet.java,Gary Gregory <garydgregory@gmail.com>,263,27.919320594479828
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\locale\LocaleBeanificationTestCase.java,Gary Gregory <garydgregory@gmail.com>,829,2.073899882420634
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\TestBean.java,Gary Gregory <garydgregory@gmail.com>,440,53.52798053527981
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\BasicDynaBeanTestCase.java,Gary Gregory <garydgregory@gmail.com>,268,20.552147239263803
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\LazyDynaMapTestCase.java,Gary Gregory <garydgregory@gmail.com>,437,52.65060240963856
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\BeanComparatorTestCase.java,Gary Gregory <garydgregory@gmail.com>,138,2.3577652485904665
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\bugs\Jira411TestCase.java,Gary Gregory <garydgregory@gmail.com>,7,46.666666666666664
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\PropertyUtilsBenchCase.java,Gary Gregory <garydgregory@gmail.com>,101,35.43859649122807
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\sql\DynaResultSetTestCase.java,Gary Gregory <garydgregory@gmail.com>,112,30.434782608695656

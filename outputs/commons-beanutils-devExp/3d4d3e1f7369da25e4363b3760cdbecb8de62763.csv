@@ -1,0 +1,16 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\LongArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,52,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\AbstractArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,54,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\CharacterArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,52,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\BeanUtils.java,Craig R. McClanahan <craigmcc@apache.org>,535,85.4632587859425
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\IntegerArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,52,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\FloatArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,52,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\BeanUtilsTestCase.java,Craig R. McClanahan <craigmcc@apache.org>,443,56.00505689001264
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\DynaBeanUtilsTestCase.java,Craig R. McClanahan <craigmcc@apache.org>,678,76.35135135135135
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\DoubleArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,52,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\PropertyUtils.java,Craig R. McClanahan <craigmcc@apache.org>,1501,66.09423161602818
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\DynaPropertyUtilsTestCase.java,Craig R. McClanahan <craigmcc@apache.org>,2250,76.58270932607216
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\ByteArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,52,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\BooleanArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,90,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\PropertyUtilsTestCase.java,Craig R. McClanahan <craigmcc@apache.org>,2732,74.34013605442176
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\ShortArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,52,100.0

@@ -1,0 +1,24 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\LocalTimeConverterTestCase.java,melloware <mellowaredev@gmail.com>,8,12.903225806451612
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\bugs\Jira493TestCase.java,melloware <mellowaredev@gmail.com>,17,53.125
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\ConvertUtilsBean.java,melloware <mellowaredev@gmail.com>,12,1.3245033112582782
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\YearConverterTestCase.java,melloware <mellowaredev@gmail.com>,12,17.647058823529413
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\MonthDayConverterTestCase.java,melloware <mellowaredev@gmail.com>,12,17.647058823529413
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\OffsetTimeConverterTestCase.java,melloware <mellowaredev@gmail.com>,8,12.903225806451612
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\converters\DateTimeConverter.java,melloware <mellowaredev@gmail.com>,13,2.08
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\UUIDConverterTestCase.java,melloware <mellowaredev@gmail.com>,4,6.896551724137931
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\locale\LocaleBeanUtils.java,melloware <mellowaredev@gmail.com>,3,0.006933210076265311
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\YearMonthConverterTestCase.java,melloware <mellowaredev@gmail.com>,12,17.647058823529413
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\ZoneIdConverterTestCase.java,melloware <mellowaredev@gmail.com>,12,17.647058823529413
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\BeanUtilsBean.java,melloware <mellowaredev@gmail.com>,2,0.12919896640826875
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\bugs\Jira157TestCase.java,melloware <mellowaredev@gmail.com>,4,0.05087763927753752
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\DurationConverterTestCase.java,melloware <mellowaredev@gmail.com>,12,17.647058823529413
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\FluentPropertyBeanIntrospectorTestCase.java,melloware <mellowaredev@gmail.com>,31,26.495726495726498
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\PathConverterTestCase.java,melloware <mellowaredev@gmail.com>,4,6.153846153846154
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\EnumConverterTestCase.java,melloware <mellowaredev@gmail.com>,12,17.91044776119403
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\locale\LocaleConvertUtils.java,melloware <mellowaredev@gmail.com>,3,0.018641645435903808
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\converters\NumberConverter.java,melloware <mellowaredev@gmail.com>,3,0.5434782608695652
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\BeanMap.java,melloware <mellowaredev@gmail.com>,3,0.0030278868377759164
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\ZoneOffsetConverterTestCase.java,melloware <mellowaredev@gmail.com>,12,17.647058823529413
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\locale\LocaleBeanUtilsBean.java,melloware <mellowaredev@gmail.com>,3,0.3865979381443299
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\DateConverterTestBase.java,melloware <mellowaredev@gmail.com>,6,0.6376195536663124

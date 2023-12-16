@@ -1,0 +1,12 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\StringArrayConverter.java,David Brosius <dbrosius@apache.org>,4,5.714285714285714
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\LongArrayConverter.java,David Brosius <dbrosius@apache.org>,4,5.128205128205128
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\IntegerArrayConverter.java,David Brosius <dbrosius@apache.org>,4,5.128205128205128
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\BooleanArrayConverter.java,David Brosius <dbrosius@apache.org>,4,2.2857142857142856
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\ByteArrayConverter.java,David Brosius <dbrosius@apache.org>,4,5.128205128205128
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\CharacterArrayConverter.java,David Brosius <dbrosius@apache.org>,4,5.128205128205128
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\JDBCDynaClass.java,David Brosius <dbrosius@apache.org>,2,0.9174311926605505
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\FloatArrayConverter.java,David Brosius <dbrosius@apache.org>,4,5.128205128205128
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\ShortArrayConverter.java,David Brosius <dbrosius@apache.org>,4,5.128205128205128
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\DoubleArrayConverter.java,David Brosius <dbrosius@apache.org>,4,5.128205128205128
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\AbstractArrayConverter.java,David Brosius <dbrosius@apache.org>,8,11.428571428571429

@@ -1,0 +1,14 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\locale\converters\DoubleLocaleConverter.java,Gary Gregory <garydgregory@gmail.com>,26,2.4644549763033177
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\sql\converters\locale\SqlTimeLocaleConverter.java,Gary Gregory <garydgregory@gmail.com>,36,2.1634615384615383
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\locale\converters\DateLocaleConverter.java,Gary Gregory <garydgregory@gmail.com>,290,7.1569595261599215
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\locale\converters\LongLocaleConverter.java,Gary Gregory <garydgregory@gmail.com>,30,2.8598665395614873
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\locale\converters\StringLocaleConverter.java,Gary Gregory <garydgregory@gmail.com>,101,4.639412034910427
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\bugs\Jira347TestCase.java,Gary Gregory <garydgregory@gmail.com>,206,55.82655826558266
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\locale\LocaleConverter.java,Gary Gregory <garydgregory@gmail.com>,4,2.1164021164021163
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\locale\converters\ByteLocaleConverter.java,Gary Gregory <garydgregory@gmail.com>,25,2.4084778420038537
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\locale\converters\DecimalLocaleConverter.java,Gary Gregory <garydgregory@gmail.com>,51,2.7945205479452055
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\locale\LocaleConvertUtilsBean.java,Gary Gregory <garydgregory@gmail.com>,268,47.85714285714286
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\locale\converters\ShortLocaleConverter.java,Gary Gregory <garydgregory@gmail.com>,125,9.534706331045003
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\sql\converters\locale\SqlTimestampLocaleConverter.java,Gary Gregory <garydgregory@gmail.com>,36,2.1739130434782608
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\sql\converters\locale\SqlDateLocaleConverter.java,Gary Gregory <garydgregory@gmail.com>,36,2.155688622754491

@@ -1,0 +1,13 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\BooleanArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,48,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\ConvertUtilsTestCase.java,Craig R. McClanahan <craigmcc@apache.org>,433,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\ShortArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,29,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\AbstractArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,54,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\ConvertUtils.java,Craig R. McClanahan <craigmcc@apache.org>,882,98.4375
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\StringArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,29,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\ByteArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,29,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\LongArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,29,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\FloatArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,29,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\DoubleArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,29,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\IntegerArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,29,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\CharacterArrayConverter.java,Craig R. McClanahan <craigmcc@apache.org>,29,100.0
