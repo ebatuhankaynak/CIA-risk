@@ -1,0 +1,26 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\binary\Base16.java,Gary Gregory <garydgregory@gmail.com>,13,3.2911392405063293
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\digest\PureJavaCrc32.java,Gary Gregory <garydgregory@gmail.com>,69,52.67175572519084
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\language\DoubleMetaphone.java,Gary Gregory <garydgregory@gmail.com>,350,19.57494407158837
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\net\URLCodec.java,Gary Gregory <garydgregory@gmail.com>,100,20.964360587002094
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base16InputStreamTest.java,Gary Gregory <garydgregory@gmail.com>,46,9.145129224652088
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base16Test.java,Gary Gregory <garydgregory@gmail.com>,309,26.707000864304238
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\BaseNCodecTest.java,Gary Gregory <garydgregory@gmail.com>,223,55.33498759305211
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\language\ColognePhoneticTest.java,Gary Gregory <garydgregory@gmail.com>,195,1.0936010319107172
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\language\RefinedSoundexTest.java,Gary Gregory <garydgregory@gmail.com>,2,0.847457627118644
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\language\Soundex.java,Gary Gregory <garydgregory@gmail.com>,18,7.317073170731707
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\Sha512CryptTest.java,Gary Gregory <garydgregory@gmail.com>,88,44.44444444444444
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base32Test.java,Gary Gregory <garydgregory@gmail.com>,285,27.859237536656888
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\MessageDigestAlgorithmsTest.java,Gary Gregory <garydgregory@gmail.com>,123,2.249040043883708
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\language\bm\Rule.java,Gary Gregory <garydgregory@gmail.com>,228,14.339622641509434
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\PureJavaCrc32CTest.java,Gary Gregory <garydgregory@gmail.com>,50,53.191489361702125
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\net\QuotedPrintableCodecTest.java,Gary Gregory <garydgregory@gmail.com>,236,20.99644128113879
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\AbstractStringEncoderTest.java,Gary Gregory <garydgregory@gmail.com>,4,1.8181818181818181
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\StringUtilsTest.java,Gary Gregory <garydgregory@gmail.com>,49,1.0355029585798818
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\PureJavaCrc32Test.java,Gary Gregory <garydgregory@gmail.com>,808,9.60190136660725
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\MurmurHash3Test.java,Gary Gregory <garydgregory@gmail.com>,995,8.742641244178895
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\binary\Base32.java,Gary Gregory <garydgregory@gmail.com>,263,15.281812899477048
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\digest\PureJavaCrc32C.java,Gary Gregory <garydgregory@gmail.com>,145,67.12962962962963
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\net\QCodecTest.java,Gary Gregory <garydgregory@gmail.com>,155,34.292035398230084
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\Sha256CryptTest.java,Gary Gregory <garydgregory@gmail.com>,41,45.55555555555556
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\net\URLCodecTest.java,Gary Gregory <garydgregory@gmail.com>,225,30.864197530864196

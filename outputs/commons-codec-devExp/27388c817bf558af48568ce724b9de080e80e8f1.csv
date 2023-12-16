@@ -1,0 +1,6 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\language\MatchRatingApproachEncoder.java,Sebastian Bazley <sebb@apache.org>,4,1.2987012987012987
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\digest\Sha2Crypt.java,Sebastian Bazley <sebb@apache.org>,12,2.4242424242424243
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\cli\Digest.java,Sebastian Bazley <sebb@apache.org>,81,56.64335664335665
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\digest\Md5Crypt.java,Sebastian Bazley <sebb@apache.org>,2,0.9302325581395349
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\digest\PureJavaCrc32C.java,Sebastian Bazley <sebb@apache.org>,61,100.0

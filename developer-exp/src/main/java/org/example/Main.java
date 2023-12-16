@@ -30,141 +30,197 @@ public class Main {
     static Map<Integer, Integer> map = new HashMap<>();
 
     public static void main(String[] args) {
-        String srcPath = "D:\\_SELEN\\_2022-2023\\CS588\\GitHub_Dataset2\\commons-cli";
+        String srcPath = "D:\\_SELEN\\_2022-2023\\CS588\\GitHub_Dataset2\\commons-cli\\commons-cli";
+
+        String allCommitsFile = "D:\\_SELEN\\_2022-2023\\CS588\\GitHub_Dataset2\\commons-cli\\all_commits.txt";
+        String commitsNotRunFile = "D:\\_SELEN\\_2022-2023\\CS588\\GitHub_Dataset2\\commons-cli\\commits_notRun.txt";
+        String outputDirectory = "D:\\_SELEN\\_2022-2023\\CS588\\commons-cli-devExp";
 
         String lastCommit = "";
         int i = 0;
         try (Git git = Git.open(new File(srcPath))) {
             Repository repository = git.getRepository();
             Iterable<RevCommit> commits = git.log().all().call();
+            processFiles(allCommitsFile, commitsNotRunFile, outputDirectory);
 
             for (RevCommit commit : commits) {
                 i++;
                 org.eclipse.jgit.lib.ObjectId commitId = commit.getId();
                 String commitHash = commitId.getName(); // Get the hash as a string
                 lastCommit = commitHash;
+                //writeToTextFile(allCommitsFile, commitHash);
 
-                // revert
                 try {
-                    File directory = new File(srcPath);
-                    if (!directory.exists() || !directory.isDirectory()) {
-                        System.out.println("Directory doesn't exist or is not a directory.");
-                        return;
-                    }
+                    BufferedReader reader = new BufferedReader(new FileReader(commitsNotRunFile));
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        if (line.equals(commitHash)) {
+                            System.out.println("***********************************");
+                            System.out.println("Commit: " + commitHash);
 
-                    ProcessBuilder processBuilder = new ProcessBuilder("git", "reset", "--hard", "HEAD");
-                    processBuilder.directory(directory);
-                    processBuilder.redirectErrorStream(true);
+                            // revert
+                            try {
+                                File directory = new File(srcPath);
+                                if (!directory.exists() || !directory.isDirectory()) {
+                                    System.out.println("Directory doesn't exist or is not a directory.");
+                                    return;
+                                }
 
-                    Process process = processBuilder.start();
-                    int exitCode = process.waitFor();
+                                ProcessBuilder processBuilder = new ProcessBuilder("git", "reset", "--hard", "HEAD");
+                                processBuilder.directory(directory);
+                                //processBuilder.redirectErrorStream(true);
 
-                    if (exitCode == 0) {
-                        //System.out.println("All changes in the directory reverted successfully.");
-                    } else {
-                        //System.out.println("Failed to revert changes in the directory. Exit code: " + exitCode);
-                    }
-                    System.out.println("Finished commit: " + commitHash);
-                } catch (IOException | InterruptedException e) {
-                    System.out.println("****************IOException or InterruptedException");
-                    System.out.println(i);
-                    System.out.println(lastCommit);
-                    e.printStackTrace();
-                }
+                                Process process = processBuilder.start();
+                                int exitCode = process.waitFor();
 
-                // Checkout to the specific commit
-                git.checkout().setName(commitHash).call();
-                //System.out.println("Checked out to commit: " + commitHash);
+                                if (exitCode == 0) {
+                                    //System.out.println("All changes in the directory reverted successfully.");
+                                } else {
+                                    //System.out.println("Failed to revert changes in the directory. Exit code: " + exitCode);
+                                }
+                            } catch (IOException | InterruptedException e) {
+                                System.out.println("****************IOException or InterruptedException");
+                                System.out.println(i);
+                                System.out.println(lastCommit);
+                                e.printStackTrace();
+                            }
 
-                if (commit.getParentCount() > 0) {
-                    RevCommit parentCommit = commit.getParent(0);
-                    List<DiffEntry> diffs = getDiffEntries(repository, parentCommit, commit);
-                    Set<FileMetadata> contributionAuthorXLines = new HashSet<>();
-                    contributionAuthorXLines.clear();
-                    for (DiffEntry diff : diffs) {
-                        if(diff.getNewPath().endsWith(".java")){
-                            String pathFile = srcPath + "\\" + diff.getNewPath().replace("/", "\\");
-                            System.out.println("Changed file: " + pathFile);
+                            // Checkout to the specific commit
+                            git.checkout().setName(commitHash).call();
+                            //System.out.println("Checked out to commit: " + commitHash);
 
-                            map.clear();
-                            // parse the file
-                            extractMethods(pathFile); //get start, end lines of methods
+                            boolean hasChangedJava = false;
 
-                            // for each start, end pairs run the git log -l
-                            for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-                                int startLine = entry.getKey();
-                                int endLine = entry.getValue();
+                            if (commit.getParentCount() > 0) {
+                                RevCommit parentCommit = commit.getParent(0);
+                                List<DiffEntry> diffs = getDiffEntries(repository, parentCommit, commit);
+                                Set<FileMetadata> contributionAuthorXLines = new HashSet<>();
+                                contributionAuthorXLines.clear();
 
-                                ProcessBuilder processBuilder = new ProcessBuilder("git", "log", "-L", startLine + "," + endLine + ":" + pathFile);
+                                for (DiffEntry diff : diffs) {
+                                    if(diff.getNewPath().endsWith(".java")){
+                                        hasChangedJava = true;
+                                        String pathFile = srcPath + "\\" + diff.getNewPath().replace("/", "\\");
+                                        System.out.println("Changed file: " + pathFile);
 
-                                // Set the working directory for the process builder
-                                processBuilder.directory(new File(srcPath));
+                                        map.clear();
+                                        // parse the file
+                                        extractMethods(pathFile); //get start, end lines of methods
 
-                                try {
-                                    Process process = processBuilder.start();
-                                    BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+                                        if(map.isEmpty()){
+                                            File file = new File(outputDirectory + "\\" + commitHash + ".csv");
+                                            file.createNewFile();
+                                            System.out.println("No methods, writing to csv...");
+                                        }
+                                        else{
+                                            // for each start, end pairs run the git log -l
+                                            for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+                                                int startLine = entry.getKey();
+                                                int endLine = entry.getValue();
 
-                                    String line;
-                                    String currentAuthor = null;
-                                    int linesContributed = 0;
+                                                ProcessBuilder processBuilder = new ProcessBuilder("git", "log", "-L", startLine + "," + endLine + ":" + pathFile);
 
-                                    while ((line = reader.readLine()) != null) {
-                                        if (line.startsWith("commit ")) {
-                                            if (currentAuthor != null) {
-                                                addOrUpdateFile(contributionAuthorXLines, new FileMetadata(pathFile, currentAuthor, linesContributed));
-                                            }
-                                            currentAuthor = null;
-                                            linesContributed = 0;
-                                        } else if (line.startsWith("Author: ")) {
-                                            currentAuthor = line.substring(8).trim();
-                                        } else if (line.matches("^\\+.*") || line.matches("^\\-.*")) {
-                                            // Count lines added or removed within the specified range
-                                            if (currentAuthor != null) {
-                                                linesContributed++;
+                                                // Set the working directory for the process builder
+                                                processBuilder.directory(new File(srcPath));
+
+                                                try {
+                                                    Process process = processBuilder.start();
+                                                    BufferedReader r = new BufferedReader(new InputStreamReader(process.getInputStream()));
+
+                                                    String l;
+                                                    String currentAuthor = null;
+                                                    int linesContributed = 0;
+                                                    boolean insideTargetLines = false;
+
+                                                    while ((l = r.readLine()) != null) {
+                                                        // Check for the commit line to reset author and linesContributed
+                                                        if (l.startsWith("commit ")) {
+                                                            if (currentAuthor != null && insideTargetLines) {
+                                                                addOrUpdateFile(contributionAuthorXLines, new FileMetadata(pathFile, currentAuthor, linesContributed));
+                                                            }
+                                                            currentAuthor = null;
+                                                            linesContributed = 0;
+                                                            insideTargetLines = false;
+                                                        } else if (l.startsWith("Author: ")) {
+                                                            currentAuthor = l.substring(8).trim();
+                                                        } else if (l.startsWith("@@")) {
+                                                            // This line indicates the start of the specified range
+                                                            insideTargetLines = true;
+                                                        } else if (insideTargetLines && (l.startsWith("+") || l.startsWith("-"))) {
+                                                            // Count lines added or removed within the specified range
+                                                            linesContributed++;
+                                                        }
+                                                    }
+                                                    if (currentAuthor != null && insideTargetLines) {
+                                                        addOrUpdateFile(contributionAuthorXLines, new FileMetadata(pathFile, currentAuthor, linesContributed));
+                                                    }
+                                                    int exitCode = process.waitFor();
+                                                    if (exitCode != 0) {
+                                                        System.err.println("Error executing git log -L. Exit code: " + exitCode);
+                                                    }
+                                                } catch (IOException | InterruptedException e) {
+                                                    e.printStackTrace();
+                                                }
                                             }
                                         }
                                     }
+                                }
+                                if(!hasChangedJava){
+                                    File file = new File(outputDirectory + "\\" + commitHash + ".csv");
+                                    file.createNewFile();
+                                    System.out.println("No java, writing to csv...");
+                                }
 
-                                    int exitCode = process.waitFor();
-                                    if (exitCode != 0) {
-                                        System.err.println("Error executing git log -L. Exit code: " + exitCode);
+                                if(!contributionAuthorXLines.isEmpty()){
+                                    BufferedWriter bw;
+                                    try{
+                                        // Print the contribution of the authors
+                                        ArrayList<String> rowsToWrite = new ArrayList<>();
+                                        for (FileMetadata pair : contributionAuthorXLines){
+                                            if(pair.getAuthor().equals(commit.getAuthorIdent().getName() + " <" + commit.getAuthorIdent().getEmailAddress() + ">")){
+                                                rowsToWrite.add(pair.getFileName() + "," + pair.getAuthor() + "," +  pair.getContribution() + "," + ((double)pair.getContribution()/(double)calculateTotalCont(contributionAuthorXLines, pair.getFileName())*100));
+                                            }
+                                        }
+
+                                        if(!rowsToWrite.isEmpty()){
+                                            // Open a .csv file
+                                            bw = new BufferedWriter(new FileWriter(outputDirectory + "\\" + commitHash + ".csv"));
+                                            // Write header
+                                            bw.write("File Directory,Author,Contribution, Percentage of Contribution\n");
+                                            System.out.println("Writing to csv...");
+                                            for(String str: rowsToWrite){
+                                                System.out.println(str);
+                                                bw.write(str + "\n");
+                                            }
+                                            bw.flush();
+                                        }
+                                        else{
+                                            // Open a .csv file
+                                            bw = new BufferedWriter(new FileWriter(outputDirectory + "\\" + commitHash + ".csv"));
+                                            // Write header
+                                            bw.write("File Directory,Author,Contribution, Percentage of Contribution\n");
+                                            System.out.println("Writing to csv...");
+
+                                            bw.write("-," + commit.getAuthorIdent().getName() + " <" + commit.getAuthorIdent().getEmailAddress() + ">" + ",0,0\n");
+
+                                            bw.flush();
+                                        }
+                                    } catch (IOException e) {
+                                        System.out.println("cant open/write csv");
+                                        e.printStackTrace();
                                     }
-                                } catch (IOException | InterruptedException e) {
-                                    e.printStackTrace();
                                 }
+
+                            } else {
+                                File file = new File(outputDirectory + "\\" + commitHash + ".csv");
+                                file.createNewFile();
+                                System.out.println("First commit, no parent");
                             }
                         }
                     }
-
-                    if(!contributionAuthorXLines.isEmpty()){
-                        BufferedWriter bw;
-                        try{
-                            // Print the contribution of the authors
-                            ArrayList<String> rowsToWrite = new ArrayList<>();
-                            for (FileMetadata pair : contributionAuthorXLines){
-                                if(pair.getAuthor().equals(commit.getAuthorIdent().getName() + " <" + commit.getAuthorIdent().getEmailAddress() + ">")){
-                                    rowsToWrite.add(pair.getFileName() + "," + pair.getAuthor() + "," +  pair.getContribution() + "," + ((double)pair.getContribution()/(double)calculateTotalCont(contributionAuthorXLines, pair.getFileName())*100));
-                                }
-                            }
-                            if(!rowsToWrite.isEmpty()){
-                                // Open a .csv file
-                                bw = new BufferedWriter(new FileWriter("D:\\_SELEN\\_2022-2023\\CS588\\GitHub_Dataset2\\DevExp\\" + commitHash + ".csv"));
-                                // Write header
-                                bw.write("File Directory,Author,Contribution, Percentage of Contribution\n");
-
-                                for(String str: rowsToWrite){
-                                    bw.write(str + "\n");
-                                }
-                                bw.flush();
-                            }
-                        } catch (IOException e) {
-                            System.out.println("cant open/write csv");
-                            e.printStackTrace();
-                        }
-                    }
-
-                } else {
-                    System.out.println("First commit, no parent");
+                }
+                catch (IOException e) {
+                    e.printStackTrace();
                 }
             }
         } catch (Exception e) {
@@ -175,6 +231,49 @@ public class Main {
         }
         System.out.println("****************Result");
         System.out.println(i);
+    }
+
+    public static void writeToTextFile(String filePath, String textToWrite) {
+        try {
+            File file = new File(filePath);
+
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+
+            FileWriter fw = new FileWriter(file.getAbsoluteFile(), true);
+            BufferedWriter bw = new BufferedWriter(fw);
+
+            bw.write(textToWrite);
+            bw.newLine();
+
+            bw.close();
+
+            System.out.println("Text has been written to the file.");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void processFiles(String inputFilePath, String outputFilePath, String directoryPath) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(inputFilePath));
+             BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String csvFileName = line + ".csv"; // Assuming each line corresponds to a CSV file name
+
+                File csvFile = new File(directoryPath, csvFileName);
+                if (!csvFile.exists()) {
+                    System.out.println("This commit was not run: " + line);
+                    writer.write(line);
+                    writer.newLine();
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static List<String> findFiles(Path path, String fileExtension)
@@ -281,21 +380,16 @@ public class Main {
                 //System.out.println("Function ending line number is: " + methodEndLine);
 
                 map.put(methodStartLine, methodEndLine);
+                System.out.println("Method start: " + methodStartLine + ", Method end: " + methodEndLine);
 
                 /*MethodVisitor methodVisitor = new MethodVisitor();
                 methodVisitor.visit(methodDeclaration, null);
                 int cyclomaticComplexity = methodVisitor.getCyclomaticComplexity();
                 System.out.println("Cyclomatic Complexity: " + cyclomaticComplexity);*/
-
-
-                /*try {
-                    bw.write(javaFile + "\t" + methodName + "\t" + methodSignature + "\t" + methodStartLine + "\t" + methodEndLine + "\t" +cyclomaticComplexity);
-                    bw.write("\n");
-                    bw.flush();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }*/
             }
+        }
+        else{
+            System.out.println("Parse is not successful.");
         }
     }
 

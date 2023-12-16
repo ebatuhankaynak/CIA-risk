@@ -1,0 +1,9 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\language\bm\PhoneticEngine.java,Gary D. Gregory <ggregory@apache.org>,510,83.60655737704919
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\language\bm\PhoneticEngineRegressionTest.java,Gary D. Gregory <ggregory@apache.org>,102,36.17021276595745
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\language\DaitchMokotoffSoundex.java,Gary D. Gregory <ggregory@apache.org>,337,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\language\bm\Languages.java,Gary D. Gregory <ggregory@apache.org>,1295,97.95763993948563
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\language\bm\Rule.java,Gary D. Gregory <ggregory@apache.org>,1394,90.87353324641461
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\language\bm\Lang.java,Gary D. Gregory <ggregory@apache.org>,259,91.19718309859155
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\PureJavaCrc32Test.java,Gary D. Gregory <ggregory@apache.org>,328,93.18181818181817
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\HmacAlgorithmsTest.java,Gary D. Gregory <ggregory@apache.org>,84,73.68421052631578

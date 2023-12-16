@@ -1,0 +1,13 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\PureJavaCrc32CTest.java,Sebastian Bazley <sebb@apache.org>,36,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\digest\HmacUtils.java,Sebastian Bazley <sebb@apache.org>,59,17.98780487804878
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\language\SoundexTest.java,Sebastian Bazley <sebb@apache.org>,26,2.201524132091448
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\net\QuotedPrintableCodecTest.java,Sebastian Bazley <sebb@apache.org>,16,1.714898177920686
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\DigestUtilsTest.java,Sebastian Bazley <sebb@apache.org>,35,5.9625212947189095
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\cli\Digest.java,Sebastian Bazley <sebb@apache.org>,76,55.072463768115945
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\binary\BaseNCodecOutputStream.java,Sebastian Bazley <sebb@apache.org>,48,39.02439024390244
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\digest\PureJavaCrc32C.java,Sebastian Bazley <sebb@apache.org>,51,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\digest\DigestUtils.java,Sebastian Bazley <sebb@apache.org>,74,2.1405843216661844
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\digest\PureJavaCrc32.java,Sebastian Bazley <sebb@apache.org>,5,10.869565217391305
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\PureJavaCrc32Test.java,Sebastian Bazley <sebb@apache.org>,18,6.206896551724138
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\digest\MessageDigestAlgorithms.java,Sebastian Bazley <sebb@apache.org>,5,50.0

@@ -1,0 +1,12 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base16OutputStreamTest.java,Gary Gregory <garydgregory@gmail.com>,49,13.279132791327914
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base64Test.java,Gary Gregory <garydgregory@gmail.com>,122,0.021994148114362358
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base64InputStreamTest.java,Gary Gregory <garydgregory@gmail.com>,73,0.6943123454441696
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base64OutputStreamTest.java,Gary Gregory <garydgregory@gmail.com>,81,1.0084661354581672
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base32InputStreamTest.java,Gary Gregory <garydgregory@gmail.com>,61,7.429963459196102
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\HmacAlgorithmsTest.java,Gary Gregory <garydgregory@gmail.com>,36,0.34802784222737815
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\language\bm\LanguageGuessingTest.java,Gary Gregory <garydgregory@gmail.com>,2,1.0752688172043012
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base32OutputStreamTest.java,Gary Gregory <garydgregory@gmail.com>,94,18.98989898989899
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\MessageDigestAlgorithmsTest.java,Gary Gregory <garydgregory@gmail.com>,72,1.3289036544850499
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\Blake3TestVectorsTest.java,Gary Gregory <garydgregory@gmail.com>,24,4.705882352941177
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\XXHash32Test.java,Gary Gregory <garydgregory@gmail.com>,10,8.47457627118644

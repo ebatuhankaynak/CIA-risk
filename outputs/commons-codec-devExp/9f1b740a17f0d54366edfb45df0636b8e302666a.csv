@@ -1,0 +1,14 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\binary\Base32.java,Gary Gregory <garydgregory@gmail.com>,12,0.8168822328114363
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\binary\BaseNCodecOutputStream.java,Gary Gregory <garydgregory@gmail.com>,13,9.352517985611511
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base32InputStreamTest.java,Gary Gregory <garydgregory@gmail.com>,3,0.43795620437956206
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base32OutputStreamTest.java,Gary Gregory <garydgregory@gmail.com>,11,2.956989247311828
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base64InputStreamTest.java,Gary Gregory <garydgregory@gmail.com>,3,0.029052876234747237
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\net\BCodecTest.java,Gary Gregory <garydgregory@gmail.com>,19,7.755102040816326
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\binary\BaseNCodecInputStream.java,Gary Gregory <garydgregory@gmail.com>,11,6.043956043956044
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base64Test.java,Gary Gregory <garydgregory@gmail.com>,10,0.0018041390558218666
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\binary\Base64.java,Gary Gregory <garydgregory@gmail.com>,12,0.10118897040222614
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base64OutputStreamTest.java,Gary Gregory <garydgregory@gmail.com>,15,0.189897455374098
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\binary\BaseNCodec.java,Gary Gregory <garydgregory@gmail.com>,15,2.4630541871921183
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\net\BCodec.java,Gary Gregory <garydgregory@gmail.com>,6,3.9473684210526314
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\binary\Base32Test.java,Gary Gregory <garydgregory@gmail.com>,16,2.7491408934707904

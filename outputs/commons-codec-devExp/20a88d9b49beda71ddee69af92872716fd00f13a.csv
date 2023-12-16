@@ -1,0 +1,13 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\java\org\apache\commons\codec\binary\StringUtils.java,Gary D. Gregory <ggregory@apache.org>,4132,49.99395039322444
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\org\apache\commons\codec\binary\Base64OutputStreamTest.java,Gary D. Gregory <ggregory@apache.org>,2184,36.41213737912638
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\java\org\apache\commons\codec\net\URLCodec.java,Gary D. Gregory <ggregory@apache.org>,195,60.371517027863774
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\java\org\apache\commons\codec\binary\Base64InputStream.java,Gary D. Gregory <ggregory@apache.org>,47,4.203935599284437
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\org\apache\commons\codec\binary\StringUtilsTest.java,Gary D. Gregory <ggregory@apache.org>,2736,49.2972972972973
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\java\org\apache\commons\codec\binary\Base64.java,Gary D. Gregory <ggregory@apache.org>,11357,50.64437012263099
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\java\org\apache\commons\codec\binary\Base64OutputStream.java,Gary D. Gregory <ggregory@apache.org>,72,3.6217303822937628
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\java\org\apache\commons\codec\net\QuotedPrintableCodec.java,Gary D. Gregory <ggregory@apache.org>,236,95.16129032258065
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\java\org\apache\commons\codec\net\RFC1522Codec.java,Gary D. Gregory <ggregory@apache.org>,79,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\org\apache\commons\codec\binary\Base64InputStreamTest.java,Gary D. Gregory <ggregory@apache.org>,2916,36.3954068896655
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\org\apache\commons\codec\binary\Base64Test.java,Gary D. Gregory <ggregory@apache.org>,12706,61.90197797914839
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\org\apache\commons\codec\binary\Base64TestData.java,Gary D. Gregory <ggregory@apache.org>,205,10.113468179575728
