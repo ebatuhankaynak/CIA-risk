@@ -20,7 +20,9 @@ from sklearn.preprocessing import StandardScaler
 from scipy.stats import norm
 from imblearn.over_sampling import SMOTE
 import pickle 
-
+from scipy.stats import mannwhitneyu, ttest_ind
+from sklearn.metrics import f1_score
+from sklearn.metrics import roc_auc_score
 
 project_name = "Fileupload"
 CREATE_FEATURES = False
@@ -31,9 +33,9 @@ dh = MockDataHandler()
 
 requested_features = [
     "global_graph_scores", 
-    "changed_graph_scores", 
+    #"changed_graph_scores", 
     "global_graph_diffs", 
-    "changed_graph_diffs",
+    #"changed_graph_diffs",
     "commit_summary",
 ]
 
@@ -42,6 +44,7 @@ kf = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=42)
 
 def get_feats(project_name):
     y = dh.create_labels(project_name, select_commits_mode=1)
+    #dh.create_graph_stats(project_name)
     if CREATE_FEATURES or not os.path.exists(f"{project_name}_feats.pkl"):
         features_per_cid = dh.create_features_from_cc(project_name)
 
@@ -124,7 +127,7 @@ def run_ml_kfold(model):
 
     val_results = 1 / (1 + np.exp(-val_results))
 
-    print_results(val_results, val_labels, model)
+    print_results(val_results, val_labels, model, project_name)
 
 def run_if():
     model = IsolationForest(contamination="auto", max_features=1)
@@ -171,7 +174,7 @@ def run_dt():
     print("="*10 + "DT" + "="*10)
     run_ml_kfold(model) 
 
-def print_results(val_results, val_labels, model):
+def print_results(val_results, val_labels, model, project_name):
     nonbic_mean = val_results[val_labels == 0].mean()
     bic_mean = val_results[val_labels == 1].mean()
     nonbic_std = val_results[val_labels == 0].std()
@@ -189,23 +192,23 @@ def print_results(val_results, val_labels, model):
     pooled_std = np.sqrt(((n_nonbic - 1) * nonbic_var + (n_bic - 1) * bic_var) / (n_nonbic + n_bic - 2))
     cohensd = (nonbic_mean - bic_mean) / pooled_std
 
-    print(f"{nonbic_mean:.3f}, {nonbic_std:.3f}, {nonbic_median:.3f}")
-    print(f"{bic_mean.mean():.3f}, {bic_std:.3f}, {bic_median:.3f}")
-    print(f"{abs(z_score):.3f}, {p_value:.3f}, {abs(cohensd):.3f}")
+    print(f"{nonbic_mean:.3f}, {nonbic_std:.3f}")
+    print(f"{bic_mean.mean():.3f}, {bic_std:.3f}")
+    print(f"{p_value:.3f}")
 
     if project_name not in global_results:
         global_results[project_name] = {}
-        global_results[project_name][model.__class__] = {
-            "nonbic_mean": nonbic_mean,
-            "bic_mean": bic_mean,
-            "nonbic_std": nonbic_std,
-            "bic_std": bic_std,
-            "nonbic_median": nonbic_median,
-            "bic_median": bic_median,
-            "z_score": z_score,
-            "p_value": p_value,
-            "cohensd": cohensd
-        }
+    global_results[project_name][model.__class__] = {
+        "nonbic_mean": nonbic_mean,
+        "bic_mean": bic_mean,
+        "nonbic_std": nonbic_std,
+        "bic_std": bic_std,
+        #"nonbic_median": nonbic_median,
+        #"bic_median": bic_median,
+        #"z_score": z_score,
+        #"p_value": p_value,
+        #"cohensd": cohensd
+    }
 
 #x, y = get_feats(project_name)
 
@@ -223,6 +226,7 @@ elif MODEL == "all_ml":
     run_dt()
 elif MODEL == "all":
     for pn in ["Cli", "Fileupload", "Beanutils", "Codec"]:
+        project_name = pn
         print("="*30)
         print("= " + pn)
         print("="*30)
@@ -323,8 +327,9 @@ elif MODEL == "lin":
     val_results = np.array(val_results)
     val_labels = np.array(val_labels)
 
-    print_results(val_results, val_labels, model)
+    print_results(val_results, val_labels, model, project_name)
 
+#print(global_results)
 
 """sorted_scores = np.sort(normalized_scores)
 cumulative_percentages = np.arange(1, len(sorted_scores) + 1) / len(sorted_scores)

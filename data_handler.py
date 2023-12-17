@@ -361,6 +361,9 @@ class MockDataHandler:
                 added_edges = set(G.edges()) - set(prev_G.edges())
                 removed_edges = set(prev_G.edges()) - set(G.edges())
 
+                if len(added_vertices.union(removed_vertices)) > 1000:
+                    print(added_vertices)
+
                 vertex_change.append(len(added_vertices.union(removed_vertices)))
                 edge_change.append(len(added_edges.union(removed_edges)))
             else:
