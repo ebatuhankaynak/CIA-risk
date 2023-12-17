@@ -343,3 +343,47 @@ class MockDataHandler:
         x = np.where(np.isnan(x), means, x)
 
         return x, y
+    
+    def create_graph_stats(self, project_name):
+        filename = f"raw/{project_name}.json"
+        commit_data = MockUtils.read_json(filename)
+
+        graph_creator = GraphCreator()
+
+        commit_ids = list(commit_data.keys())
+        
+        vertex_change = []
+        edge_change = []
+        prev_G = None
+        for i in tqdm(range(len(commit_ids) - 1), "Calculating Graphs Stats"):
+            current_cid = commit_ids[i]
+
+            try:
+                current_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/{project_name}/{current_cid}.csv', project_name)
+            except FileNotFoundError:
+                continue
+
+            G = graph_creator.create_graph(current_cc_pair_df)
+
+            if prev_G is not None:
+                added_vertices = set(G.nodes()) - set(prev_G.nodes())
+                removed_vertices = set(prev_G.nodes()) - set(G.nodes())
+
+                added_edges = set(G.edges()) - set(prev_G.edges())
+                removed_edges = set(prev_G.edges()) - set(G.edges())
+
+                vertex_change.append(len(added_vertices.union(removed_vertices)))
+                edge_change.append(len(added_edges.union(removed_edges)))
+
+                if len(added_edges.union(removed_edges)) == 10:
+                    print(current_cid)
+                    print(added_edges)
+                    print(removed_edges)
+            else:
+                vertex_change.append(0)
+                edge_change.append(0)
+
+            prev_G = G
+
+        graph_stats = [vertex_change, edge_change]
+        print(graph_stats)

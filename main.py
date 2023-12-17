@@ -49,6 +49,7 @@ def get_feats(project_name):
         np.save(f"{project_name}_y", y)
     else:
         y = dh.create_labels(project_name)
+        dh.create_graph_stats(project_name)
         x = np.load(f"{project_name}_x.npy")
         y = np.load(f"{project_name}_y.npy")
 
