@@ -19,6 +19,7 @@ import os
 from sklearn.preprocessing import StandardScaler
 from scipy.stats import norm
 from imblearn.over_sampling import SMOTE
+import pickle 
 
 
 project_name = "Fileupload"
@@ -30,9 +31,9 @@ dh = MockDataHandler()
 
 requested_features = [
     "global_graph_scores", 
-    #"changed_graph_scores", 
+    "changed_graph_scores", 
     "global_graph_diffs", 
-    #"changed_graph_diffs",
+    "changed_graph_diffs",
     "commit_summary",
 ]
 
@@ -40,18 +41,19 @@ n_splits = 5
 kf = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=42)
 
 def get_feats(project_name):
-    if CREATE_FEATURES or not os.path.exists(f"{project_name}_x.npy"):
-        y = dh.create_labels(project_name)
+    y = dh.create_labels(project_name, select_commits_mode=1)
+    if CREATE_FEATURES or not os.path.exists(f"{project_name}_feats.pkl"):
         features_per_cid = dh.create_features_from_cc(project_name)
-        x, y = dh.flatten_features(features_per_cid, y)
 
-        np.save(f"{project_name}_x", x)
-        np.save(f"{project_name}_y", y)
+        with open(f"{project_name}_feats.pkl", 'wb') as f:
+            pickle.dump(features_per_cid, f)
+
+        x, y = dh.flatten_features(features_per_cid, y)
     else:
-        y = dh.create_labels(project_name)
-        dh.create_graph_stats(project_name)
-        x = np.load(f"{project_name}_x.npy")
-        y = np.load(f"{project_name}_y.npy")
+        with open(f"{project_name}_feats.pkl", 'rb') as f:
+            features_per_cid = pickle.load(f)
+
+        x, y = dh.flatten_features(features_per_cid, y)
 
     def filter_features(x, requested_features):
         feature_map = {
@@ -70,8 +72,9 @@ def get_feats(project_name):
         return filtered_x
         
     filtered_x = filter_features(x, requested_features)
-    """for i in filtered_x :
-        print(i)"""
+    print(sum(y), len(y) - sum(y))
+
+
     return filtered_x, y
 
 def run_ml_kfold(model):
@@ -81,9 +84,6 @@ def run_ml_kfold(model):
     for train_index, val_index in kf.split(x, y):
         x_train, x_val = x[train_index], x[val_index]
         y_train, y_val = y[train_index], y[val_index]
-
-        smote = SMOTE(random_state=42)
-        x_train, y_train = smote.fit_resample(x_train, y_train)
 
         scaler = StandardScaler()
         scaler.fit(x_train)
@@ -207,7 +207,7 @@ def print_results(val_results, val_labels, model):
             "cohensd": cohensd
         }
 
-x, y = get_feats(project_name)
+#x, y = get_feats(project_name)
 
 if MODEL == "if":
     run_if()

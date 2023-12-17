@@ -119,7 +119,7 @@ class MockDataHandler:
         return attach_cid_to_features(filtered_metrics_dicts)
     
     
-    def create_labels(self, project_name):
+    def create_labels(self, project_name, select_commits_mode=0):
         project_name_to_dbname = {
             "Cli": "org.apache:commons-cli",
             "Fileupload": "org.apache:commons-fileupload",
@@ -135,28 +135,35 @@ class MockDataHandler:
         bic_dataset_for_pid = bic_dataset[bic_dataset['PROJECT_ID'] == project_name_to_dbname[project_name]]
 
         bic_commit_ids = set(bic_dataset_for_pid['FAULT_INDUCING_COMMIT_HASH'])
-        print(len(bic_dataset_for_pid), len(bic_commit_ids), len(commit_ids))
+        #print(len(bic_dataset_for_pid), len(bic_commit_ids), len(commit_ids))
         
         common_commit_ids = bic_commit_ids.intersection(commit_ids)
-        labels = [1 if commit_id in common_commit_ids else 0 for commit_id in commit_ids]
+
+        labels = []
+        if select_commits_mode != 0:
+            filename = f"raw/{project_name}.json"
+            commit_data = MockUtils.read_json(filename)
+            commit_ids = list(commit_data.keys())
+
+            for i in tqdm(range(len(commit_ids) - 1), "Calculating File Changes"):
+                current_cid = commit_ids[i]
+
+                changed_files = commit_data[current_cid]["files_changed"]
+                changed_filenames = [file_change['filename'] for file_change in changed_files]
+                has_java_file = any(filename.endswith('.java') for filename in changed_filenames)
+
+                if has_java_file and commit_ids[i] in common_commit_ids:
+                    labels.append(1)
+                else:
+                    labels.append(0)
+        else:
+            labels = [1 if commit_id in common_commit_ids else 0 for commit_id in commit_ids]
 
         return labels
     
     def read_and_parse_csv(self, file_path, project_name):
-        if project_name == "Cli":
-            regex = r'(org\.apache\.[\w\.]+\([^)]*\)),(org\.apache\.[\w\.]+\([^)]*\))'
-            data = []
-            with open(file_path, 'r') as file:
-                next(file)
-                for line in file:
-                    match = re.match(regex, line.strip())
-                    if match:
-                        caller, callee = match.groups()
-                        data.append({'Caller': caller, 'Callee': callee})
-            return pd.DataFrame(data)
-        else:
-            df = pd.read_csv(file_path, delimiter="\t")
-            return df
+        df = pd.read_csv(file_path, delimiter="\t",  names=["Caller", "Callee"])
+        return df
 
     def create_example_project(self):
         file_path = 'example_cc.csv'
@@ -197,20 +204,17 @@ class MockDataHandler:
             unique_methods = pd.unique(diff_df[['Caller', 'Callee']].values.ravel('K'))
             return list(unique_methods)
         
-        vertex_change = []
-        edge_change = []
-        prev_G = None
         for i in tqdm(range(len(commit_ids) - 1), "Calculating Global Metrics for commits"):
             current_cid = commit_ids[i]
             next_cid = commit_ids[i + 1]
 
             try:
-                current_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/{project_name}/{current_cid}.csv', project_name)
-                next_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/{project_name}/{next_cid}.csv', project_name)
+                current_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/{project_name}/{current_cid}.tsv', project_name)
+                next_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/{project_name}/{next_cid}.tsv', project_name)
             except FileNotFoundError:
                 continue
-            changed_files = extract_unique_methods(current_cc_pair_df, next_cc_pair_df)
 
+            changed_files = extract_unique_methods(current_cc_pair_df, next_cc_pair_df)
             G = graph_creator.create_graph(current_cc_pair_df)
 
             pagerank, centrality, closeness, clustering_coeff = self.calculate_graph_metrics(G)
@@ -244,21 +248,6 @@ class MockDataHandler:
                 'deletions': deletions,
                 'count': len(current_cc_pair_df),
             }
-
-            if prev_G is not None:
-                added_vertices = set(G.nodes()) - set(prev_G.nodes())
-                removed_vertices = set(prev_G.nodes()) - set(G.nodes())
-
-                added_edges = set(G.edges()) - set(prev_G.edges())
-                removed_edges = set(prev_G.edges()) - set(G.edges())
-
-                vertex_change.append(added_vertices + removed_vertices)
-                edge_change.append(added_edges + removed_edges)
-
-            prev_G = G
-
-        graph_stats = [vertex_change, edge_change]
-        np.save(f"{project_name}_graph_stats", np.array(graph_stats))
 
         for i in tqdm(range(len(commit_ids) - 2), "Calculating Change Metrics for commits"):
             current_cid = commit_ids[i]
@@ -359,7 +348,7 @@ class MockDataHandler:
             current_cid = commit_ids[i]
 
             try:
-                current_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/{project_name}/{current_cid}.csv', project_name)
+                current_cc_pair_df = self.read_and_parse_csv(f'caller_callee_outputs/{project_name}/{current_cid}.tsv', project_name)
             except FileNotFoundError:
                 continue
 
@@ -374,11 +363,6 @@ class MockDataHandler:
 
                 vertex_change.append(len(added_vertices.union(removed_vertices)))
                 edge_change.append(len(added_edges.union(removed_edges)))
-
-                if len(added_edges.union(removed_edges)) == 10:
-                    print(current_cid)
-                    print(added_edges)
-                    print(removed_edges)
             else:
                 vertex_change.append(0)
                 edge_change.append(0)
