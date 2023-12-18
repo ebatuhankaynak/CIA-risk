@@ -1,0 +1,12 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\ClassConverterTestCase.java,Oliver Heger <oheger@apache.org>,13,12.264150943396226
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\BeanUtilsBean.java,Oliver Heger <oheger@apache.org>,70,5.397070161912105
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\BooleanArrayConverterTestCase.java,Oliver Heger <oheger@apache.org>,4,2.1164021164021163
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\DateTimeConverter.java,Oliver Heger <oheger@apache.org>,36,7.982261640798225
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\bugs\Jira347TestCase.java,Oliver Heger <oheger@apache.org>,10,10.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\NumberConverterTestBase.java,Oliver Heger <oheger@apache.org>,27,7.219251336898395
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\locale\LocaleBeanUtilsBean.java,Oliver Heger <oheger@apache.org>,16,1.9975031210986267
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\NumberConverter.java,Oliver Heger <oheger@apache.org>,40,8.438818565400844
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\memoryleaktests\MemoryLeakTestCase.java,Oliver Heger <oheger@apache.org>,4,0.7518796992481203
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\locale\converters\DateLocaleConverter.java,Oliver Heger <oheger@apache.org>,2,0.1480384900074019
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\DynaProperty.java,Oliver Heger <oheger@apache.org>,12,3.7037037037037033

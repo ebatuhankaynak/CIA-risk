@@ -1,0 +1,11 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\LazyDynaBean.java,Gary Gregory <garydgregory@gmail.com>,91,9.118236472945892
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\locale\converters\DateLocaleConverter.java,Gary Gregory <garydgregory@gmail.com>,54,3.7552155771905427
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\converters\DateLocaleConverterTestCase.java,Gary Gregory <garydgregory@gmail.com>,14,2.9473684210526314
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\converters\AbstractConverter.java,Gary Gregory <garydgregory@gmail.com>,126,22.950819672131146
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\locale\converters\FloatLocaleConverter.java,Gary Gregory <garydgregory@gmail.com>,16,32.6530612244898
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\converters\DateTimeConverter.java,Gary Gregory <garydgregory@gmail.com>,70,10.130246020260492
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\converters\NumberConverter.java,Gary Gregory <garydgregory@gmail.com>,66,10.679611650485436
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\BasicDynaBean.java,Gary Gregory <garydgregory@gmail.com>,127,18.98355754857997
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\ConversionException.java,Gary Gregory <garydgregory@gmail.com>,3,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\converters\ArrayConverter.java,Gary Gregory <garydgregory@gmail.com>,42,9.722222222222223

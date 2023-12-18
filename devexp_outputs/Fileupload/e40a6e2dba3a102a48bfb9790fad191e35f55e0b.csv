@@ -1,0 +1,13 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\FileItemStream.java,Gary Gregory <garydgregory@gmail.com>,2,40.0
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\RequestContext.java,Gary Gregory <garydgregory@gmail.com>,1,33.33333333333333
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\FileItemFactory.java,Gary Gregory <garydgregory@gmail.com>,7,53.84615384615385
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\disk\DiskFileItem.java,Gary Gregory <garydgregory@gmail.com>,754,1.4897358386185369
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\FileUpload.java,Gary Gregory <garydgregory@gmail.com>,2,5.555555555555555
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\ParameterParser.java,Gary Gregory <garydgregory@gmail.com>,154,31.622176591375773
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\MultipartStream.java,Gary Gregory <garydgregory@gmail.com>,471,25.431965442764582
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\ProgressListener.java,Gary Gregory <garydgregory@gmail.com>,2,9.523809523809524
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\FileItem.java,Gary Gregory <garydgregory@gmail.com>,19,26.76056338028169
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\FileItemIterator.java,Gary Gregory <garydgregory@gmail.com>,17,1.87018701870187
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\FileUploadBase.java,Gary Gregory <garydgregory@gmail.com>,348,36.74762407602957
+C:\SELEN\CS588\commons-fileupload\commons-fileupload\src\main\java\org\apache\commons\fileupload2\FileItemHeaders.java,Gary Gregory <garydgregory@gmail.com>,1,0.26109660574412535

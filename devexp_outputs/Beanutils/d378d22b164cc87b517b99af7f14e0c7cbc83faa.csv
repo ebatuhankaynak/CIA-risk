@@ -1,0 +1,8 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\ResultSetDynaClass.java,Niall Pemberton <niallp@apache.org>,3,12.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\ResultSetIterator.java,Niall Pemberton <niallp@apache.org>,2,1.8018018018018018
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\JDBCDynaClass.java,Niall Pemberton <niallp@apache.org>,24,21.62162162162162
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\DynaResultSetTestCase.java,Niall Pemberton <niallp@apache.org>,56,28.426395939086298
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\TestResultSet.java,Niall Pemberton <niallp@apache.org>,66,11.379310344827587
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\DynaRowSetTestCase.java,Niall Pemberton <niallp@apache.org>,82,36.93693693693694
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\RowSetDynaClass.java,Niall Pemberton <niallp@apache.org>,16,37.2093023255814

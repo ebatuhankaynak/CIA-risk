@@ -59,12 +59,12 @@ class MockDataHandler:
                     'clustering_coefficient': self.calculate_aggregate_metrics(clustering_coeff)
                 }
 
-                changed_graph_scores[cid] = {
+                """changed_graph_scores[cid] = {
                     'pagerank': self.calculate_aggregate_metrics({file: pagerank[file] for file in changed_files if file in pagerank}),
                     'centrality': self.calculate_aggregate_metrics({file: centrality[file] for file in changed_files if file in centrality}),
                     'closeness': self.calculate_aggregate_metrics({file: closeness[file] for file in changed_files if file in closeness}),
                     'clustering_coefficient': self.calculate_aggregate_metrics({file: clustering_coeff[file] for file in changed_files if file in clustering_coeff}),
-                }
+                }"""
 
             else:
                 bad_commits.append(cid)
@@ -195,6 +195,7 @@ class MockDataHandler:
         global_graph_diffs = {}
         changed_graph_diffs = {}
         commit_summary = {}
+        devexp_summary = {}
 
         with open(filename, 'r') as file:
             commit_json = json.load(file)
@@ -226,12 +227,12 @@ class MockDataHandler:
                 'clustering_coefficient': self.calculate_aggregate_metrics(clustering_coeff)
             }
 
-            changed_graph_scores[current_cid] = {
+            """changed_graph_scores[current_cid] = {
                 'pagerank': self.calculate_aggregate_metrics({file: pagerank[file] for file in changed_files if file in pagerank}),
                 'centrality': self.calculate_aggregate_metrics({file: centrality[file] for file in changed_files if file in centrality}),
                 'closeness': self.calculate_aggregate_metrics({file: closeness[file] for file in changed_files if file in closeness}),
                 'clustering_coefficient': self.calculate_aggregate_metrics({file: clustering_coeff[file] for file in changed_files if file in clustering_coeff}),
-            }
+            }"""
 
             files_changed = len(commit_json[current_cid].get('files_changed', []))
 
@@ -249,6 +250,27 @@ class MockDataHandler:
                 'count': len(current_cc_pair_df),
             }
 
+            try:
+                devexp_df = pd.read_csv(f'devexp_outputs/{project_name}/{current_cid}.csv')
+            except pd.errors.EmptyDataError:
+                devexp_df = pd.DataFrame(columns=['File Directory', 'Author', 'Contribution', 'Percentage of Contribution'])
+
+            if not devexp_df.empty:
+                total_contribution = devexp_df['Contribution'].mean()
+                total_percent_contribution = devexp_df[' Percentage of Contribution'].mean()
+
+                devexp_summary[current_cid] = {
+                    'contribution': total_contribution,
+                    'percent_contribution': total_percent_contribution
+                }
+            else:
+                devexp_summary[current_cid] = {
+                    'contribution': 0, 
+                    'percent_contribution': 0.0
+                }
+
+            #print(devexp_summary)
+
         for i in tqdm(range(len(commit_ids) - 2), "Calculating Change Metrics for commits"):
             current_cid = commit_ids[i]
             next_cid = commit_ids[i + 1]
@@ -262,7 +284,7 @@ class MockDataHandler:
 
             try:
                 global_graph_diffs[next_cid] = calc_diff(global_graph_scores[current_cid], global_graph_scores[next_cid])
-                changed_graph_diffs[next_cid] = calc_diff(changed_graph_scores[current_cid], changed_graph_scores[next_cid])
+                #changed_graph_diffs[next_cid] = calc_diff(changed_graph_scores[current_cid], changed_graph_scores[next_cid])
             except KeyError:
                 continue
   
@@ -282,14 +304,24 @@ class MockDataHandler:
                 linear_vector = [metrics['changed'], metrics['additions'], metrics['deletions'],  metrics['count']]
                 linearized_summary[cid] = linear_vector
             return linearized_summary
+        
+        def linearize_dev_exp(dev_exp):
+            linearized_summary = {}
+            for cid, metrics in dev_exp.items():
+                linear_vector = [metrics['contribution'], metrics['percent_contribution']]
+                linearized_summary[cid] = linear_vector
+            return linearized_summary
 
-        def attach_cid_to_features(metrics_dicts, metrics_order1, commit_ids):
+        def attach_cid_to_features(metrics_dicts, commit_ids):
             linearized_metrics = {}
             for name, metric_dict in metrics_dicts.items():
-                if name != 'commit_summary':
-                    linearized_metrics[name] = linearize_metrics(metric_dict, metrics_order1)
-                else:
+                if name == 'commit_summary':
                     linearized_metrics[name] = linearize_commit_summary(metric_dict)
+                elif name == 'devexp_summary':
+                    linearized_metrics[name] = linearize_dev_exp(metric_dict)
+                else:
+                    linearized_metrics[name] = linearize_metrics(metric_dict, ['pagerank', 'centrality', 'closeness', 'clustering_coefficient'])
+                    
 
             consolidated_features = {}
             for cid in commit_ids:
@@ -299,13 +331,14 @@ class MockDataHandler:
 
         metrics_dicts = {
             "global_graph_scores": global_graph_scores,
-            "changed_graph_scores": changed_graph_scores,
+            #"changed_graph_scores": changed_graph_scores,
             "global_graph_diffs": global_graph_diffs,
-            "changed_graph_diffs": changed_graph_diffs,
-            "commit_summary": commit_summary
+            #"changed_graph_diffs": changed_graph_diffs,
+            "commit_summary": commit_summary,
+            "devexp_summary": devexp_summary,
         }
 
-        return attach_cid_to_features(metrics_dicts, ['pagerank', 'centrality', 'closeness', 'clustering_coefficient'], commit_ids)
+        return attach_cid_to_features(metrics_dicts, commit_ids)
 
     
     def flatten_features(self, features_dict, y):

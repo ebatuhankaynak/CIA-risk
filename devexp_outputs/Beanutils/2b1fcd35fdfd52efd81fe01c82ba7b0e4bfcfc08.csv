@@ -1,0 +1,11 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\LocaleBeanUtils.java,Martin Cooper <martinc@apache.org>,31505,50.31140210795273
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\converters\SqlTimestampLocaleConverter.java,Martin Cooper <martinc@apache.org>,265,50.38022813688213
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\converters\DecimalLocaleConverter.java,Martin Cooper <martinc@apache.org>,288,50.97345132743363
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\converters\SqlDateLocaleConverter.java,Martin Cooper <martinc@apache.org>,267,50.37735849056604
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\LocaleConvertUtils.java,Martin Cooper <martinc@apache.org>,8901,49.918680948909206
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\BaseLocaleConverter.java,Martin Cooper <martinc@apache.org>,1412,50.663796196627196
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\converters\StringLocaleConverter.java,Martin Cooper <martinc@apache.org>,682,51.66666666666667
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\converters\DateLocaleConverter.java,Martin Cooper <martinc@apache.org>,289,50.970017636684304
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\converters\SqlTimeLocaleConverter.java,Martin Cooper <martinc@apache.org>,266,50.378787878787875
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\LocaleConverter.java,Martin Cooper <martinc@apache.org>,91,50.27624309392266

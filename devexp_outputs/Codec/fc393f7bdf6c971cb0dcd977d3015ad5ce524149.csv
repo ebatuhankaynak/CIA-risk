@@ -1,0 +1,13 @@
+File Directory,Author,Contribution, Percentage of Contribution
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\DigestUtilsTest.java,Gary D. Gregory <ggregory@apache.org>,241,58.07228915662651
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\Sha512CryptTest.java,Gary D. Gregory <ggregory@apache.org>,57,82.6086956521739
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\B64Test.java,Gary D. Gregory <ggregory@apache.org>,10,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\digest\Crypt.java,Gary D. Gregory <ggregory@apache.org>,30,78.94736842105263
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\digest\Sha2Crypt.java,Gary D. Gregory <ggregory@apache.org>,410,91.72259507829978
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\Apr1CryptTest.java,Gary D. Gregory <ggregory@apache.org>,62,83.78378378378379
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\b\src\test\java\org\apache\commons\codec\digest\Sha2CryptTest.java,Gary D. Gregory <ggregory@apache.org>,3,100.0
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\UnixCryptTest.java,Gary D. Gregory <ggregory@apache.org>,51,80.95238095238095
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\Md5CryptTest.java,Gary D. Gregory <ggregory@apache.org>,47,77.04918032786885
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\CryptTest.java,Gary D. Gregory <ggregory@apache.org>,22,78.57142857142857
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\main\java\org\apache\commons\codec\digest\Md5Crypt.java,Gary D. Gregory <ggregory@apache.org>,168,88.42105263157895
+D:\_SELEN\_2022-2023\CS588\GitHub_Dataset2\commons-codec\commons-codec\src\test\java\org\apache\commons\codec\digest\Sha256CryptTest.java,Gary D. Gregory <ggregory@apache.org>,52,78.78787878787878

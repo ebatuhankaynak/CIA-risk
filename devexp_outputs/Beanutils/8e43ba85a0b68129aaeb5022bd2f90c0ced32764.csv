@@ -1,0 +1,9 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\DateConverterTestCase.java,Niall Pemberton <niallp@apache.org>,19,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\SqlDateConverterTestCase.java,Niall Pemberton <niallp@apache.org>,38,77.55102040816327
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\SqlTimestampConverter.java,Niall Pemberton <niallp@apache.org>,39,50.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\DateConverterTestBase.java,Niall Pemberton <niallp@apache.org>,297,87.61061946902655
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\SqlTimeConverterTestCase.java,Niall Pemberton <niallp@apache.org>,59,84.28571428571429
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\SqlTimeConverter.java,Niall Pemberton <niallp@apache.org>,39,50.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\CalendarConverterTestCase.java,Niall Pemberton <niallp@apache.org>,15,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\SqlTimestampConverterTestCase.java,Niall Pemberton <niallp@apache.org>,56,83.5820895522388

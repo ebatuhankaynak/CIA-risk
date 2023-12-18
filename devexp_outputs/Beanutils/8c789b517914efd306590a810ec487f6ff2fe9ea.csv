@@ -1,0 +1,9 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\AbstractConverter.java,Niall Pemberton <niallp@apache.org>,204,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\ArrayConverterTestCase.java,Niall Pemberton <niallp@apache.org>,229,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\DateTimeConverter.java,Niall Pemberton <niallp@apache.org>,280,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\ArrayConverter.java,Niall Pemberton <niallp@apache.org>,172,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\ClassConverter.java,Niall Pemberton <niallp@apache.org>,46,56.79012345679012
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\NumberConverter.java,Niall Pemberton <niallp@apache.org>,259,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\converters\CharacterConverter.java,Niall Pemberton <niallp@apache.org>,37,50.68493150684932
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\converters\ClassConverterTestCase.java,Niall Pemberton <niallp@apache.org>,80,100.0

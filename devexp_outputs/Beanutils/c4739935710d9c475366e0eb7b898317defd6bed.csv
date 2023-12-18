@@ -1,0 +1,19 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\WrapDynaBean.java,Scott Sanders <sanders@apache.org>,18,14.754098360655737
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\DynaPropertyUtilsTestCase.java,Scott Sanders <sanders@apache.org>,688,25.500370644922164
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\BasicDynaBean.java,Scott Sanders <sanders@apache.org>,54,14.285714285714285
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\ConvertUtils.java,Scott Sanders <sanders@apache.org>,8,2.2222222222222223
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\BasicDynaBeanTestCase.java,Scott Sanders <sanders@apache.org>,182,21.666666666666668
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\TestBean.java,Scott Sanders <sanders@apache.org>,3,2.380952380952381
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\MethodUtilsTestCase.java,Scott Sanders <sanders@apache.org>,101,46.97674418604651
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\MethodUtils.java,Scott Sanders <sanders@apache.org>,125,44.96402877697842
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\PropertyUtilsTestCase.java,Scott Sanders <sanders@apache.org>,943,28.58441952106699
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\WrapDynaClass.java,Scott Sanders <sanders@apache.org>,26,22.033898305084744
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\PropertyUtils.java,Scott Sanders <sanders@apache.org>,744,35.68345323741007
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\BeanUtilsTestCase.java,Scott Sanders <sanders@apache.org>,175,49.157303370786515
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\DynaBeanUtilsTestCase.java,Scott Sanders <sanders@apache.org>,210,47.08520179372198
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\MappedPropertyDescriptor.java,Scott Sanders <sanders@apache.org>,706,69.28361138370953
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\DynaClass.java,Scott Sanders <sanders@apache.org>,2,10.526315789473683
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\WrapDynaBeanTestCase.java,Scott Sanders <sanders@apache.org>,8,10.526315789473683
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\BeanUtils.java,Scott Sanders <sanders@apache.org>,181,27.21804511278195
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\BasicDynaClass.java,Scott Sanders <sanders@apache.org>,18,17.475728155339805

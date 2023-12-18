@@ -1,0 +1,20 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\BeanPropertyValueChangeConsumer.java,Gary Gregory <garydgregory@gmail.com>,5,0.1235483073881888
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\WeakFastHashMap.java,Gary Gregory <garydgregory@gmail.com>,3,0.3488372093023256
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\PropertyUtilsTestCase.java,Gary Gregory <garydgregory@gmail.com>,5,0.07544892108042855
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\ConvertUtilsBean.java,Gary Gregory <garydgregory@gmail.com>,22,2.3706896551724137
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\MethodUtils.java,Gary Gregory <garydgregory@gmail.com>,92,5.186020293122886
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\BasicDynaBean.java,Gary Gregory <garydgregory@gmail.com>,90,14.240506329113925
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\BeanPropertyValueEqualsPredicate.java,Gary Gregory <garydgregory@gmail.com>,5,0.1834862385321101
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\converters\NumberConverter.java,Gary Gregory <garydgregory@gmail.com>,13,2.3008849557522124
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\BeanUtilsBean.java,Gary Gregory <garydgregory@gmail.com>,35,2.2082018927444795
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\converters\AbstractConverter.java,Gary Gregory <garydgregory@gmail.com>,91,17.704280155642024
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\DynaRowSetTestCase.java,Gary Gregory <garydgregory@gmail.com>,10,2.5316455696202533
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\LazyDynaBean.java,Gary Gregory <garydgregory@gmail.com>,45,4.726890756302521
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\BeanComparator.java,Gary Gregory <garydgregory@gmail.com>,9,4.712041884816754
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\ConvertUtils.java,Gary Gregory <garydgregory@gmail.com>,24,0.09354536950420954
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\DynaProperty.java,Gary Gregory <garydgregory@gmail.com>,12,3.0303030303030303
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils2\TestResultSet.java,Gary Gregory <garydgregory@gmail.com>,51,5.391120507399577
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\expression\DefaultResolver.java,Gary Gregory <garydgregory@gmail.com>,45,19.911504424778762
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\PropertyUtilsBean.java,Gary Gregory <garydgregory@gmail.com>,128,4.039129062795835
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils2\BeanToPropertyValueTransformer.java,Gary Gregory <garydgregory@gmail.com>,5,0.17979144192736426

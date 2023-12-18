@@ -37,6 +37,7 @@ requested_features = [
     "global_graph_diffs", 
     #"changed_graph_diffs",
     "commit_summary",
+    "devexp_summary",
 ]
 
 n_splits = 5

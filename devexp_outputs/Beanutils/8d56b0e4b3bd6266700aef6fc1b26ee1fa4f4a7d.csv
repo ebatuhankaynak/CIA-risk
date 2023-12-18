@@ -1,0 +1,11 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\LocaleConvertUtils.java,Robert Burrell Donkin <rdonkin@apache.org>,8754,49.05575791538246
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\BaseLocaleConverter.java,Robert Burrell Donkin <rdonkin@apache.org>,1392,49.64336661911555
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\converters\ByteLocaleConverter.java,Robert Burrell Donkin <rdonkin@apache.org>,8,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\converters\FloatLocaleConverter.java,Robert Burrell Donkin <rdonkin@apache.org>,7,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\locale\LocaleConvertTestSuite.java,Robert Burrell Donkin <rdonkin@apache.org>,6,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\converters\DateLocaleConverter.java,Robert Burrell Donkin <rdonkin@apache.org>,302,51.09983079526227
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\org\apache\commons\beanutils\locale\LocaleConvertUtilsTestCase.java,Robert Burrell Donkin <rdonkin@apache.org>,491,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\converters\DecimalLocaleConverter.java,Robert Burrell Donkin <rdonkin@apache.org>,291,50.259067357512954
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\converters\IntegerLocaleConverter.java,Robert Burrell Donkin <rdonkin@apache.org>,7,100.0
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\java\org\apache\commons\beanutils\locale\converters\StringLocaleConverter.java,Robert Burrell Donkin <rdonkin@apache.org>,652,48.87556221889056

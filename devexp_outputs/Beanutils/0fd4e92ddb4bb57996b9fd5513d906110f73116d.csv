@@ -1,0 +1,13 @@
+File Directory,Author,Contribution, Percentage of Contribution
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\SqlTimeConverterTestCase.java,Oliver Heger <oheger@apache.org>,2,2.7027027027027026
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\DateConverterTestCase.java,Oliver Heger <oheger@apache.org>,2,8.695652173913043
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\SqlDateConverterTestCase.java,Oliver Heger <oheger@apache.org>,2,3.7735849056603774
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\SqlDateConverter.java,Oliver Heger <oheger@apache.org>,2,1.3605442176870748
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\CalendarConverterTestCase.java,Oliver Heger <oheger@apache.org>,2,10.526315789473683
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\DateConverter.java,Oliver Heger <oheger@apache.org>,2,28.57142857142857
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\SqlTimestampConverter.java,Oliver Heger <oheger@apache.org>,2,2.1505376344086025
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\DateTimeConverter.java,Oliver Heger <oheger@apache.org>,30,6.741573033707865
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\SqlTimestampConverterTestCase.java,Oliver Heger <oheger@apache.org>,2,2.8169014084507045
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\test\java\org\apache\commons\beanutils\converters\DateConverterTestBase.java,Oliver Heger <oheger@apache.org>,10,2.5773195876288657
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\CalendarConverter.java,Oliver Heger <oheger@apache.org>,2,28.57142857142857
+C:\SELEN\CS588\commons-beanutils\commons-beanutils\src\main\java\org\apache\commons\beanutils\converters\SqlTimeConverter.java,Oliver Heger <oheger@apache.org>,2,2.1505376344086025
