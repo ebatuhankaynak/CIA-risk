@@ -32,11 +32,11 @@ global_results = {}
 dh = MockDataHandler()
 
 requested_features = [
-    "global_graph_scores", 
+    #"global_graph_scores", 
     #"changed_graph_scores", 
-    "global_graph_diffs", 
+    #"global_graph_diffs", 
     #"changed_graph_diffs",
-    "commit_summary",
+    #"commit_summary",
     "devexp_summary",
 ]
 
@@ -60,12 +60,19 @@ def get_feats(project_name):
         x, y = dh.flatten_features(features_per_cid, y)
 
     def filter_features(x, requested_features):
-        feature_map = {
+        """feature_map = {
             "global_graph_scores": slice(0, 4), #12
             "changed_graph_scores": slice(12, 16), #24
             "global_graph_diffs": slice(24, 28), #36
             "changed_graph_diffs": slice(36, 40), #48
-            "commit_summary": slice(48, 52)
+            "commit_summary": slice(48, 52), #52
+            "devexp_summary": slice(52, 54)
+        }"""
+        feature_map = {
+            "global_graph_scores": slice(0, 4), #12
+            "global_graph_diffs": slice(12, 16), #24
+            "commit_summary": slice(24, 28), #28
+            "devexp_summary": slice(28, 30) #30
         }
 
         columns_to_keep = []
@@ -76,6 +83,8 @@ def get_feats(project_name):
         return filtered_x
         
     filtered_x = filter_features(x, requested_features)
+    print(len(x[0]))
+    print(len(filtered_x[0]))
     print(sum(y), len(y) - sum(y))
 
 
@@ -176,6 +185,8 @@ def run_dt():
     run_ml_kfold(model) 
 
 def print_results(val_results, val_labels, model, project_name):
+    val_results = (val_results - val_results.min()) / (val_results.max() - val_results.min())
+
     nonbic_mean = val_results[val_labels == 0].mean()
     bic_mean = val_results[val_labels == 1].mean()
     nonbic_std = val_results[val_labels == 0].std()
@@ -193,9 +204,49 @@ def print_results(val_results, val_labels, model, project_name):
     pooled_std = np.sqrt(((n_nonbic - 1) * nonbic_var + (n_bic - 1) * bic_var) / (n_nonbic + n_bic - 2))
     cohensd = (nonbic_mean - bic_mean) / pooled_std
 
-    print(f"{nonbic_mean:.3f}, {nonbic_std:.3f}")
-    print(f"{bic_mean.mean():.3f}, {bic_std:.3f}")
-    print(f"{p_value:.3f}")
+    print(f"{nonbic_mean:.2f}, {nonbic_std:.2f}")
+    print(f"{bic_mean.mean():.2f}, {bic_std:.2f}")
+    print(f"{p_value:.2f}")
+
+    sorted_indices = np.argsort(val_results)
+    sorted_scores = val_results[sorted_indices]
+    sorted_labels = val_labels[sorted_indices]
+
+    cumulative_percentages = np.arange(1, len(sorted_scores) + 1) / len(sorted_scores)
+
+    plt.figure(figsize=(8, 6))
+    for score, percentage, label in zip(sorted_scores, cumulative_percentages * 100, sorted_labels):
+        if label == 0:
+            plt.plot(score, percentage, 'go')  # green for label 0
+        else:
+            plt.plot(score, percentage, 'ro')  # red for label 1
+    plt.title('Cumulative Distribution of Risk Scores', fontsize=14)
+    plt.xlabel('Risk Score', fontsize=12)
+    plt.ylabel('Cumulative Percentage', fontsize=12)
+    plt.grid(True)
+    plt.savefig(f"cumsum_pngs/cumsum_{project_name}_{model.__class__}.pdf", format='pdf', dpi=300)
+    # plt.savefig('plot.svg', format='svg')  # Save as SVG
+
+    #plt.show()
+
+    """sorted_indices = np.argsort(val_results)
+    sorted_scores = val_results[sorted_indices]
+    sorted_labels = val_labels[sorted_indices]
+
+    cumulative_percentages = np.arange(1, len(sorted_scores) + 1) / len(sorted_scores)
+
+    plt.figure()
+    for score, percentage, label in zip(sorted_scores, cumulative_percentages * 100, sorted_labels):
+        if label == 0:
+            plt.plot(score, percentage, 'go')  # green for label 0
+        else:
+            plt.plot(score, percentage, 'ro')  # red for label 1
+
+    plt.title('Cumulative Distribution of Risk Scores')
+    plt.xlabel('Risk Score')
+    plt.ylabel('Cumulative Percentage')
+    plt.grid(True)
+    plt.show()"""
 
     if project_name not in global_results:
         global_results[project_name] = {}
@@ -330,14 +381,4 @@ elif MODEL == "lin":
 
     print_results(val_results, val_labels, model, project_name)
 
-#print(global_results)
-
-"""sorted_scores = np.sort(normalized_scores)
-cumulative_percentages = np.arange(1, len(sorted_scores) + 1) / len(sorted_scores)
-
-plt.plot(sorted_scores, cumulative_percentages)
-plt.title('Cumulative Distribution of Confidence Scores')
-plt.xlabel('Risk Score')
-plt.ylabel('Cumulative Percentage')
-plt.grid(True)
-plt.show()"""
+print(global_results)
