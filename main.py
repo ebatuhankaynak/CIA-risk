@@ -32,11 +32,11 @@ global_results = {}
 dh = MockDataHandler()
 
 requested_features = [
-    #"global_graph_scores", 
+    "global_graph_scores", 
     #"changed_graph_scores", 
-    #"global_graph_diffs", 
+    "global_graph_diffs", 
     #"changed_graph_diffs",
-    #"commit_summary",
+    "commit_summary",
     "devexp_summary",
 ]
 
@@ -60,14 +60,6 @@ def get_feats(project_name):
         x, y = dh.flatten_features(features_per_cid, y)
 
     def filter_features(x, requested_features):
-        """feature_map = {
-            "global_graph_scores": slice(0, 4), #12
-            "changed_graph_scores": slice(12, 16), #24
-            "global_graph_diffs": slice(24, 28), #36
-            "changed_graph_diffs": slice(36, 40), #48
-            "commit_summary": slice(48, 52), #52
-            "devexp_summary": slice(52, 54)
-        }"""
         feature_map = {
             "global_graph_scores": slice(0, 4), #12
             "global_graph_diffs": slice(12, 16), #24
@@ -93,6 +85,7 @@ def get_feats(project_name):
 def run_ml_kfold(model):
     val_results = []
     val_labels = []
+    val_indices = []
 
     for train_index, val_index in kf.split(x, y):
         x_train, x_val = x[train_index], x[val_index]
@@ -131,13 +124,15 @@ def run_ml_kfold(model):
 
         val_results.extend(raw_scores)
         val_labels.extend(y_val)
+        val_indices.extend(val_index)
 
     val_results = np.array(val_results)
     val_labels = np.array(val_labels)
+    val_indices = np.array(val_indices)
 
     val_results = 1 / (1 + np.exp(-val_results))
 
-    print_results(val_results, val_labels, model, project_name)
+    print_results(val_results, val_labels, model, project_name, val_indices)
 
 def run_if():
     model = IsolationForest(contamination="auto", max_features=1)
@@ -184,7 +179,7 @@ def run_dt():
     print("="*10 + "DT" + "="*10)
     run_ml_kfold(model) 
 
-def print_results(val_results, val_labels, model, project_name):
+def print_results(val_results, val_labels, model, project_name, val_indices):
     val_results = (val_results - val_results.min()) / (val_results.max() - val_results.min())
 
     nonbic_mean = val_results[val_labels == 0].mean()
@@ -214,39 +209,19 @@ def print_results(val_results, val_labels, model, project_name):
 
     cumulative_percentages = np.arange(1, len(sorted_scores) + 1) / len(sorted_scores)
 
+    #print(val_results[val_labels == 1], val_indices[val_labels == 1])
+
     plt.figure(figsize=(8, 6))
     for score, percentage, label in zip(sorted_scores, cumulative_percentages * 100, sorted_labels):
         if label == 0:
-            plt.plot(score, percentage, 'go')  # green for label 0
+            plt.plot(score, percentage, 'go')
         else:
-            plt.plot(score, percentage, 'ro')  # red for label 1
+            plt.plot(score, percentage, 'ro')
     plt.title('Cumulative Distribution of Risk Scores', fontsize=14)
     plt.xlabel('Risk Score', fontsize=12)
     plt.ylabel('Cumulative Percentage', fontsize=12)
     plt.grid(True)
     plt.savefig(f"cumsum_pngs/cumsum_{project_name}_{model.__class__}.pdf", format='pdf', dpi=300)
-    # plt.savefig('plot.svg', format='svg')  # Save as SVG
-
-    #plt.show()
-
-    """sorted_indices = np.argsort(val_results)
-    sorted_scores = val_results[sorted_indices]
-    sorted_labels = val_labels[sorted_indices]
-
-    cumulative_percentages = np.arange(1, len(sorted_scores) + 1) / len(sorted_scores)
-
-    plt.figure()
-    for score, percentage, label in zip(sorted_scores, cumulative_percentages * 100, sorted_labels):
-        if label == 0:
-            plt.plot(score, percentage, 'go')  # green for label 0
-        else:
-            plt.plot(score, percentage, 'ro')  # red for label 1
-
-    plt.title('Cumulative Distribution of Risk Scores')
-    plt.xlabel('Risk Score')
-    plt.ylabel('Cumulative Percentage')
-    plt.grid(True)
-    plt.show()"""
 
     if project_name not in global_results:
         global_results[project_name] = {}
@@ -261,8 +236,6 @@ def print_results(val_results, val_labels, model, project_name):
         #"p_value": p_value,
         #"cohensd": cohensd
     }
-
-#x, y = get_feats(project_name)
 
 if MODEL == "if":
     run_if()

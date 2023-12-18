@@ -153,6 +153,7 @@ class MockDataHandler:
                 has_java_file = any(filename.endswith('.java') for filename in changed_filenames)
 
                 if has_java_file and commit_ids[i] in common_commit_ids:
+                    #print(commit_ids[i])
                     labels.append(1)
                 else:
                     labels.append(0)
